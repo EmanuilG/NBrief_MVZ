@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Mustertexte und Textbausteine für einen neurologischen Arztbrief">
+    <meta name="author" content="Emanuil Giuris">
+    <meta license="GNU General Public License 3">
+    <title>N-Brief</title>
+    <style>
+        body {
+            position: fixed;
+            background-color: hsla(0, 0%, 40%, 1);
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            color: white;
+            margin-left: 0.625rem;
+        }
+
+        a {
+            color: hsla(60, 100%, 50%, 1);
+        }
+
+        textarea {
+            background-color: hsla(0, 0%, 40%, 1);
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            color: white;
+            width: 100%;
+            height: 43.75rem;
+            padding: 0.375rem;
+            resize: none;
+            border: solid;
+            border-width: 1px;
+            border-color: hsla(60, 15%, 90%, 1);
+        }
+        .txtarea2 {
+            width: 100%;
+            height: 34.5rem;
+            padding: 0.5rem;
+            resize: none;
+        }
+        .wrap {
+            position: fixed;
+            margin-top: 2.81rem;
+            width: 100%;
+            /*overflow: auto;*/
+        }
+
+        .wrap2 {
+            position: fixed;
+            margin-top: 2.5rem;
+            display: none;
+            width: 100%;
+            overflow: auto;
+        }
+
+        /*add-on class for gfr and levodopa-equivalence calculators*/
+        .wrap2_2 {
+            width: 55%;
+        }
+
+        /*add-on class for alcohol calculator*/
+        /* 15.02.2019 tried, not succeeded: to make the frame constant in size */
+        .alcoholmenge1class {
+            min-height: 7rem;
+        }
+
+        .wrap2_1 {
+            position: fixed;
+            margin-top: 2.5rem;
+            display: block;
+            width: 100%;
+            /*overflow: auto;*/
+        }
+
+        .wrap3 {
+            margin-top: 0.625rem;
+            display: none;
+            width: 100%;
+            /*overflow: auto;*/
+        }
+
+        .fleft {
+            float: left;
+            width: 25%;
+            height: 60rem;
+            margin: 0px;
+        }
+
+        .fcenter {
+            float: left;
+            width: 57%;
+            height: 60rem;
+            margin-right: 2rem;
+        }
+
+        .fright {
+            float: left;
+            height: 60rem;
+            width: 14%;
+            margin: 0px;
+        }
+
+        .fleft50 {
+            float: left;
+            height: 60rem;
+            width: 45%;
+            margin: 0px;
+        }
+
+        .fright50 {
+            float: right;
+            height: 60rem;
+            width: 45%;
+            margin: 0px;
+        }
+/* Two classes for the mdedit*/
+        .fleft50_1 {
+            float: left;
+            height: 40rem;
+            width: 45%;
+            margin: 1rem;
+        }
+        .fright50_1 {
+            float: left;
+            height: 40rem;
+            width: 45%;
+            margin: 1.1rem;
+        }
+
+        .bt1 {
+            height: 1.875rem;
+            width: 9.375rem;
+            color: hsla(0, 0%, 100%, 1);
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            border-style: none;
+            background-color: hsla(40, 50%, 50%, 1);
+            color: hsla(0, 0%, 100%, 1);
+        }
+
+        .bt1:hover {
+            background-color: hsla(40, 100%, 55%, 1);
+            color: hsla(0, 0%, 40%, 1); 
+        }
+
+        .bt2 {
+            width: 4.5625rem;
+        }
+
+        .btgrey {
+            background-color: hsla(0, 0%, 0%, 1);
+        }
+
+
+        .bttext {
+            border-style: ridge;
+            border-width: 0.1875rem;
+            border-color: hsla(0, 0%, 50%, 1);
+
+        }
+
+        .stamp {
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            margin-left: 0.125rem;
+            width: 40%;
+            width: 40%;
+        }
+
+        #topBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2rem;
+            background-color: inherit;
+            font-size: 0.8rem;
+            margin-left: 0.625rem;
+        }
+
+        .h1_1 {
+            text-align: center;
+            margin-top: 5rem;
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 3rem;
+        }
+
+        .gfrclass {
+            background-color: hsla(0, 0%, 100%, 1);
+            color: hsla(0, 0%, 0%, 1);
+            font-weight: bold;
+            padding: 0.25rem;
+            display: inline-block;
+            height: 0.9375rem;
+            width: 2.5rem;
+            text-align: right;
+        }
+
+        input[type="number"] {
+            width: 3.125rem;
+            height: 0.9375rem;
+        }
+
+        .gfrtable {
+            padding: 0.625rem;
+            text-align: left;
+            vertical-align: text-bottom;
+        }
+
+        .ldopatable{
+            padding: 0.625rem;
+        }
+
+        .gfrtable th,
+        .gfrtable td {
+            padding: 0.625rem;
+        }
+
+        /*display flex, align-items and justify-content are to display the text horiz and vert centered*/
+        #gesX {
+            color: hsla(0, 100%, 50%, 1);
+            font-weight: bold;
+            background-color: hsla(0, 0%, 100%, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 9.375rem;
+            height: 1.5625rem;
+            animation-name: mannfrau;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        hr {
+            display: block;
+            margin-left: 0;
+            width: 19rem;
+            border-style: solid;
+            border-width: 0.0625rem;
+            color: hsla(0, 0%, 100%, 1);
+        }
+
+        .select1 {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: none;
+            border-radius: 0;
+            background-color: hsla(0, 0%, 40%, 1);
+            font-size: 0.8rem;
+        }
+
+        .select1 {
+            width: 50%;
+            border: 0.0625rem solid;
+            padding: .75rem 1rem .5rem 1rem;
+            box-shadow: 0 0.01875rem 0.0625rem 0;
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+
+        .select1:hover {
+            box-shadow: 0 0.0625rem 0.0625rem 0 hsla(0, 0%, 0%, 0.1);
+        }
+
+        .select1::-ms-expand {
+            display: none;
+        }
+
+        .select1 {
+            border-width: 0.0625rem;
+            padding: 0.1rem 0.1rem 0.1rem 1rem;
+            background-color: hsla(0, 0%, 40%, 1);
+            color: hsla(0, 0%, 100%, 1);
+        }
+
+        .select1 option {
+              background-color:hsla(0, 0%, 40%, 1);
+              padding: 0.2rem;
+          }
+
+        .select2 {
+            width: 80%
+        }
+
+        @keyframes mannfrau {
+            0% {
+                background-color: hsla(0, 100%, 50%, 1);
+            }
+            10% {
+                background-color: hsla(39, 100%, 50%, 1);
+            }
+            30% {
+                background-color: hsla(60, 100%, 50%, 1);
+            }
+            100% {
+                background-color: hsla(0, 0%, 100%, 1);
+            }
+        }
+
+        #mof {
+            padding-left: 9.375rem;
+            display: none;
+        }
+        /**
+ * Tooltip Styles
+ */
+        /* Add this attribute to the element that needs a tooltip */
+
+        [data-tooltip] {
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
+        }
+        /* Hide the tooltip content by default */
+
+        [data-tooltip]:before,
+        [data-tooltip]:after {
+            visibility: hidden;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+            opacity: 0;
+            pointer-events: none;
+        }
+        /* Position tooltip above the element */
+
+        [data-tooltip]:before {
+            position: absolute;
+            bottom: 150%;
+            left: 50%;
+            margin-bottom: 0.3125rem;
+            margin-left: -5rem;
+            padding: 0.4375rem;
+            width: 10rem;
+            -webkit-border-radius: 0.1875rem;
+            -moz-border-radius: 0.1875rem;
+            border-radius: 0.1875rem;
+            background-color: hsla(0, 0%, 0%, 1);
+            color: hsla(0, 0%, 100%, 1);
+            content: attr(data-tooltip);
+            text-align: center;
+            font-size: 0.875rem;
+            line-height: 1.2;
+        }
+        /* Triangle hack to make tooltip look like a speech bubble */
+
+        [data-tooltip]:after {
+            position: absolute;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -0.3125rem;
+            width: 0;
+            border-top: 0.3125rem solid hsla(0, 0%, 0%, 1);
+            border-right: 0.3125rem solid transparent;
+            border-left: 0.3125rem solid transparent;
+            content: " ";
+            font-size: 0;
+            line-height: 0;
+        }
+        /* Show tooltip content on hover */
+
+        [data-tooltip]:hover:before,
+        [data-tooltip]:hover:after {
+            visibility: visible;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+            opacity: 1;
+        }
+
+.rand1 {
+        border-style: solid;
+        border-width: 0.1em;
+        border-color: white;
+}
+
+#targetwrap {
+    height: 20rem;
+}
+
+#target1 {
+        background-color: hsla(0, 0%, 40%, 1); 
+        color: white;
+        border-style:solid;
+        border-width: 1px;
+        border-color: hsla(0, 0%, 80%, 1);
+        width: 100%;
+        height: 34.5rem;
+        padding: 0.5rem;
+        margin-top: 0.9rem;
+        overflow:auto;
+}
+
+    </style>
+</head>
+
+<body>
+    <noscript><p>Der N-Brief_MVZ hilft mit Textbausteinen einen Arztbrief zusammenzustellen.<br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. <br>Dieser Code wird von Ihrem Browser interpretiert. <br>Sie sehen diesen Text, weil Javascript in Ihrem Browser deaktiviert ist. Erwägen Sie bitte, Javascript zu aktivieren. <br>Der N-Brief_MVZ braucht einen neuen Browser, am besten funktioniert er mit Firefox 45 oder neuer<br>
+<br>Emanuil Giuris<br>giuris@gmail.com<br><br>N-Brief_MVZ 1.2, Letzte Aktualisierung: 11.04.2020</p></noscript>
+    <div id="topBar">
+        <button class="bt1" onclick="ez1()">Arztbrief</button>
+        <button class="bt1" onclick="ez4()">Hilfe</button>
+        <button class="bt1" onclick="ez2()">Rechner / Skalen</button>
+        <button class="bt1" onclick="ez3()">Markdown-Edit</button>
+        <span id="mof">Ist der Patient Mann oder Frau?</span>
+    </div>
+
+    <div id="zweit" class="wrap2">
+
+        <h3>Skalen und Rechner</h3>
+        <div class="fleft" id="panelSkalen">
+            <button class="bt1" onclick="showGfr()">GFR</button><br><br>
+            <button class="bt1" onclick="showLdopa()">L-Dopa-Dosis</button><br><br>
+            <button class="bt1" onclick="showAlc()">Alkohol</button><br><br>
+            <button class="bt1" onclick="showBMI()">BMI</button><br><br>
+        </div>
+
+        <div class="fcenter" id="Skalen">
+
+            <div class="wrap2 wrap2_2" id="Gfr1">
+                <h4>GFR</h4>
+                <fieldset>
+                    <form id="gfr">
+                        <table class="gfrtable">
+                            <tr>
+                                <th>Kreatinin<br>mg/dl</th>
+                                <th>Alter<br>(Jahre)</th>
+                                <th>Geschlecht</th>
+                                <th>Hautfarbe</th>
+                                <th>GFR nach MDRD</th>
+                            </tr>
+                            <tr>
+                                <td><label for="a"></label>
+                                    <select id="a" onfocus="this.form.a.value='1'">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        </select>
+
+                                    <label for="b"><b>,</b></label>
+                                    <select id="b" onfocus="this.form.b.value='0'">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        </select></td>
+                                <td><label for="c"></label>
+                                    <input type="number" id="c" name="c" value="60" min="18" max="99" onfocus="this.form.c.value='65'">
+                                    <output name="x" for="a, b"></output>
+                                </td>
+                                <td><label for="geschlecht"></label>
+                                    <input type="radio" name="geschlecht" value="mann" checked>Mann<br>
+                                    <input type="radio" name="geschlecht" value="frau">Frau</td>
+                                <td><label for="farbe"></label>
+                                    <input type="radio" name="farbe" value="weiss" checked="checked">Nicht schwarz<br>
+                                    <input type="radio" name="farbe" value="schwarz">Schwarz</td>
+                                <td><span class="gfrclass" id="gfrp"></span><span> ml/min/1,73 m<sup>2</sup></span>
+                                    <br><br><button type="button" class="bt1" onclick="gfrCalc()">GFR</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </fieldset>
+            </div>
+
+
+            <div class="wrap2 wrap2_2" id="bmi">
+                <h4>Body Mass Index</h4>
+                <fieldset>
+                    <form id="bmi_form">
+                        <table class="gfrtable">
+                            <tr>
+                                <th>Körpergewicht<br>kg</th>
+                                <th>Körpergröße<br>cm</th>
+                                <th>BMI</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="number" id="koerpergewicht" name="koerpergewicht" min="30" max="299">
+                                </td>
+                                <td>
+                                    <input type="number" id="koerpergroesse" name="koerpergroesse" min="100" max="230">
+                                </td>
+                                <td><span class="gfrclass" id="bmi_1"></span><span>   kg/m<sup>2</sup></span>
+                                    <br><br><button type="button" class="bt1" onclick="bmiCalc()">BMI</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </fieldset>
+            </div>
+
+
+
+
+
+
+            <div class="wrap2 wrap2_2" id="alcohol">
+                <h4>Von Promille zur Alkoholmenge</h4>
+                <fieldset>
+                    <form id="alc">
+                        <table class="gfrtable">
+                            <tr>
+                                <th>Promille<br>Alkohol mg/Blut g</th>
+                                <th>Geschlecht</th>
+                                <th>Gewicht<br>kg</th>
+                                <th>Vergangene Stunden</th>
+                            </tr>
+                            <tr>
+                                <td><label for="pm10"></label>
+                                    <select id="pm10" onfocus="this.form.pm10.value='1'">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+
+                                    <label for="pm01"><b>,</b></label>
+                                    <select id="pm01" onfocus="this.form.pm01.value='0'">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        </select></td>
+                                        
+                                <td><label for="geschlecht"></label>
+                                    <input type="radio" name="geschlecht" value="mann" checked>Mann<br>
+                                    <input type="radio" name="geschlecht" value="frau">Frau</td>
+                                
+                                <td><label for="gewicht"></label>
+                                    <input type="number" id="gewicht" name="gewicht" value="80" min="40" max="150" onfocus="this.form.gewicht.value='80'">
+                                    <output name="x" for="a, b"></output>
+                                </td>
+                                    <td><label for="stunden"></label>
+                                        <select id="stunden" onfocus="this.form.stunden.value='1'">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                        </select>
+                                    
+                                    <td><p class="alcoholmenge1class" id="alcoholmenge1"></p><br><br>
+                                    <button type="button" class="bt1" onclick="alcCalc()">Alkohol</button><br><br><span>Berechnung nach der Widmark-Formel</span>
+                                    </td>
+                            </tr>
+                        </table>
+                    </form>
+                </fieldset>
+            </div>
+
+
+            <div class="wrap2 wrap2_2" id="levodopa">
+                <h4>Levodopa-Äquivalenzdosis</h4>
+                <fieldset>
+                    <form id="levodopaEqDosis">
+                        <table class="ldopatable">
+                            <tr>
+                                <th>Substanz</th>
+                                <th>Dosis (mg)</th>
+                                <th>Konversionsfaktor</th>
+                            </tr>
+                            <tr>
+                                <td>Levodopa</td>
+                                <td><input type="number" id="Levodopa" name="Levodopa" min="0" max="2000" value="0" step="25" onfocus="this.form.Levodopa.value='99 '"></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Levodopa ret</td>
+                                <td><input type="number" id="Levodopa_ret" name="Levodopa_ret" min="0" max="2000" value="0" step="25" onfocus="this.form.Levodopa_ret.value=' '"></td>
+                                <td>0,75</td>
+                            </tr>
+                            <tr>
+                                <td>Duodopa</td>
+                                <td><input type="number" id="Duodopa" name="Duodopa" value="0" min="0" max="2000" step="10" onfocus="this.form.Duodopa.value=''"></td>
+                                <td>1,1</td>
+                            </tr>
+                            <tr>
+                                <td>Levodopa_Entacapon</td>
+                                <td><input type="number" id="Levodopa_Entacapon" name="Levodopa_Entacapon" value="0" min="0" max="2000" step="25" onfocus="this.form.Levodopa_Entacapon.value=''"></td>
+                                <td>1,33</td>
+                            </tr>
+                            <tr>
+                                <td>Pramipexolsalz</td>
+                                <td><input type="number" id="Pramipexolsalz" name="Pramipexolsalz" value="0" min="0" max="5" step="0.375" onfocus="this.form.Pramipexolsalz.value=''"></td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Ropinirol</td>
+                                <td><input type="number" id="Ropinirol" name="Ropinirol" value="0" min="0" max="20" step="1" onfocus="this.form.Ropinirol.value=''"></td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>Rotigotin</td>
+                                <td><input type="number" id="Rotigotin" name="Rotigotin" value="0" min="0" max="100" step="1" onfocus="this.form.Rotigotin.value=''"></td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Piribedil</td>
+                                <td><input type="number" id="Piribedil" name="Piribedil" value="0" min="0" max="1000" step="25" onfocus="this.form.Piribedil.value=''"></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Rasagilin</td>
+                                <td><input type="number" id="Rasagilin" name="Rasagilin" value="0" step="" onfocus="this.form.Rasagilin.value=''"></td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Amantadin</td>
+                                <td><input type="number" id="Amantadin" name="Amantadin" value="0" min="0" max="500" step="50" onfocus="this.form.Amantadin.value=''"></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Apomorphin</td>
+                                <td><input type="number" id="Apomorphin" name="Apomorphin" value="0" min="0" max="400" step="1" onfocus="this.form.Apomorphin.value=''"></td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><button type="button" class="bt1" onclick="ldopaCalc()">Levodopa-Äquivalent</button></td>
+                                <td><span class="gfrclass" id="led"></span></td>
+                                <td>mg</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp;</td>
+                                <td><button type="button" class="bt1" onclick="parkMed()">Alles löschen</button>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div id="viert" class="wrap2">
+        <div class="fleft50">
+            <h3>Hilfe</h3>
+            <p>Der N-Brief_MVZ hilft mit Textbausteinen.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt.<br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formattierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der N-Brief_MVZ funktioniert am besten mit Firefox, Version mindestens 50. <br>Emanuil Giuris<br>giuris@gmail.com<br><br>N-Brief_MVZ 1.2, Letzte Aktualisierung: 11.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/N-Brief/">N-Brief-Website</a><br></p>
+        </div>
+        <div class="fright50">
+            <h3>Tastenkombinationen</h3> Die folgenden Tastenkombinationen gelten in den meisten Windows-Anwendungen.<br>Sie helfen bei der Textbearbeitung.<br>Sie gelten auch für das weiße Textfeld im 'N-Brief'.
+            <h4>Kopieren, Einfügen, Finden</h4> 'Strg' + C : Die Auswahl kopieren <br>'Strg' + X : Die Auswahl ausschneiden <br>'Strg' + V : Die Auswahl einfügen <br>'Strg' + F : Suchen
+            <h4>Rückgängig</h4> 'Strg' + Z : Die vorherige Aktion rückgängig machen <br>'Strg' + Y : Die zurückgenommene Aktion wiederherstellen
+            <h4>Cursor-Bewegung</h4> 'Strg' + 'Pfeil rechts' : Cursor ein Wort nach rechts<br>'Strg' + 'Pfeil links' : Cursor ein Wort nach links<br>'Pos1' : Cursor zum Beginn der Zeile<br>'Ende' : Cursor zum Ende der Zeile<br>'Strg' + 'Pos1' : Cursor zum Beginn des Textes<br>'Strg'
+            + 'Ende' : Cursor zum Ende des Textes<br>'Tab' : Die Tab-Taste funktioniert nun normal.
+            <h4>Auswählen</h4>'Strg' + A : Den gesamten Text auswählen<br>'Umschalt' + 'Pfeil rechts' : Eine Stelle rechts vom Cursor auswählen<br>'Strg' + 'Umschalt' + 'Pfeil rechts' : Das Wort rechts vom Cursor auswählen<br>'Umschalt' + 'Pos1' : Bis zum Beginn der Zeile auswählen<br>'Umschalt'
+            + 'Ende' : Bis zum Ende der Zeile auswählen<br>'Strg' + 'Umschalt' + 'Pos1' : Bis zum Beginn des Textes auswählen<br>'Strg' + 'Umschalt' + 'Ende' : Bis zum Ende des Textes auswählen<br>Doppelklick auf ein Wort : Das Wort auswählen
+        </div>
+    </div>
+    <div id="mdedit" class="wrap2">
+        <div class="fleft50_1">
+            <button class="bt1 bt2" onclick="ed3('\r\n## Überschrift in Ebene 2\r\n\r\n#### Überschrift in Ebene 4\r\n\r\n*Kursiv*, **Fett**\r\n\r\nListe, nicht geordnet\r\n\r\n- Ein Punkt in einer ungeordneten Liste\r\n- Ein weiterer Punkt\r\n&nbsp;&nbsp;&nbsp;&nbsp;- Ein Unterpunkt, um vier Leerzeichen eingerückt\r\n&nbsp;&nbsp;&nbsp;&nbsp;- Zweiter Unterpunkt\r\n- Der dritte Punkt\r\n\r\nListe, geordnet\r\n\r\n1. Ein Punkt in einer geordneten Liste\r\n2. Ein weiterer Punkt\r\n3. Der dritte Punkt\r\n\r\nVor und nach einer Liste muss eine leere Zeile sein\r\n\r\nTabelle\r\n\r\n|   | A   | B   | C   |\r\n|---|-----|-----|-----|\r\n| M | 23 | 34 | 44  |\r\n| W | 66  | 75  | 39 |\r\n\r\nDas Zeichen | bekommen wir mit Alt+Strg+<\r\n')">Beispiel</button>
+            <button class="bt1 bt2" onclick="ed3('O<sub>2</sub>')">O<sub>2</sub></button>
+            <button class="bt1 bt2" onclick="ed3('\r\n\r\n|&nbsp;xxx&nbsp;|&nbsp;xxx&nbsp;|&nbsp;xxx&nbsp;|\r\n|--|---|--|\r\n|&nbsp;xxx&nbsp;|&nbsp;xxx&nbsp;|&nbsp;xxx&nbsp;|\r\n|&nbsp;xxx&nbsp;|&nbsp;xxx&nbsp;|&nbsp;xxx&nbsp;|\r\n')">Tabelle</button>
+            <button class="bt1 bt2" onclick="ed3('\r\n-&nbsp;xxx\r\n-&nbsp;xxx\r\n-&nbsp;xxx\r\n-&nbsp;xxx\r\n-&nbsp;xxx\r\n')">Liste -</button>
+            <button class="bt1 bt2" onclick="ed3('\r\n1. &nbsp;xxx\r\n2. &nbsp;xxx\r\n3. &nbsp;xxx\r\n4. &nbsp;xxx\r\n')">Liste 1</button>
+            <button class="bt1 bt2" onclick="runmd()">Konvert</button>
+            <!-- <button class="bt1 bt2" onclick="m2t()">M2T</button> -->
+            <!-- <button class="bt1 bt2" onclick="ddel_2()">Lösch all</button> -->
+            <textarea id="hh2" class="txtarea2">
+            </textarea>
+        </div>
+        <div id="targetwrap" class="fright50_1">
+            &nbsp;&nbsp;Formattierter Text - bearbeiten Sie den linken Textbereich
+            <div id="target1"></div>
+            </div>
+    </div>
+    <div id="erst" class="wrap2_1">
+        <div class="fleft">
+            <button class="bt1 nbblock" onclick="showAnr()">Anrede</button>
+            <button class="bt1 nbblock" onclick="showDiagn()">Diagnosen</button><br>
+            <button class="bt1 nbblock" onclick="showKlBef()">Klinischer Befund</button>
+            <button class="bt1 nbblock" onclick="showMedi()">Medikamente</button><br>
+            <button class="bt1 nbblock" onclick="showEpikr()">Epikrise/Symptome</button>
+            <button class="bt1 nbblock" onclick="showBefunde()">Apparativ</button>
+            <br><br>
+            <button class="bt1 nbblock" onclick="showMS()">Texte_A</button>
+            <button class="bt1 nbblock" onclick="showRS()">Texte_B</button><br>
+            <!-- <button class="bt1 nbblock" onclick="showDemPark()">Demenz-Parkinson</button>
+            <button class="bt1 nbblock" onclick="showKopfEpi()">Kopfschm - Epil</button><br>
+            <button class="bt1 nbblock" onclick="showGeri()">Geriatrie</button> -->
+            <hr>
+            <div class="wrap3" id="Anrede">
+                <p class="stamp">Anrede</p>
+                <button class="bt1 bttext" onclick="ed1('Sehr geehrter Herr Kollege ')" title="Sehr geehrter Herr Kollege">Herr Kollege</button>
+                <button class="bt1 bttext" onclick="ed1('Sehr geehrte Frau Kollegin ')" title="Sehr geehrte Frau Kollegin">Frau Kollegin</button><br>
+                <button class="bt1 bttext" onclick="ed1('Sehr geehrter Herr Professor ')" title="Sehr geehrter Herr Professor">Herr Professor</button>
+                <button class="bt1 bttext" onclick="ed1('Sehr geehrte Frau Professorin ')" title="Sehr geehrte Frau Professorin">Frau Professorin</button>
+                <br><br>
+                <!-- <button class="bt1 bttext" onclick="anArzt()">An Arzt/Ärztin:</button> -->
+                <form>
+                    <select id="mySelect" class="select1" size="" onKeyUp="anArzt()">
+                    <option value="Ajouri">Ajouri</option>
+                    <option value="Amthauer">Amthauer</option>
+                    <option value="Auel">Auel</option>
+                    <option value="Alles">Alles</option>
+                    <option value="Behr">Behr</option>
+                    <option value="Born">Born</option>
+                    <option value="Brönneke-Born">Brönneke-Born</option>
+                    <option value="Bucka">Bucka</option>
+                    <option value="Dippel">Dippel</option>
+                    <option value="Dürr-Hohenthanner">Dürr-Hohenthanner</option>
+                    <option value="Ebel">Ebel</option>
+                    <option value="Englisch">Englisch</option>
+                    <option value="Funck">Funck</option>
+                    <option value="Gonzoreck-Schweitzer">Gonzoreck-Schweitzer</option>
+                    <option value="Götte">Götte</option>
+                    <option value="Graumann">Graumann</option>
+                    <option value="Hagemann">Hagemann</option>
+                    <option value="Handke">Handke</option>
+                    <option value="Hejazi">Hejazi</option>
+                    <option value="Hennig">Hennig</option>
+                    <option value="Hufnagl">Hufnagl</option>
+                    <option value="Hussainy">Hussainy</option>
+                    <option value="Iwan">Iwan</option>
+                    <option value="Keimer">Keimer</option>
+                    <option value="Keymling">Keymling</option>
+                    <option value="Kolb-Fricke">Kolb-Fricke</option>
+                    <option value="Kuhl">Kuhl</option>
+                    <option value="Kirchhoff">Kirchhoff</option>
+                    <option value="Kurz">Kurz</option>
+                    <option value="Malsch">Malsch</option>
+                    <option value="Lepper">Lepper</option>
+                    <option value="Lotter">Lotter</option>
+                    <option value="Müller">Müller</option>
+                    <option value="Müller-Siebert">Müller-Siebert</option>
+                    <option value="Nachtmann">Nachtmann</option>
+                    <option value="Neumann-Haefelin">Neumann-Haefelin</option>
+                    <option value="Saure">Saure</option>
+                    <option value="Schäfer">Schäfer</option>
+                    <option value="Schell">Schell</option>
+                    <option value="Schieren">Schieren</option>
+                    <option value="Schiller">Schiller</option>
+                    <option value="Schmidt">Schmidt</option>
+                    <option value="Schmidtlein">Schmidtlein</option>
+                    <option value="Schweitzer">Schweitzer</option>
+                    <option value="Semm">Semm</option>
+                    <option value="Sgraja">Sgraja</option>
+                    <option value="Vargas-Leal">Vargas-Leal</option>
+                    <option value="Vogelpohl">Vogelpohl</option>
+                    <option value="von Manteuffel">von Manteuffel</option>
+                    </select>
+                </form><br>
+            </div>
+
+
+
+            <div class="wrap3" id="ICD-Diagnosen">
+                <p class="stamp">ICD Diagnosen</p>
+                <form>
+                    <select id="icd-diagnosen" class="select1 select2" size="" onKeyUp="icddiagn()">
+                <option value="Adipositas">Adipositas</option><br>
+                <option value="Alkoholkrankheit">Alkoholkrankheit</option>
+                <option value="Arterielle Hypertonie">Art. Hypertonie</option><br>
+                <option value="Bandscheibenvorfall">Bandscheibenvorfall</option><br>
+                <option value="COPD Stadium">COPD</option>
+                <option value="Delir">Delir</option><br>
+                <option value="Demenz, leicht, mittelschwer, schwer">Demenz</option>
+                <option value="Depression">Depression</option><br>
+                <option value="Diabetes mellitus Typ 1 2">DM</option>
+                <option value="Epileptischer Anfall, generalisiert tonisch-klonisch, komplex-fokal, fokal, nicht-konvulsiv, Status epilepticus">Epil. Anfall</option><br>
+                <option value="Periphere Fazialisparese rechts links">Fazialisparese</option><br>
+                <option value="Funktionelle Körperbeschwerden">Funktionell</option>
+                <option value="Gutartiger Lagerungsschwindel des hinteren Bogengangs rechts links">Lagerungsschwindel</option><br>
+                <option value="Harnwegsinfekt">Harnwegsinfekt</option>
+                <option value="Herzinsuffizienz NYHA Stadium ">Herzinsuffizienz</option>
+                <option value="Hirnblutung ca.  x cm rechts links">Hirnblutung</option><br>
+                <option value="Hirninfarkt im Stromgebiet der A. cerebri media posterior anterior rechts links">Hirninfarkt</option>
+                <option value="Hyperlipidämie">Hyperlipidämie</option><br>
+                <option value="Hypothyreose">Hypothyreose</option><br>
+                <option value="Guillain-Barré-Syndrom">Guillain-Barré-Syndrom</option><br>
+                <option value="Idiopathisches Parkinson-Syndrom">Parkinson</option>
+                <option value="Infarkt im Hirnstamm Kleinhirn rechts links">Hirnstamm-Kleinhirn</option><br>
+                <option value="Koronare Herzkrankheit">KHK</option>
+                <option value="Migräne mit ohne Aura">Migräne</option><br>
+                <option value="Multiple Sklerose, schubförmig, sekundär primär progredient, EDSS ">Multiple Sklerose</option><br>
+                <option value="Myasthenia gravis">Myasthenia gravis</option><br>
+                <option value="Niereninsuffizienz Stadium">Niereninsuffizienz</option>
+                <option value="Neuritis vestibularis rechts links">Neuritis vestibularis</option>
+                <option value="Pneumonie">Pneumonie</option><br>
+                <option value="Radikulopathie C6 C7 L5 S1 rechts links ">Radikulopathie</option><br>
+                <option value="Kopfschmerzen vom Spannungstyp">Spannungskopfschmerzen</option>
+                <option value="Spinalkanalstenose, lumbal, zervikal">Spinalkanalstenose</option>
+                <option value="Subarachnoidalblutung Hunt Hess mit Ventrikeleinblutung">SAB</option>
+                <option value="Transiente globale Amnesie">TGA</option><br>
+                <option value="Transitorisch-ischämische Attacke">TIA</option>
+                <option value="Vorhofflimmern, Erstdiagnose, ohne unter Antikoagulation mit">VHF</option><br>
+                <option value="Z.n.">Z.n.</option>
+                </select></form>
+                <br>
+            </div>
+
+
+
+
+
+
+
+            <div class="wrap3" id="Diagnosen">
+                <p class="stamp">Diagnosen</p>
+                <form>
+                    <select id="diagnosen" class="select1 select2" size="" onKeyUp="diagn()">
+                <option value="Adipositas">Adipositas</option><br>
+                <option value="Alkoholkrankheit">Alkoholkrankheit</option>
+                <option value="Arterielle Hypertonie">Art. Hypertonie</option><br>
+                <option value="Bandscheibenvorfall">Bandscheibenvorfall</option><br>
+                <option value="COPD Stadium">COPD</option>
+                <option value="Delir">Delir</option><br>
+                <option value="Demenz, leicht, mittelschwer, schwer">Demenz</option>
+                <option value="Depression">Depression</option><br>
+                <option value="Diabetes mellitus Typ 1 2">DM</option>
+                <option value="Epileptischer Anfall, generalisiert tonisch-klonisch, komplex-fokal, fokal, nicht-konvulsiv, Status epilepticus">Epil. Anfall</option><br>
+                <option value="Periphere Fazialisparese rechts links">Fazialisparese</option><br>
+                <option value="Funktionelle Körperbeschwerden">Funktionell</option>
+                <option value="Gutartiger Lagerungsschwindel des hinteren Bogengangs rechts links">Lagerungsschwindel</option><br>
+                <option value="Harnwegsinfekt">Harnwegsinfekt</option>
+                <option value="Herzinsuffizienz NYHA Stadium ">Herzinsuffizienz</option>
+                <option value="Hirnblutung ca.  x cm rechts links">Hirnblutung</option><br>
+                <option value="Hirninfarkt im Stromgebiet der A. cerebri media posterior anterior rechts links">Hirninfarkt</option>
+                <option value="Hyperlipidämie">Hyperlipidämie</option><br>
+                <option value="Hypothyreose">Hypothyreose</option><br>
+                <option value="Guillain-Barré-Syndrom">Guillain-Barré-Syndrom</option><br>
+                <option value="Idiopathisches Parkinson-Syndrom">Parkinson</option>
+                <option value="Infarkt im Hirnstamm Kleinhirn rechts links">Hirnstamm-Kleinhirn</option><br>
+                <option value="Koronare Herzkrankheit">KHK</option>
+                <option value="Migräne mit ohne Aura">Migräne</option><br>
+                <option value="Multiple Sklerose, schubförmig, sekundär primär progredient, EDSS ">Multiple Sklerose</option><br>
+                <option value="Myasthenia gravis">Myasthenia gravis</option><br>
+                <option value="Niereninsuffizienz Stadium">Niereninsuffizienz</option>
+                <option value="Neuritis vestibularis rechts links">Neuritis vestibularis</option>
+                <option value="Pneumonie">Pneumonie</option><br>
+                <option value="Radikulopathie C6 C7 L5 S1 rechts links ">Radikulopathie</option><br>
+                <option value="Kopfschmerzen vom Spannungstyp">Spannungskopfschmerzen</option>
+                <option value="Spinalkanalstenose, lumbal, zervikal">Spinalkanalstenose</option>
+                <option value="Subarachnoidalblutung Hunt Hess mit Ventrikeleinblutung">SAB</option>
+                <option value="Transiente globale Amnesie">TGA</option><br>
+                <option value="Transitorisch-ischämische Attacke">TIA</option>
+                <option value="Vorhofflimmern, Erstdiagnose, ohne unter Antikoagulation mit">VHF</option><br>
+                <option value="Z.n.">Z.n.</option>
+                </select></form>
+                <br>
+            </div>
+            <div class="wrap3" id="Epikrise">
+                <p class="stamp">Epikrise</p>
+                <button class="bt1 bttext" onclick="ed1('Vorläufiger Arztbrief\r\n\r\nAm Datum ca. Uhrzeit merkte ' + der_Patient + ', dass \r\nAm Datum ca. Uhrzeit wurde ' + der_Patient + ' vorgefunden. \r\n' + Der_Patient + ' wurde durch den Rettungsdienst gebracht. \r\n' + Der_Patient + ' stellte sich am Datum in der Notaufnahme vor. \r\n' + Er + ' klagt über xxx seit xxx Stunden Tagen Wochen. \r\n' + Der_Patient + ' berichtet, dass ' + er + ' \r\nDie Angehörigen berichten dass, \r\n')">Anamnese</button>
+                <button class="bt1 bttext" onclick="ed1('Die klinische Untersuchung deckte kein neurologisches Defizit auf. \r\nIn der klinischen Untersuchung war ' + der_Patient + ' wach, orientiert und hatte xxx. \r\n\r\nSchädel-CT, Schädel-MRT, EKG, EEG, Labor, waren nicht wegweisend. \r\n\r\nDie CT-Angiographie der hirnversorgenden Gefäße zeigte keinen Verschluss eines großen Gefäßes. einen Verschluss der A. cerebri media basilaris carotis int. \r\n\r\nDas Schädel-CT zeigte\r\nkeine frische Ischämie oder Blutung. \r\neinen Hirninfarkt im Stromgebiet der Arteria cerebri media posterior anterior rechts links \r\nDas Schädel-CT zeigte Marklagerveränderungen einen Hirninfarkt eine Blutung. \r\nDas Schädel-MRT zeigte \r\nDas Labor war im Normbereich zeigte \r\nDie transthorakale Echokardiographie zeigte keine Emboliequelle. \r\nDie transösophageale Echokardiographie zeigte keine Emboliequelle. \r\nDer Ultraschall der hirnversorgenden Gefäße zeigte Plaques und geringgradige Stenose der Karotiden. \r\nDie Elektrophysiologie\r\nwar regelrecht\r\nwaren regelrecht. wegweisend. \r\nWährend der Monitor-Überwachung von Datum bis Datum stellten wir kein Vorhofflimmern fest. \r\nIm Laufe des stationären Aufenthaltes \r\n')">Befunde</button>
+                <button class="bt1 bttext" onclick="ed1('\r\n' + Der_Patient + ' lebte bisher zu Hause, arbeitete als xxx und konnte sich selbst versorgen. \r\n' + Der_Patient + ' lebte bisher im Heim, hatte Pflegegrad . \r\n' + Er + ' konnte sich teilweise selbst versorgen. ' + Er + ' war ohne Hilfsmittel am Rollator am Stock gehfähig. ' + Er + ' war auf einen Rollstuhl angewiesen. ' + Er + ' war harninkontinent harnkontinent. \r\n' + Der_Patient + ' ist ' + Nichtraucher + ' raucht xxx Zigaretten täglich (xxx Packungsjahre) und trinkt keinen Alkohol xxx Glas Wein Bier täglich in der Woche. \r\nEs gibt eine Vorsorgevollmacht (bevollmächtigt: ) und eine Patientenverfügung\r\n\r\n')">Psychosozial</button>
+                <button class="bt1 bttext" onclick="ed1('\r\nWir klärten ' + den_Patienten + ' über einen gesunden Lebensstil im kardiovaskulären Sinn auf. \r\nNach ausführlichen Gesprächen mit \r\nder Familie der bevollmächtigten Person (Tochter Sohn Ehemann Ehefrau ) dem gesetzlichen Betreuer () \r\nentschieden wir uns gemeinsam gemäß dem mutmaßlichen Willen ' + des_Patienten + ' \r\nfür eine rein konservative palliative Behandlung \r\nfür den Verzicht auf eine eventuelle Wiederbelebung oder Beatmung \r\nfür eine frühe Entlassung ins gewohnte Umfeld zur Vorbeugung eines Delirs.\r\nWir klärten ' + den_Patienten + ' auf, dass die Kraftfahreignung für mindestens 6 Monate nicht besteht. Danach sollte die Kraftfahreignung von einem Neurologen beurteilt werden. \r\nEine ambulante Kontrolle von xxx wird empfohlen. \r\n' + Herr + ' xxx wird am Datum in Ihre Weiterbehandlung entlassen. \r\n' + Herr + ' xxx wird am Datum gegen ärztlichen Rat entlassen. \r\nwie vereinbart in Ihre Rehabilitations-Klinik Klinik zurück verlegt. \r\nWir danken für die freundliche Übernahme. \r\nWir stehen für Fragen gerne zur Verfügung. \r\n')">Schluss</button>
+                <p class="stamp">Subjektive Symptome</p>
+                <form>
+                    <select id="symptSubj" class="select1 select2" size="" onKeyUp="symptSu()">
+                <option value="im Arm im Gesicht im Bein im Bauch in der Brust ">Arm Gesicht Bein Bauch Brust</option>
+                <option value="rechts links ">rechts links</option>
+                <option value="seit , x/ , jeweils für - , mit Stärke  (in der Skala 0-10, 10 ist am stärksten), mit Linderung durch , Verschlimmerung durch . ">seit, Dauer, Häufigkeit, Stärke, Linderung, Verschlimmerung</option>
+                <option value="Angst ">Angst</option>
+                <option value="Bewusstseinsverlust ">Bewusstseinsverlust</option>
+                <option value="Doppeltsehen ">Doppeltsehen</option>
+                <option value="Erbrechen ">Erbrechen</option>
+                <option value="Kopfschmerzen ">Kopfschmerzen</option>
+                <option value="Kribbeln ">Kribbeln</option>
+                <option value="Luftnot ">Luftnot</option>
+                <option value="Niedergeschlagenheit ">Niedergeschlagenheit</option>
+                <option value="Ohnmacht ">Ohnmacht</option>
+                <option value="Rückenschmerzen ">Rückenschmerzen</option>
+                <option value="Schmerz ">Schmerz</option>
+                <option value="Schwäche ">Schwäche </option>
+                <option value="Schwierigkeit beim Erinnern ">Schwierigkeit beim Erinnern</option>
+                <option value="Schwierigkeit beim Gehen ">Schwierigkeit beim Gehen</option>
+                <option value="Schwierigkeit beim Schlucken ">Schwierigkeit beim Schlucken</option>
+                <option value="Schwierigkeit beim Sehen ">Schwierigkeit beim Sehen</option>
+                <option value="Schwierigkeit beim Sprechen ">Schwierigkeit beim Sprechen</option>
+                <option value="Schwierigkeit mit dem Wasserlassen ">Schwierigkeit mit dem Wasserlassen</option>
+                <option value="Schwindel ">Schwindel</option>
+                <option value="Taubheitsgefühl ">Taubheitsgefühl</option>
+                <option value="Übelkeit ">Übelkeit</option>
+                <option value="Verschwommensehen ">Verschwommensehen</option>
+                <option value="Zittern ">Zittern</option>
+                <option value="Zuckungen ">Zuckungen</option>
+                </select>
+                </form>
+                <p class="stamp">Objektive Symptome</p>
+                <form>
+                    <select id="symptObj" class="select1 select2" size="" onKeyUp="symptOb()">
+    <option value="Aggressivität ">Aggressivität</option>
+    <option value="Aphasie, der Ausdruck das Verständnis leicht schwer beeinträchtigt ">Aphasie</option>
+    <option value="Ataxie ">Ataxie</option>
+    <option value="Aufmerksamkeitsstörung ">Aufmerksamkeitsstörung</option>
+    <option value="Auslöschungsphänomen visuell taktil ">Auslöschungsphänomen </option>
+    <option value="Babinski-Zeichen  rechts links">Babinski-Zeichen</option>
+    <option value="Blickparese  rechts links">Blickparese</option>
+    <option value="Depression ">Depression</option>
+    <option value="Diplopie ">Diplopie</option>
+    <option value="Dysarthrie ">Dysarthrie</option>
+    <option value="Erregung ">Erregung</option>
+    <option value="Faziale Parese rechts links">Faziale Parese</option>
+    <option value="Gangstörung ">Gangstörung</option>
+    <option value="Gedächtnisstörung ">Gedächtnisstörung</option>
+    <option value="Hemianopsie  rechts links">Hemianopsie </option>
+    <option value="Hemihypästhesie  rechts links">Hemihypästhesie </option>
+    <option value="Hemiparese  rechts links">Hemiparese </option>
+    <option value="Koma ">Koma</option>
+    <option value="Kopfimpulstest negativ positiv ">Kopfimpulstest</option>
+    <option value="Nystagmus ">Nystagmus</option>
+    <option value="Parese  rechts links">Parese</option>
+    <option value="Rasselgeräusche ">Rasselgeräusche</option>
+    <option value="Rigor ">Rigor</option>
+    <option value="Somnolenz ">Somnolenz</option>
+    <option value="Tremor ">Tremor</option>
+</select>
+                </form><br>
+
+            </div>
+            <div class="wrap3" id="Medikamente">
+                <p class="stamp">Medikamente</p>
+                <form>
+                    <select id="medikamente" class="select1 select2" size="" onKeyUp="medi()">
+<option value="Amlodipin 5 mg 1-0-0">Amlodipin</option>
+<option value="Apixaban 5 mg 1-0-1">Apixaban</option>
+<option value="ASS 100 mg 1-0-0">ASS</option>
+<option value="Atorvastatin 20 mg 0-0-1">Atorvastatin</option>
+<option value="Augenschutz durch Uhrglasverband, Augensalbe zur Nacht und neutrale Augentropfen tagsüber.">Augenschutz</option>
+<option value="Bisoprolol 5 mg 1-0-0">Bisoprolol</option>
+<option value="Candesartan 4 8 mg 0-0-1">Candesartan</option>
+<option value="Cefuroxim 1,5 g 1-1-1">Cefuroxim</option>
+<option value="Citalopram 20 mg 0-0-1">Citalopram</option>
+<option value="Chlortalidon 25 50 mg 0-0-1">Chlortalidon</option>
+<option value="Clopidogrel 75 mg 0-0-1">Clopidogrel</option>
+<option value="Dabigatran 110 mg 1-0-1">Dabigatran</option>
+<option value="Digitoxin 0,07 mg 1-0-0">Digitoxin</option>
+<option value="Digoxin 0,25 mg 1-0-0">Digoxin</option>
+<option value="Enalapril 10 mg 1-0-1">Enalapril</option>
+<option value="Enoxaparin 0,4 ml s. c. 0-0-1">Enoxaparin</option>
+<option value="Furosemid 20 mg 1-0-0">Furosemid</option>
+<option value="HCT 25 mg 1-0-0">HCT</option>
+<option value="Ibuprofen 400 mg 1-1-1">Ibuprofen</option>
+<option value="Insulin glargin (Lantus) (Abasaglar) I. E. s. c. 0-0-10">Insulin glargin</option>
+<option value="L-Thyroxin 100 µg 1-0-0">L-Thyroxin</option>
+<option value="Lacosamid 100 mg 1-0-1">Lacosamid</option>
+<option value="Lamotrigin 50 100 mg 1-0-1">Lamotrigin</option>
+<option value="Levetiracetam 1000 mg 1-0-1">Levetiracetam</option>
+<option value="Lercanidipin 10 mg 1-0-0">Lercanidipin</option>
+<option value="Levodopa 100/25 mg 1-1-1">Levodopa</option>
+<option value="Lorazepam 1 mg 1-1-1">Lorazepam</option>
+<option value="Metamizol 500 mg 1-1-1-1">Metamizol</option>
+<option value="Metformin 1000 mg 1-0-1">Metformin</option>
+<option value="Metoprolol 47,5 95 mg 1-0-0">Metoprolol</option>
+<option value="Moxonidin 0,3 mg 1-0-0">Moxonidin</option>
+<option value="Morphin 2,5 mg s. c. 1-1-1-1">Morphin</option>
+<option value="Mirtazapin 30 mg 0-0-1">Mirtazapin</option>
+<option value="Pantoprazol 40 mg 1-0-0">Pantoprazol</option>
+<option value="Paracetamol 500 mg 1-1-1">Paracetamol</option>
+<option value="Phenprocoumon 3 mg nach INR (Ziel 2-3)">Phenprocoumon</option>
+<option value="Pipamperon Saft (4 mg/ml) 6 ml 0-0-1">Pipamperon</option>
+<option value="Prednisolon 60 mg 1-0-0 bis Datum, danach täglich um 10 mg reduzieren">Prednisolon</option>
+<option value="Quetiapin 25 mg 1-0-0">Quetiapin</option>
+<option value="Ramipril 5 mg 1-0-0">Ramipril</option>
+<option value="Risperidon 1 mg 0-0-1">Risperidon</option>
+<option value="Rivaroxaban 20 mg 1-0-0">Rivaroxaban</option>
+<option value="Simvastatin 20 mg 0-0-1">Simvastatin</option>
+<option value="Sitagliptin 100 mg 1-0-0">Sitagliptin</option>
+<option value="Spironolacton 50 mg 1-0-0">Spironolacton</option>
+<option value="Tilidin 50 mg 1-1-1">Tilidin</option>
+<option value="Torasemid 5 mg 1-0-0">Torasemid</option>
+<option value="Trospiumchlorid (Spasmex) 15 mg 1-1-1">Trospiumchlorid (Spasmex)</option>
+<option value="Valproat 500 mg 1-0-1">Valproat</option>
+<option value="Vitamin B1 100 mg 1-0-0">Vitamin B1</option>
+<option value="Vitamin D 1000 I. E. 1-0-0">Vitamin D</option>
+</select>
+                </form>
+
+            </div>
+            <div class="wrap3" id="Klinischer_Befund">
+                <p class="stamp">Klinischer Befund</p>
+                <button class="bt1 bttext" onclick="ed1('Wach, kooperativ, aufmerksam, orientiert.\r\nWach, kooperativ, aufmerksam, zeitlich, örtlich orientiert, nennt ' + sein + ' Geburtsdatum, ' + sein + ' Alter, den laufenden Monat, erinnert sich an 3 Wörter nach 3 Minuten, rechnet korrekt 3 + 4, 20 - 3, zählt rückwärts von 20 bis 10.\r\nMerkfähigkeit, Stimmung normal.\r\nSprachverständnis, sprachlicher Ausdruck normal, Artikulation normal.\r\nAugen: Bewegung, Pupillen, Gesichtsfelder fingerperimetrisch normal. Kein pathologischer Nystagmus.\r\nSehkraft ohne mit Brille R und L mindestens Fingerzählen xxx mm große Buchstaben Zahlen in Leseentfernung.\r\nSehkraft ohne mit Brille R mindestens Fingerzählen xxx mm L xxx mm große Buchstaben Zahlen in Leseentfernung.\r\nFundoskopisch keine Stauungspapille bds.\r\nMimik normal, die Zunge wird geradeaus herausgestreckt, der weiche Gaumen hebt sich symmetrisch. \r\nHören von Fingerreiben beiderseits normal. Kein Meningismus.\r\nArmhalteversuch, Beinhalteversuch, Kraft, Muskeltrophik, Muskeltonus, Muskeldehnungsreflexe lebhaft/mittellebhaft/schwach, stgl., Plantarreflex normal.\r\nFinger-Nase-Versuch, Knie-Hacke-Versuch o. B.\r\nKein Tremor, keine unwillkürlichen Bewegungen.\r\nDie schnellen repetitiven Bewegungen der Hände der Füße sind normal unbeholfen arrythmisch.\r\nAlgesie, Ästhesie normal.\r\nLagesinn im Zeigefinger im Handgelenk im Ellenbogen im großen Zeh im Sprunggelenk normal fehlend.\r\nVibrationssinn im Zeigefinger /8 im Malleolus medialis /8 und im großen Zeh /8.\r\nZwei-Punkt-Diskrimination an der Fingerbeere des Zeigefingers mm.\r\nUnterscheidung spitz-stumpf an den Fußsohlen normal fehlend.\r\nLagerungsmanöver für den rechten linken vertikalen Bogengang negativ positiv.\r\nLagerungsmanöver für den rechten linken horizontalen Bogengang negativ positiv.\r\nKopfimpulstest normal positiv für eine Läsion des rechten linken Gleichgewichtsorgans.\r\nStehen und Gehen normal, Einbeinstand, Rombergversuch, Zehen- und Hackengang, Strichgang, Aufstehen vom Stuhl, Steigen auf eine Treppenstufe mit jedem Bein normal.\r\nAllgemeinzustand gut, Ernährungszustand gut. Haut und Schleimhäute normal. Lunge auskultatorisch normales Atemgeräusch, Herzaktion rhythmisch, keine Herzgeräusche, Bauch weich mit Darmgeräuschen, keine Ödeme, große Gelenke frei beweglich, Wirbelsäule ohne Klopfschmerz.\r\nLasègue-Zeichen negativ positiv.\r\nUmgekehrtes Lasègue-Zeichen negativ positiv.\r\nGroße Gelenke frei beweglich.\r\nHüftaußenrotation und Hüftinnenrotation schmerzfrei.\r\nHWS LWS ohne Klopf- oder Druckschmerz.\r\nPhalen-Test negativ positiv.\r\nTinel-Zeichen des N. medianus ulnaris peroneus negativ positiv.\r\nGleichgewichts-Reflexe normal.\r\nSchmerz in xxx wird ausgelöst durch Druck auf  durch passive Armabduktion R L Armaußenrotation R L Hüftaußenrotation R L Hüftinnenrotation R L.\r\nRR / mmHg, Herzfrequenz /min, Temperatur 36, °C, SpO2 xxx % bei Raumluft.\r\n')">Befund</button>
+                <button class="bt1 bttext" onclick="ed1('Schulterblattstabilisierung durch Serratus ant. R normal schwach L normal schwach, Schulterhebung R  L , Armabduktion R  L , Armadduktion R  L , Arminnenrotation R  L , Armaußenrotation R  L , Armbeugung R  L , Armstreckung R  L , Unterarmpronation R  L , Unterarmsupination R  L , Handbeugung R  L , Handstreckung R  L , Fingerstreckung R  L , Fingerbeugung R  L , Abduktion der Finger II und V R  L , Beugung der MCP-Gelenke R  L , Streckung der MCP-Gelenke R  L , Beugung der IP-Gelenke R  L , Streckung der IP-Gelenke R  L  nach MRC.\r\nHüftbeugung R  L , Hüftstreckung R  L , Hüftinnenrotation R  L , Hüftaußenrotation R  L , Kniebeugung R  L , Kniestreckung R  L , Fußhebung R  L , Fußsenkung R  L , Fußpronation R  L , Fußsupination R  L , Zehenstreckung R  L , Zehenbeugung R  L  nach MRC.\r\n\r\n--- Ohne MRC-Grad ---\r\nSchulterblattstabilisierung durch Serratus ant. normal, Schulterhebung, Armabduktion, Armadduktion, Arminnenrotation, Armaußenrotation, Armbeugung, Armstreckung, Unterarmpronation, Unterarmsupination, Handbeugung, Handstreckung, Fingerstreckung, Fingerbeugung, Abduktion der Finger II und V, Beugung der MCP-Gelenke, Streckung der MCP-Gelenke, Beugung der IP-Gelenke, Streckung der IP-Gelenke.\r\nHüftbeugung, Hüftstreckung, Hüftinnenrotation, Hüftaußenrotation, Kniebeugung, Kniestreckung, Fußhebung, Fußsenkung, Fußpronation, Fußsupination, Zehenstreckung, Zehenbeugung.\r\n\r\nMuskelatrophie in Mm. biceps br. triceps br. kleinen Handmuskeln Thenar quadriceps femoris gastrocnemius tibialis ant. R L.\r\nHautregion ohne Schweiß:  R L. \r\n\r\nMasseter-Reflex , BSR R  L , TSR R  L , PSR R  L , ASR R  L  .\r\nMuskeldehnungsreflexe: (0: fehlend, 1: schwach, 2: mittellebhaft, 3: lebhaft ohne Klonus, 4: mit Klonus)\r\n\r\nLasègue-Zeichen R bei Grad  positiv L bei Grad  positiv. \r\nUmgekehrtes Lasègue-Zeichen R positiv L positiv. \r\nSchmerz in xxx wird ausgelöst durch Druck auf  durch passive Armabduktion R L Armaußenrotation R L Hüftaußenrotation R L Hüftinnenrotation R L \r\n\r\nPassiver Bewegungsumfang\r\n\r\nSchultergelenk\r\nAbduktion - Adduktion (Frontalebene): R -- L -- (Normal: 180-0-30)\r\nArm vorwärts - rückwärts (Sagittalebene): R -- L -- (Normal: 160-0-40)\r\nArmaußenrotation - Arminnenrotation: R -- L -- (Normal: 60-0-75)\r\n\r\nEllenbogen\r\nStreckung - Beugung: R -- L -- (Normal: 10-0-135) \r\n\r\nHandgelenk\r\nStreckung - Beugung: R -- L -- (Normal: 50-0-60)\r\n\r\nHüftgelenk\r\nStreckung - Beugung: R -- L -- (Normal: 5-0-130)\r\nAbduktion - Adduktion: R -- L -- (Normal: 40-0-30)\r\nAußen- und Innenrotation in Beugung von 90 Grad: R -- L -- (Normal: 40-0-40)\r\n\r\nKniegelenk\r\nStreckung - Beugung: R -- L -- (Normal: 5-0-130)\r\n\r\nOberes Sprunggelenk \r\nHebung - Senkung: R -- L -- (Normal: 20-0-40)\r\n')">Peripher</button><br>
+                <button class="bt1 bttext" onclick="ed1(Der_Patient + ' liegt im Bett, atmet spontan wird über eine Beatmungsmaske einen endotrachealen Tubus ein Tracheostoma CPAP- BIPAP- beatmet.\r\nDie Augen sind offen geschlossen, ' + er + ' reagiert nicht auf Ansprache und Berührung. Nach mäßigem Schmerzreiz bewegt ' + er + ' Arme Beine rechts links symmetrisch.\r\nNach passivem Öffnen der Augen nimmt ' + er + ' keinen Blickkontakt auf, die Augen sind parallel, der okulozephale Reflex, horizontal und vertikal, ist auslösbar. Eine Blickparese rechts links ist beim okulozephalen Reflex erkennbar. Der Kornealreflex ist bds. rechts links nicht auslösbar. Die Pupillen sind entrundet rund und gleich groß, ca. xxx mm, und reagieren auf Licht. Der Muskeltonus in Armen und Beinen ist schlaff erhöht rechts links geringer. Die Muskeldehnungsreflexe lassen sich nicht lebhaft auslösen. Es sind keine unwillkürlichen Bewegungen Zuckungen im Gesicht im Arm im Bein rechts links zu sehen. Der Plantarreflex ist stumm normal. Babinski-Zeichen rechts links. \r\nGlasgow-Coma-Scale: --. \r\n')">Koma</button>
+                <button class="bt1 bttext" onclick="ed1('Lagerungsmanöver für den rechten linken vertikalen Bogengang negativ positiv.\r\nLagerungsmanöver für den rechten linken horizontalen Bogengang negativ positiv.\r\nKopfimpulstest normal positiv für eine Läsion des rechten linken Gleichgewichtsorgans.\r\n')">Schwindel-Befund</button><br>
+                <button class="bt1 bttext" onclick="ed1(Der_Patient + ' ist wach, freundlich, kooperativ, aufmerksam, nennt ' + sein + ' Geburtsdatum, ' + sein + ' Alter, den laufenden Monat, erinnert sich an 3 Wörter nach 3 Minuten, rechnet korrekt 3 + 4, 20 - 3, zählt rückwärts von 20 bis 10.\r\n\r\nMini-Mental-Status-Test xxx von 30 Punkten.\r\n' + Der_Patient + ' konnte xxx.\r\n\r\nDemTect xxx Punkte.\r\nFehlleistung in allen, den Bereichen xx\r\n\r\nUhren-Zeichen-Test nach Shulman\r\nBestes Ergebnis 1, ungünstigstes Ergebnis 6.\r\n' + Der_Patient + ' erzielte xxx Punkte.\r\n\r\nEine leichte Demenz ist möglich aber nicht sicher.\r\nEine Korrelation mit den Alltagsaktivitäten und eine Wiederholung der Testung wären vielleicht hilfreich.')">Neuropsychologie</button>
+                <button class="bt1 bttext" onclick="ed1('Wach, kooperativ, aufmerksam, orientiert. \r\nWach, kooperativ, aufmerksam, zeitlich, örtlich orientiert, nennt ' + sein + ' Geburtsdatum, ' + sein + ' Alter, den laufenden Monat, erinnert sich an 3 Wörter nach 3 Minuten, rechnet korrekt 3 + 4, 20 - 3, zählt rückwärts von 20 bis 10. \r\nMini-Mental-Status-Test xxx von 30 Punkten.\r\nMerkfähigkeit, Stimmung normal. \r\n'+ Rechtshaender + ' ' + Linkshaender + '. \r\nSprachverständnis, sprachlicher Ausdruck, Artikulation normal. \r\nAugen: Bewegung, Pupillen, Gesichtsfelder fingerperimetrisch normal. Kein pathologischer Nystagmus.\r\nSehkraft mit Brille R und L mindestens Fingerzählen xxx mm große Buchstaben Zahlen in Leseentfernung. \r\nSehkraft mit Brille L mindestens Fingerzählen xxx mm große Buchstaben Zahlen in Leseentfernung. \r\nFundoskopisch keine Stauungspapille bds.\r\nMimik (Stirn, Auge, Mund) normal, die Zunge wird geradeaus herausgestreckt, der weiche Gaumen hebt sich symmetrisch. Hören von Fingerreiben beiderseits normal. Kein Meningismus. \r\nArmhalteversuch, Beinhalteversuch, Kraft, Trophik, Tonus, Muskeldehnungsreflexe lebhaft/mittellebhaft/schwach, stgl., Plantarreflex normal.\r\nFinger-Nase-Versuch, Knie-Hacke-Versuch o. B. Kein Tremor, keine unwillkürlichen Bewegungen.\r\nAlgesie, Ästhesie normal.\r\nLagesinn im Zeigefinger im Handgelenk im Ellenbogen im großen Zeh im Sprunggelenk normal fehlend. Vibrationssinn im Zeigefinger /8 und im großen Zeh /8. \r\nZwei-Punkt-Diskrimination an der Fingerbeere des Zeigefingers mm. \r\nUnterscheidung spitz-stumpf an den Fußsohlen normal fehlend.\r\nLagerungsmanöver für den rechten linken vertikalen Bogengang negativ positiv.\r\nLagerungsmanöver für den rechten linken horizontalen Bogengang negativ positiv.\r\nKopfimpulstest normal positiv für eine Läsion des rechten linken Gleichgewichtsorgans.\r\nStehen und Gehen normal, Einbeinstand, Rombergversuch, Zehen- und Hackengang, Strichgang, Aufstehen vom Bett Stuhl normal. \r\n\r\nAllgemeinzustand gut, Ernährungszustand gut. Haut und Schleimhäute normal. Lunge auskultatorisch normales Atemgeräusch, Herzaktion rhythmisch, keine Herzgeräusche, Bauch weich mit Darmgeräuschen, keine Ödeme, große Gelenke frei beweglich, Wirbelsäule ohne Klopfschmerz. \r\nRR / mmHg, Herzfrequenz /min, Temperatur 36, °C, SpO2 xxx % bei Raumluft.\r\n')">Befund (Lang)</button>
+            </div>
+            <div class="wrap3" id="MS">
+                <p class="stamp">Texte_A</p>
+
+                <button class="bt1 bttext" onclick="ed1('BPLS\r\n')">BPLS</button>
+                <button class="bt1 bttext" onclick="ed1('ClusterK\r\n')">ClusterK</button>
+                <button class="bt1 bttext" onclick="ed1('CRSS\r\n')">CRSS</button>
+                <button class="bt1 bttext" onclick="ed1('CTS\r\n')">CTS</button>
+                <button class="bt1 bttext" onclick="ed1('Es handelt sich um eine leichtgradige mittelgradige Demenz, wahrscheinlich vom Alzheimer-Typ.\r\nZum Ausschluss einer behandelbaren (Mit-)Ursache der Demenz bitte ich um folgende Labordiagnostik, wenn nicht bereits durchgeführt: Blutbild, Vitamin B12 (besser Holotranscobalamin), Folsäure, Glukose, Kreatinin, Leberenzyme, Na, K, Ca, TSH, CRP.\r\nZum Ausschluss einer strukturellen Läsion habe ich zum Schädel-CT Schädel-MRT überwiesen.\r\nIch habe ein Informationsblatt mitgegeben und über vertrauenswürdige Internet-Quellen zur Demenz sowie über die Senioren-Beratung des Landkreises Hersfeld-Rotenburg informiert. Ich habe Ratschläge zum Umgang mit ' + dem_Patienten + ' gegeben, insbesondere habe ich über Milde, Akzeptanz und Erhaltung der Selbstständigkeit gesprochen.\r\n')">Demenz</button>
+                <button class="bt1 bttext" onclick="ed1('Depression\r\n')">Depression</button>
+                <button class="bt1 bttext" onclick="ed1('Epilepsie\r\n')">Epilepsie</button>
+                <button class="bt1 bttext" onclick="ed1('E_Tremor\r\n')">E_Tremor</button>
+                <button class="bt1 bttext" onclick="ed1('FunktKB\r\n')">FunktKB</button>
+                <button class="bt1 bttext" onclick="ed1('Kopfschmerz\r\n')">Kopfschmerz</button>
+                <button class="bt1 bttext" onclick="ed1('Es handelt sich um eine milde Meralgia paresthetica rechts links, es ist ein Nervenwurzelkompressions-Syndrom des N. cutaneus femoris lateralis im Leistenband. ' + Der_Patient + ' soll langes Stehen vermeiden, ebenfalls soll ' + er +  ' keine das Becken beengende Kleidung tragen.\r\nZunächst würde ich Verlaufsbeobachtung und keine weitere neurologische Diagnostik oder Behandlung empfehlen.\r\n')">Meralgia</button>
+                <button class="bt1 bttext" onclick="ed1('Migräne\r\n')">Migräne</button>
+                <button class="bt1 bttext" onclick="ed1('MS\r\n')">MS</button>
+
+            </div>
+
+            <div class="wrap3" id="RS">
+                <p class="stamp">Texte_B</p>
+                <button class="bt1 bttext" onclick="ed1('Polyneuropathie\r\n')">Polyneuropathie</button>
+                <button class="bt1 bttext" onclick="ed1('Radialis\r\n')">Radialis</button>
+                <button class="bt1 bttext" onclick="ed1('Radix_LE\r\n')">Radix_LE</button>
+                <button class="bt1 bttext" onclick="ed1('Radix_UE\r\n')">Radix_UE</button>
+                <button class="bt1 bttext" onclick="ed1('RZA\r\n')">RZA</button>
+                <button class="bt1 bttext" onclick="ed1('RLS\r\n')">RLS</button>
+                <button class="bt1 bttext" onclick="ed1('Rückenschmerz\r\n')">Rückenschmerz</button>
+                <button class="bt1 bttext" onclick="ed1('SpannungK\r\n')">SpannungK</button>
+                <button class="bt1 bttext" onclick="ed1('Spastik\r\n')">Spastik</button>
+                <button class="bt1 bttext" onclick="ed1('SpondyloseZ\r\n')">SpondyloseZ</button>
+                <button class="bt1 bttext" onclick="ed1('SpondyloseL\r\n')">SpondyloseL</button>
+                <button class="bt1 bttext" onclick="ed1('TrigeminusN\r\n')">TrigeminusN</button>
+                <button class="bt1 bttext" onclick="ed1('Ulnaris\r\n')">Ulnaris</button>
+                <button class="bt1 bttext" onclick="ed1('ÜbergebrauchK\r\n')">ÜbergebrauchK</button>
+                <button class="bt1 bttext" onclick="ed1('Zoster\r\n')">Zoster</button>
+            </div>
+            <div class="wrap3" id="Geri">
+                <p class="stamp">Geriatrie</p>
+
+                <button class="bt1 bttext btgrey" data-tooltip="Text in Vorbereitung">Geriatrie 1</button>
+                <button class="bt1 bttext btgrey" data-tooltip="Text in Vorbereitung">Geriatrie 2</button>
+                <button class="bt1 bttext btgrey" data-tooltip="Text in Vorbereitung">Geriatrie 3</button>
+                <button class="bt1 bttext btgrey" data-tooltip="Text in Vorbereitung">Geriatrie 4</button>
+            </div>
+            <div class="wrap3" id="DemPark">
+                <p class="stamp">Demenz und Parkinson</p>
+                <button class="bt1 bttext btgrey" data-tooltip="Text in Vorbereitung">Demenz</button><br>
+                <button class="bt1 bttext btgrey" data-tooltip="Text in Vorbereitung">Parkinson</button><br>
+            </div>
+            <div class="wrap3" id="KopfEpi">
+                <p class="stamp">Kopfschmerz und Epilepsie</p>
+                <button class="bt1 bttext btgrey" data-tooltip="Text in Vorbereitung">Kopfschmerz</button><br>
+                <button class="bt1 bttext btgrey" data-tooltip="Text in Vorbereitung">Epilepsie</button><br>
+            </div>
+            <div class="wrap3" id="Bef">
+                <p class="stamp">Apparative Befunde</p>
+                <button class="bt1 bttext" onclick="ed1('Grundrhythmus Hz, normale visuelle Blockade-Reaktion, keine epilepsietypischen Potentiale, keine regionale Verlangsamung. Flaches EEG\r\nÜberwiegend Beta-Wellen ca. Hz\r\nPulsartefakt\r\nElektrodenartefakt \r\nAugenartefakte\r\nMuskelartefakte \r\n\r\nPolymorphe Wellen Hz, keine unsichere visuelle Blockade-Reaktion, keine epilepsietypischen Potentiale. \r\nKomplexe aus Spitze und Welle spitze Wellen bilateral synchron alle xxx Sekunden. \r\nMTA-Notiz: wach, ansprechbar, müde, schläfrig, schnarcht, schläft, komatös, unruhig.\r\n\r\nNormalbefund.\r\n\r\nAltersentsprechender Normalbefund.\r\n\r\nBefund hinweisend auf eine leichtgradige mittelgradige schwere diffuse Hirnfunktionsstörung. \r\n\r\nBefund hinweisend auf eine erhöhte zerebrale Erregbarkeit. \r\n\r\nBefund hinweisend auf eine Funktionsstörung in der rechten linken Hirnhemisphäre. \r\n\r\nKeine pathologische Reaktion auf Hyperventilation. \r\n\r\nEs ist keine iktuale Aktivität zu beobachten.\r\n\r\nBurst-Suppression-Muster.\r\n\r\nSchlafstadium nach Rechtschaffen und Kales .\r\n')">EEG</button>
+                <button class="bt1 bttext" onclick="ed1('Motorische Neurographie\r\nN. medianus (Aufzeichnung: Thenar, Stimulation: Ellenbeuge) bds. normal\r\nN. ulnaris (Aufzeichnung: Hypothenar, Stimulation: Handgelenk sowie distal und proximal des Sulcus ulnaris) bds. normal\r\nN. tibialis (Aufzeichnung: medialer Fußrand, Stimulation: dorsal des Malleolus medialis und in der Kniekehle) bds. normal\r\nN. peroneus (Aufzeichnung: Bauch des M. tibialis anterior, Stimulation: distal und proximal des Fibulaköpfchens) bds. normal\r\n\r\nSensible Neurographie\r\nN. medianus (Aufzeichnung: Dig. II, Stimulation: Handgelenk) bds. normal\r\nN. ulnaris (Aufzeichnung: Dig. V, Stimulation: Handgelenk) bds. normal\r\nN. suralis (Aufzeichnung: dorsal des Malleolus lat., Stimulation: dorsaler Unterschenkel) bds. normal\r\n')">Neurograph-S</button>
+                <button class="bt1 bttext" onclick="ed1('Extrakraniell: Arteriosklerose. Plaques in den Karotiden.\r\nA. subclavia rechts links V.a. Stenose.\r\nA. carotis comm. bds. rechts links V.a. Stenose (lokaler Stenosegrad %).\r\nA. carotis int. bds. rechts V.a. geringgradige mittelgradige hochgradige Stenose links V.a. geringgradige mittelgradige hochgradige Stenose Verschluss kein Hinweis auf Stenose. regelrecht.\r\nA. carotis ext. bds. rechts links V.a. Stenose regelrecht. kein Hinweis auf eine Stenose.\r\nA. vertebralis bds. rechts links V.a. Stenose Verschluss regelrecht. kein Hinweis auf Stenose. V.a. Hypoplasie\r\nTransnuchal: V.a. Stenose der A. basilaris bis Tiefe  cm regelrecht.\r\nTranskraniell: A. cerebri anterior, media und posterior bds. regelrecht.\r\nTranskraniell: sonst keine ausreichenden temporalen Schallfenster.\r\nV.a. Stenose der A. cerebri media, anterior, posterior\r\nnicht darstellbar\r\nnicht beurteilbar\r\nProzente\r\n(NASCET <20%, ECST 20-30%)\r\n(NASCET <20%, ECST 30-40%)\r\n(NASCET <20%, ECST 45%)\r\n(NASCET <30%, ECST 40-50%)\r\n(NASCET <30%, ECST 50%)\r\n(NASCET 20-40%, ECST 50-60%)\r\n(NASCET 40%, ECST 60%)\r\n(NASCET 40%, ECST 65%)\r\n(NASCET 30-50%, ECST 60-70%)\r\n(NASCET 50%, ECST 70%)\r\n(NASCET 60%, ECST 75%)\r\n(NASCET 70%, ECST 80%)\r\n(NASCET 50-70%, ECST 70-80%)\r\n(NASCET 80%, ECST 90%)\r\n(NASCET 90%, ECST 95%)\r\n')">US Neuro</button>
+                <button class="bt1 bttext" onclick="ed1('Motorische Neurographie\r\n\r\nN. medianus (Aufzeichnung: Thenar, Stimulation: Ellenbeuge)\r\nBds. normal\r\nRechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nLinks\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n\r\nN. ulnaris (Aufzeichnung: Hypothenar, Stimulation: Handgelenk sowie distal und proximal des Sulcus ulnaris)\r\nBds. normal\r\nRechts\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnaris\r\nLinks\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnaris\r\n\r\nN. tibialis (Aufzeichnung: medialer Fußrand, Stimulation: dorsal des Malleolus medialis und in der Kniekehle)\r\nBds. normal\r\nRechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nLinks\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n\r\nN. peroneus (Aufzeichnung: Bauch des M. tibialis anterior, Stimulation: distal und proximal des Fibulaköpfchens)\r\nBds. normal\r\nRechts \r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\nLinks \r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n(Aufzeichnung: , Stimulation: )\r\n\r\nSensible Neurographie\r\n\r\nN. medianus (Aufzeichnung: Dig. II, Stimulation: Handgelenk)\r\nBds. normal\r\nRechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nLinks\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n\r\nN. ulnaris (Aufzeichnung: Dig. V, Stimulation: Handgelenk)\r\nBds. normal\r\nRechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nLinks\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n\r\nN. suralis (Aufzeichnung: dorsal des Malleolus lat., Stimulation: dorsaler Unterschenkel)\r\nBds. normal\r\nRechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nLinks\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n\r\nBefund hinweisend auf \r\nein leichtgradiges mittelgradiges schweres Karpaltunnelsyndrom rechts links \r\neine distal symmetrische axonale Polyneuropathie\r\nLäsion des Spinalnervs\r\ntechnisch nicht verwertbar\r\nDer Befund vom rechten linken N. peroneus bedeutet nicht zwangsläufig eine Läsion des Nervenstamms des N. peroneus oder des spinalen Nervs L5 oder S1, es kann sich um eine lokale Läsion des motorischen Astes zum M. ext. dig. brevis handeln. \r\nDie verminderte Geschwindigkeit im N. suralis bds. kann im altersentsprechenden Normbereich sein.\r\nNormalbefund.')">Neurographie</button>
+                <button class="bt1 bttext" onclick="ed1('EMG rechts links \r\nMuskeln\r\n\r\nAlle untersuchten Muskeln hatten keine pathologische Spontanaktivität, die Potentiale motorischer Einheiten erschienen normal und das Interferenzmuster war normal. \r\n\r\nNormalbefund. \r\n\r\nMuskeln\r\n\r\nDeltoideus \r\nBiceps br.\r\nBrachioradialis\r\nTriceps br.\r\nExt. dig. comm.\r\nInt. dors I\r\nPronator teres\r\nAbd. poll. longus\r\nExt. ind. proprius\r\nFlex. dig. prof. (uln.)\r\nAbd. poll. brevis \r\nOpponens poll.\r\nAbd. dig. min. manus\r\nInter. dorsalis I \r\n\r\nRectus fem.\r\nVastus med.\r\nVastus lat.\r\nTib. ant.\r\nSemimembranosus \r\nBiceps fem.\r\nGluteus med. \r\nGluteus max. \r\nPeroneus longus\r\nExt. hall. longus\r\nGastrocn. lat. \r\nGastrocn. med. \r\n\r\nPotentiale motorischer Einheiten polyphasisch normal\r\npathologische Spontanaktivität \r\nFibrillationen\r\nFaszikulationen\r\npositive scharfe Wellen\r\n\r\n\r\nAbkürzungen\r\n\r\nPMA: Potentiale motorischer Einheiten \r\nIF: Interferenzmuster\r\nWA: Willentliche Aktivität \r\nFib: Fibrillationen\r\nPSW: positive scharfe Wellen \r\nFasz: Faszikulationen \r\nKRE: komplexe repetitive Entladungen\r\n\r\nBefund hinweisend auf eine Läsion xxx \r\n')">EMG</button>
+                <button class="bt1 bttext" onclick="ed1('Somatosensible evozierte Potentiale \r\nN. medianus (Aufzeichnung: Handgelenk, Stimulation: 2 cm hinter C3/C4)\r\nBds. normal\r\nRechts normal verzögert, links normal verzögert\r\nN. tibialis (Aufzeichnung: Malleolus med., Stimulation: 2 cm hinter Cz)\r\nBds. normal\r\nRechts normal verzögert, links normal verzögert\r\n')">SEP</button>
+                <button class="bt1 bttext" onclick="ed1('Vorhofflimmern Sinusrhythmus /min, Indifferenztyp, Linkstyp, Rechtstyp, keine Erregungsrückbildungsstörungen, Linksschenkelblock, Rechtsschenkelblock, linksanteriorer Hemiblock, T-Negativierung, ST-Hebung, verlängerte QTc-Zeit ( ms), AV-Block I II \r\n')">EKG</button>
+                <button class="bt1 bttext" onclick="ed1('Labor: Großes Blutbild, Elektrolyte, Leberwerte, Nierenwerte, TSH, Gerinnung, Entzündungsparameter und Urinstatus unauffällig. HbA1c xxx (4,8-5,9) %, Triglyzeride xxx (<200) mg/dl, Cholesterin gesamt xxx (<220) mg/dl, LDL-Cholesterin xxx (<150) mg/dl.\r\n\r\n\r\nIm Labor hervorzuheben waren: Leukozyten  Tsd./µl, Hb  mg/dl, CRP  mg/dl, Kreatinin  mg/dl, Na  mmol/l, K  mmol/l, HbA1c  %, Triglyzeride  mg/dl, LDL-Cholesterin  mg/dl.\r\n')">Labor</button>
+                <button class="bt1 bttext" onclick="ed1('Liquor: Kernhaltige Zellen /µl, davon % Lymphozyten, Erythrozyten /µl, Glukose (40-70) mg/dl, Laktat (10-22) mg/dl, Eiweiß (150-450) mg/l. \r\n\r\n\Lumbalpunktion \r\nPunkteur: Name\r\nVorgehen: Aufsuchen der Stichstelle in der unteren LWS, Desinfektion, sterile Abdeckung, Punktion und Entnahme vom ml klarem Liquor, Entfernung der Nadel, steriler Verband. Keine unmittelbaren Komplikationen.\r\n')">Liquor</button>
+                </div>
+        </div>
+        <div class="fcenter" id="Brief">
+            <textarea id="hh" spellcheck="false"></textarea><br>
+        </div>
+        <div class="fright">
+            <p>Patient:</p>
+            <p id="gesX">Mann oder Frau?</p>
+            <button class="bt1 bt2" onclick="mannSx()">Mann</button>
+            <button class="bt1 bt2" onclick="frauSx()">Frau</button>
+            <br><br>
+            <button class="bt1 bt2 bttext" onclick="ed1(dateGerman() + ' ')">Datum</button>
+            <button class="bt1 bt2 bttext" onclick="edein('Text  ')">Text</button><br>
+            <button class="bt1 bt2 bttext" onclick="ed1(timeGerman() + ' ')">Uhrzeit</button>
+            <button class="bt1 bt2 bttext" onclick="ed1('\t')">Tab</button><br><br>
+            <button class="bt1" onclick="ddel()">Lösch alles</button><br>
+            <button class="bt1" onclick="selCopTx()">Kopiere alles</button><br>
+            <button class="bt1" onclick="typogr3()">TypKorrekt</button><br>
+            <br><br><br>
+                <button class="bt1 bttext" onclick="ed1('xxx: bitte NLG N. medianus bds. und ulnaris rechts links\r\nxxx: bitte NLG N. tibialis bds. und suralis rechts links sowie SEP tibialis\r\nxxx: bitte Ü Schädel-CT Schädel-MRT HWS-MRT (Kopfschmerz, Schwindel, Gangstörung, Demenz)\r\nxxx: bitte Rezept Physiotherapie \r\nxxx: bitte EEG (heute in wenigen Tagen irgendwann)\r\n')">MFA-Chat</button>
+            <button class="bt1 bttext" onclick="ed1('Diagnosen:\r\n\r\nAm Datum ca. Uhrzeit stellte sich ' + der_Patient + ' in unserer Notaufnahme vor. \r\nAm Datum ca. Uhrzeit wurde ' + der_Patient + ' vom Rettungsdienst in unsere Notaufnahme gebracht. \r\n\r\nEigenanamnese: \r\nFremdanamnese: \r\nVorerkrankungen: \r\nVormedikation: \r\n\r\nKlinischer Befund: \r\nZusatzdiagnostik \r\nLabor: \r\nEKG: \r\nSchädel-CT: \r\n\r\nEmpfehlungen: \r\n\r\n\r\n' + Herr + ' xxx wurde ambulant belassen. Wir stehen für Fragen gerne zur Verfügung. \r\n')">Kurzbrief ZNA</button><br>
+            <button class="bt1 bttext" onclick="ed1('Klinik für Neurologie - Aufnahmebogen\r\n\r\nUntersucher: \r\nUntersuchungs-Datum: \r\nUntersuchungs-Uhrzeit: \r\n\r\nAm Datum ca. Uhrzeit stellte sich ' + der_Patient + ' in unserer Notaufnahme vor.\r\nAm Datum ca. Uhrzeit wurde ' + der_Patient + ' vom Rettungsdienst in unsere Notaufnahme gebracht. \r\nAufnahme-Diagnose: V.a. \r\n\r\nZuletzt ohne die jetzigen Symptome: \r\nEigenanamnese: \r\n\r\nFremdanamnese: \r\n\r\nVorerkrankungen: \r\n\r\nVormedikation: \r\n\r\nAlkohol/Rauchen/Drogen: \r\n\r\nPsychosoziale Anamnese: \r\n\tLebt zu Hause im Pflegeheim \r\n\tPflegegrad \r\n\tVorsorgevollmacht: Betreuung: Ja Nein \r\n\tBevollmächtigt: \r\n\tAngehöriger (Name): \r\n\tAngehöriger (Tel): \r\n\tHausarzt: \r\n\r\nKlinischer Befund: \r\n\r\nLabor: \r\n\r\nEKG: \r\n\r\nSchädel-CT: \r\n\r\nAufnahme auf \r\nOST1(Stroke) \r\nOST3 \r\n\OST1(Intensiv)\r\n')">Aufnahmebogen</button>
+            <button class="bt1 bttext" onclick="ed1('Neurologisches Konsil Datum \r\n\r\nKonsil wegen \r\n\r\nEigenanamnese (Angaben ' + des_Patienten +'): \r\n\r\nFremdanamnese (Angaben des der ): \r\n\r\nBefund: \r\n\r\nBeurteilung: Neurostatus regelrecht. Kein Anhalt für eine akute neurologische Erkrankung. Gerne Rücksprache.\r\n')">Konsil</button><br>
+            <button class="bt1 bttext" onclick="ed1('Neurologisches Konsil Datum \r\n\r\n**Konsil** wegen \r\n\r\n**Eigenanamnese** (Angaben ' + des_Patienten +'): \r\n\r\n**Fremdanamnese** (Angaben des der ): \r\n\r\n**Befund:** \r\n\r\n**Beurteilung:** Neurostatus regelrecht. Kein Anhalt für eine akute neurologische Erkrankung. Gerne Rücksprache.\r\n')">Konsil 2</button><br>
+            
+            <br><br>
+            <!--the star logo-->
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<svg height="40" width="40"><polygon points="20.0,2.0 8.0,39.6 38.0,15.6 2.0,15.6 32.0,39.6" style="fill:hsla(40, 100%, 70%, 1);"/></svg></p>
+            <span>N-Brief_MVZ 1.2 <br>11.04.2020</span>
+        </div>
+    </div>
+    
+    <script>
+
+// the m/f-related variables are declared
+var Der_Patient;
+var der_Patient;
+var Er;
+var er;
+var sein;
+var seinen;
+var ihm;
+var ihn;
+var des_Patienten;
+var dem_Patienten;
+var den_Patienten;
+var Herr;
+var Herrn;
+var Rechtshaender;
+var Linkshaender;
+var Rechtshaenderin;
+var Linkshaenderin;
+var Nichtraucher;
+var mofbestimmt;
+
+
+// all male forms are set
+function mannSx() {
+    var i1 = document.getElementById('gesX');
+    i1.innerHTML = 'Mann';
+    i1.style = 'color:#003d66;animation-iteration-count:0;';
+    mofbestimmt = '1';
+    document.getElementById('mof').style.display = 'none';
+    Der_Patient = 'Der Patient';
+    der_Patient = 'der Patient';
+    Er = 'Er';
+    er = 'er';
+    sein = 'sein';
+    seinen = 'seinen';
+    ihm = 'ihm';
+    ihn = 'ihn';
+    des_Patienten = 'des Patienten';
+    den_Patienten = 'den Patienten';
+    dem_Patienten = 'dem Patienten';
+    Herr = 'Herr';
+    Herrn = 'Herrn';
+    Rechtshaender = 'Rechtshänder';
+    Linkshaender = 'Linkshänder';
+    Nichtraucher = 'Nichtraucher';
+}
+
+// all female forms are set
+function frauSx() {
+    var i1 = document.getElementById('gesX');
+    i1.innerHTML = 'Frau';
+    i1.style = 'color:#003d66;animation-iteration-count:0;';
+    mofbestimmt = '1';
+    document.getElementById('mof').style.display = 'none';
+    Der_Patient = 'Die Patientin';
+    der_Patient = 'die Patientin';
+    Er = 'Sie';
+    er = 'sie';
+    sein = 'ihr';
+    seinen = 'ihren';
+    ihm = 'ihr';
+    ihn = 'sie';
+    des_Patienten = 'der Patientin';
+    den_Patienten = 'die Patientin';
+    dem_Patienten = 'der Patientin';
+    Herr = 'Frau';
+    Herrn = 'Frau';
+    Rechtshaender = 'Rechtshänderin';
+    Linkshaender = 'Linkshänderin';
+    Nichtraucher = 'Nichtraucherin';
+}
+
+// hides erst, zweit, viert
+function showNil2() {
+    document.getElementById('erst').style.display = 'none';
+    document.getElementById('zweit').style.display = 'none';
+    document.getElementById('viert').style.display = 'none';
+    document.getElementById('mdedit').style.display = 'none';
+}
+// it shows the erst
+function ez1() {
+    showNil2();
+    document.getElementById('erst').style.display = 'block';
+}
+// it shows the zweit
+function ez2() {
+    showNil2();
+    document.getElementById('zweit').style.display = 'block';
+}
+// it shows the mdedit
+function ez3() {
+    showNil2();
+    document.getElementById('mdedit').style.display = 'block';
+}
+// it shows the viert
+function ez4() {
+    showNil2();
+    document.getElementById('viert').style.display = 'block';
+}
+// it hides all named elements
+function showNil1() {
+    document.getElementById('Anrede').style.display = 'none';
+    document.getElementById('Diagnosen').style.display = 'none';
+    document.getElementById('ICD-Diagnosen').style.display = 'none';
+    document.getElementById('Epikrise').style.display = 'none';
+    document.getElementById('Medikamente').style.display = 'none';
+    document.getElementById('Klinischer_Befund').style.display = 'none';
+    document.getElementById('MS').style.display = 'none';
+    document.getElementById('RS').style.display = 'none';
+    document.getElementById('DemPark').style.display = 'none';
+    document.getElementById('Bef').style.display = 'none';
+    document.getElementById('KopfEpi').style.display = 'none';
+    document.getElementById('Geri').style.display = 'none';
+}
+// it does what it says
+function showAnr() {
+    showNil1();
+    document.getElementById('Anrede').style.display = 'block';
+}
+
+function showDiagn() {
+    showNil1();
+    document.getElementById('Diagnosen').style.display = 'block';
+    document.getElementById('ICD-Diagnosen').style.display = 'block';
+}
+
+function showEpikr() {
+    showNil1();
+    document.getElementById('Epikrise').style.display = 'block';
+}
+
+function showMS() {
+    showNil1();
+    document.getElementById('MS').style.display = 'block';
+}
+
+function showRS() {
+    showNil1();
+    document.getElementById('RS').style.display = 'block';
+}
+
+function showDemPark() {
+    showNil1();
+    document.getElementById('DemPark').style.display = 'block';
+}
+
+function showBefunde() {
+    showNil1();
+    document.getElementById('Bef').style.display = 'block';
+}
+
+function showKopfEpi() {
+    showNil1();
+    document.getElementById('KopfEpi').style.display = 'block';
+}
+
+function showGeri() {
+    showNil1();
+    document.getElementById('Geri').style.display = 'block';
+}
+
+function showMedi() {
+    showNil1();
+    document.getElementById('Medikamente').style.display = 'block';
+}
+
+function showKlBef() {
+    showNil1();
+    document.getElementById('Klinischer_Befund').style.display = 'block';
+}
+
+function showNilSkalen() {
+    document.getElementById('levodopa').style.display = 'none';
+    document.getElementById('Gfr1').style.display = 'none';
+    document.getElementById('alcohol').style.display = 'none';
+    document.getElementById('bmi').style.display = 'none';
+}
+
+function showGfr() {
+    showNilSkalen();
+    document.getElementById('Gfr1').style.display = 'block';
+}
+
+function showLdopa() {
+    showNilSkalen();
+    document.getElementById('levodopa').style.display = 'block';
+}
+
+function showAlc() {
+    showNilSkalen();
+    document.getElementById('alcohol').style.display = 'block';
+}
+
+function showBMI() {
+    showNilSkalen();
+    document.getElementById('bmi').style.display = 'block';
+}
+
+function ed1(inp) {
+    if (mofbestimmt == '1') {
+        let tarea = document.getElementById('hh');
+        // find and define the start and end of selection
+        let sst = tarea.selectionStart;
+        let sse = tarea.selectionEnd;
+        // find the whole length of what is in the textarea now
+        let tvl = tarea.value.length;
+        // insert the inp and replace the selection
+        tarea.value = tarea.value.substring(0, sst) + inp + tarea.value.substring(sse, tvl);
+        // set cursor after the inserted text
+        tarea.selectionStart = sst + inp.length;
+        tarea.selectionEnd = sst + inp.length;
+        tarea.focus();
+    } else {
+        document.getElementById('mof').style.display = 'inline-block';
+    }
+}
+
+function edein(inp) {
+    // just the ed1, only the cursor a place to the left
+    if (mofbestimmt == '1') {
+        let tarea = document.getElementById('hh');
+        let sst = tarea.selectionStart;
+        let sse = tarea.selectionEnd;
+        let tvl = tarea.value.length;
+        tarea.value = tarea.value.substring(0, sst) + inp + tarea.value.substring(sse, tvl);
+        tarea.selectionStart = sst + inp.length - 1;
+        tarea.selectionEnd = sst + inp.length - 1;
+        tarea.focus();
+    } else {
+        document.getElementById('mof').style.display = 'inline-block';
+    }
+}
+
+// delete all text from the textarea
+function ddel() {
+    document.getElementById('hh').value = '';
+}
+
+function ddel_2() {
+    document.getElementById('hh2').value = '';
+}
+
+// copy all text from the textarea
+function selCopTx() {
+    var ta = document.getElementById('hh');
+    ta.focus();
+    ta.select();
+    var tz = document.execCommand('copy');
+    return tz;
+}
+
+// a helper function to get the sum of all elements. See function ldopaCalc
+function getSum(total, num) {
+    return total + num;
+}
+
+// get the input of the Parkinson medication dose, calculate the LED for each, then for all of them.
+function ldopaCalc() {
+    let Levodopa1 = document.getElementById('Levodopa').value;
+    let Levodopa_ret1 = document.getElementById('Levodopa_ret').value;
+    let Duodopa1 = document.getElementById('Duodopa').value;
+    let Ld_Ent1 = document.getElementById('Levodopa_Entacapon').value;
+    let Pram1 = document.getElementById('Pramipexolsalz').value;
+    let Rop1 = document.getElementById('Ropinirol').value;
+    let Rot1 = document.getElementById('Rotigotin').value;
+    let Piri1 = document.getElementById('Piribedil').value;
+    let Ras1 = document.getElementById('Rasagilin').value;
+    let Aman1 = document.getElementById('Amantadin').value;
+    let Apo1 = document.getElementById('Apomorphin').value;
+    let parkMed = [Levodopa1 * 1, Levodopa_ret1 * 0.75, Duodopa1 * 1.1, Ld_Ent1 * 1.33, Pram1 * 100, Rop1 * 20, Rot1 * 30, Piri1 * 1, Ras1 * 100, Aman1 * 1, Apo1 * 10];
+    document.getElementById('led').innerHTML = Math.round(parkMed.reduce(getSum));
+}
+
+// turn all numeric input of the parkinson medication to null
+function parkMed() {
+    let allParkMed = document.getElementById('levodopaEqDosis').elements;
+    for (let i = 0; i < allParkMed.length - 2; i++) {
+        allParkMed[i].value = 0;
+    }
+}
+
+// GFR Calculator
+function gfrCalc() {
+    var krea1 = document.getElementById('gfr').elements['a'].value;
+    var krea2 = document.getElementById('gfr').elements['b'].value;
+    var al_1 = document.getElementById('gfr').elements['c'].value;
+    var ges = document.getElementById('gfr').elements['geschlecht'].value;
+    var farbe = document.getElementById('gfr').elements['farbe'].value;
+    var al_2 = parseInt(al_1);
+    var krea = parseInt(krea1) + parseInt(krea2) / 10;
+    var gfr1 = 175 * Math.pow(krea, -1.154) * Math.pow(al_2, -0.203);
+    if (ges == 'frau') {
+        gfr1 = gfr1 * 0.742;
+    }
+    if (farbe == 'schwarz') {
+        gfr1 = gfr1 * 1.212;
+    }
+    var gfr4 = Math.round(gfr1);
+    document.getElementById('gfrp').innerHTML = gfr4;
+}
+
+// BMI Calculator
+function bmiCalc() {
+    var koerpergewicht_1 = document.getElementById('bmi_form').elements['koerpergewicht'].value;
+    var koerpergroesse_1 = document.getElementById('bmi_form').elements['koerpergroesse'].value;
+    var bmi_wert_1 = koerpergewicht_1/Math.pow(koerpergroesse_1/100, 2);
+    var bmi_wert = bmi_wert_1.toPrecision(3);
+    document.getElementById('bmi_1').innerHTML = bmi_wert.replace(/\./gi, ',');
+}
+
+// Promille-Alkoholmenge-Calculator
+function alcCalc() {
+    var vpm10 = document.getElementById('alc').elements['pm10'].value;
+    var vpm01 = document.getElementById('alc').elements['pm01'].value;
+    var vgeschlecht = document.getElementById('alc').elements['geschlecht'].value;
+    var vgewicht = document.getElementById('alc').elements['gewicht'].value;
+    var vstunden = document.getElementById('alc').elements['stunden'].value;
+    var vgewicht1 = parseInt(vgewicht);
+    var vpm = parseInt(vpm10) + parseInt(vpm01)/10;
+    var alc_ml_m = (vpm + (0.15 * vstunden)) * vgewicht * 0.125 * 7
+    var alc_ml_w = (vpm + (0.15 * vstunden)) * vgewicht * 0.125 * 6
+    var beer_m = Math.round(alc_ml_m/0.05)
+    var brandy_m = Math.round(alc_ml_m/0.4)
+    var beer_w = Math.round(alc_ml_w/0.05)
+    var brandy_w = Math.round(alc_ml_w/0.4)
+    var alc_text_w = "Die Patientin hat vermutlich getrunken: <br><br>" + beer_w + " ml Bier <br><br>oder <br><br>" + brandy_w + " ml Schnaps";
+    var alc_text_m = "Der Patient hat vermutlich getrunken: <br><br>" + beer_m + " ml Bier <br><br>oder <br><br>" + brandy_m + " ml Schnaps";
+    if (vgeschlecht == 'frau') {alc_text =  alc_text_w;} 
+    else {alc_text =  alc_text_m;}
+    document.getElementById('alcoholmenge1').innerHTML = alc_text;
+}
+
+// date according to usual German format
+function dateGerman() {
+    let str = new Date().toISOString();
+    return str.replace(/(\d{4})-(\d{2})-(\d{2}).*$/, '$3.$2.$1');
+}
+
+// time according to usual German format
+function timeGerman() {
+    let d = new Date;
+    let hours = d.getHours();
+    let minutes = d.getMinutes();
+    if (hours < 10) {
+        hours = '0' + hours;
+    }
+    if (minutes < 10) {
+        minutes = '0' + minutes;
+    }
+    let timeGerman = hours + ':' + minutes + ' Uhr';
+    return timeGerman;
+}
+
+// the functions below get the selected element and insert it into the textarea
+function anArzt() {
+    let x = document.getElementById('mySelect').value;
+    edein(x + ',\r\n');
+}
+
+function medi() {
+    let y0 =
+        document.getElementById('medikamente').value;
+    edein(y0 + ',  ');
+}
+
+function diagn() {
+    let y7 =
+        document.getElementById('diagnosen').value;
+    edein(y7 + ',  ');
+}
+
+function icddiagn() {
+    let y8 =
+        document.getElementById('icd-diagnosen').value;
+    edein(y8 + '\r\n');
+}
+
+function symptSu() {
+    let y1 =
+        document.getElementById('symptSubj').value;
+    ed1(y1);
+}
+
+function symptOb() {
+    let y2 =
+        document.getElementById('symptObj').value;
+    ed1(y2);
+}
+
+// enables tab in textarea
+function tabJa() {
+    let textArea = document.getElementById('hh');
+    textArea.onkeydown = function(z) {
+        if (z.keyCode === 9) {
+            ed1('\t');
+            return false;
+        }
+    };
+}
+tabJa();
+// it scrolls both the whole body and the textarea up
+function winscroll() {
+    window.scrollTo(0, 0);
+    document.getElementById('hh').scrollTo(0, 0);
+}
+// turn to dark theme: it appends the 'css'-text to the style sheet
+function themeEG1() {
+    let css =
+        'body{background-color: hsla(190, 100%, 10%, 1);} textarea{background-color: hsla(190, 100%, 10%, 1); color: hsla(60, 15%, 90%, 1); border: solid;border-width: 1px;border-color: hsla(0, 0%, 80%, 1);}.bt1{background-color: hsla(40, 50%, 50%, 1);color: hsla(0, 0%, 100%, 1);} .bt1:hover {background-color: hsla(40, 100%, 55%, 1);color: hsla(190, 100%, 10%, 1);} .bttext{border-color:hsla(0, 0%, 50%, 1);} .btgrey {background-color: hsla(0, 0%, 0%, 1);} .select1 {background-color:hsla(190, 100%, 10%, 1);} .select1 option{background-color:hsla(190, 100%, 10%, 1);} #target1 {background-color:hsla(190, 100%, 10%, 1); color: hsla(40, 100%, 60%, 1);border-style:solid;border-width: 1px;border-color: hsla(0, 0%, 80%, 1);}';
+    let style = document.createElement('style');
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    document.getElementsByTagName('head')[0].appendChild(style);
+}
+// turn back to standard theme: it appends the 'css'-text to the style sheet
+function themeEG2() {
+    let css =
+        'body{background-color:hsla(204, 100%, 20%, 1);} textarea {background-color:hsla(0, 0%, 100%, 1);color:hsla(0, 0%, 33%, 1);border:none;font-family:sans-serif;} .bt1{background-color:hsla(122, 39%, 49%, 1);} .bt1:hover{background-color:hsla(0, 100%, 50%, 1);} .bttext{border-color:hsla(122, 39%, 49%, 1);} .btgrey{background-color:hsla(0, 0%, 50%, 1);} .select1{background-color:hsla(204, 100%, 20%, 1);} .select1 option{background-color:hsla(204, 100%, 20%, 1);} #target1 {background-color: white;color: grey;border:none;}';
+    let style = document.createElement('style');
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    document.getElementsByTagName('head')[0].appendChild(style);
+}
+
+function typogr2 (s2)
+    {s2 = s2.replace(/[ ]{2,99}/gi, ' ')
+    .replace(/([,.?!:\d])(?=[a-züäöµ])/gi, '$1 ')
+    .replace(/[ ](?=[.,)?:])/gi, '')
+    .replace(/(\S)%/gi, '$1 %')
+    .replace(/\(\s/gi, '(')
+    .replace(/(\d\d)\.(\d\d) Uhr/gi, '$1:$2 Uhr')
+    .replace(/HbA1 c/gi, 'HbA1c')
+    .replace(/ /gi, ' ')
+    .replace(/ /gi, ' ')
+    .replace(/ /gi, ' ')
+    .replace(/ /gi, ' ');
+        return s2;
+        }
+
+function typogr3(){
+    let tz = document.getElementById('hh').value;
+    let tu = typogr2(tz);
+    document.getElementById('hh').value = tu;
+    }
+
+// 13.02.2019 Start 
+// A try to make a multiple replace in JS
+
+function runmd() {
+    var text11 = document.getElementById('hh2').value,
+        target_a = document.getElementById('target1'),
+        converter11 = new showdown.Converter(),
+        html11 = converter11.makeHtml(text11);
+        target_a.innerHTML = html11;
+}
+
+// 16.02.2019 
+
+// function m2tfun (s2)
+// {s2 = s2.replace(/33/gi, ' # ')
+//     .replace(/3/gi, ' ')
+//     .replace(/1/gi, '.')
+//     .replace(/2/gi, '-')
+//     .replace(/  /gi, ' # ')
+//     .replace(/ \.\- /gi, ' a ')
+//     .replace(/ \-\.\.\. /gi, ' b ')
+//     .replace(/ /gi, '');
+//     return s2;
+// }
+
+
+// .replace(/ -.-. /gi, ' c ')
+// .replace(/ -.. /gi, ' d ')
+// .replace(/ . /gi, ' e ')
+// .replace(/ --. /gi, ' g ')
+// .replace(/ .... /gi, ' h ')
+// .replace(/ .. /gi, ' i ')
+// .replace(/ .--- /gi, ' j ')
+// .replace(/ -.- /gi, ' k ')
+// .replace(/ .-.. /gi, ' l ')
+// .replace(/ -- /gi, ' m ')
+// .replace(/ -. /gi, ' n ')
+// .replace(/ --- /gi, ' o ')
+// .replace(/ .--. /gi, ' p ')
+// .replace(/ --.- /gi, ' q ')
+// .replace(/ .-. /gi, ' r ')
+// .replace(/ ... /gi, ' s ')
+// .replace(/ - /gi, ' t ')
+// .replace(/ ..- /gi, ' u ')
+// .replace(/ ...- /gi, ' v ')
+// .replace(/ .-- /gi, ' w ')
+// .replace(/ -..- /gi, ' x ')
+// .replace(/ -.-- /gi, ' y ')
+// .replace(/ --.. /gi, ' z ')
+// .replace(/ .---- /gi, ' 1 ')
+// .replace(/ ..--- /gi, ' 2 ')
+// .replace(/ ...-- /gi, ' 3 ')
+// .replace(/ ....- /gi, ' 4 ')
+// .replace(/ ..... /gi, ' 5 ')
+// .replace(/ -.... /gi, ' 6 ')
+// .replace(/ --... /gi, ' 7 ')
+// .replace(/ ---.. /gi, ' 8 ')
+// .replace(/ ----. /gi, ' 9 ')
+// .replace(/ ----- /gi, ' 0 ')
+// .replace(/ .-.-.- /gi, ' . ')
+// .replace(/ .--.-. /gi, ' @ ')
+// .replace(/ ..--.. /gi, ' ? ')
+// .replace(/ ---... /gi, ' : ')
+// .replace(/ .----. /gi, ' " ')
+// .replace(/ -....- /gi, ' - ')
+// .replace(/ -..-. /gi, ' / ')
+// .replace(/ -.--. /gi, ' ( ')
+// .replace(/ -.--.- /gi, ' ) ')
+// .replace(/ -...- /gi, ' = ')
+// .replace(/ ...-. /gi, ' <VE> ')
+// .replace(/ ........ /gi, ' <Error> ')
+// .replace(/ .-.-. /gi, ' + ')
+// .replace(/ -.- /gi, ' <K> ')
+// .replace(/ .-... /gi, ' <Wait> ')
+// .replace(/ ...-.- /gi, ' <End of work> ')
+// .replace(/ -.-.- /gi, ' <KA> ')
+;
+
+
+// function m2t() {
+//     var text11 = document.getElementById('hh2').value;
+//     var target_a = document.getElementById('target1');
+//     var html11 = m2tfun(text11);
+//     target_a.innerHTML = html11;
+// }
+
+function ed3(inp) {
+        let tarea = document.getElementById('hh2');
+        // find and define the start and end of selection
+        let sst = tarea.selectionStart;
+        let sse = tarea.selectionEnd;
+        // find the whole length of what is in the textarea now
+        let tvl = tarea.value.length;
+        // insert the inp and replace the selection
+        tarea.value = tarea.value.substring(0, sst) + inp + tarea.value.substring(sse, tvl);
+        // set cursor after the inserted text
+        tarea.selectionStart = sst + inp.length;
+        tarea.selectionEnd = sst + inp.length;
+        tarea.focus();
+    }
+
+// 2020-04-10 I call the function frauSx to default to females
+frauSx()
+
+</script>
+
+<!-- <script src="clipboard.min.js"></script> -->
+<!-- EG: the showdown js file minified and with the table option turned on -->
+<script>(function(){function e(e){"use strict";var r={omitExtraWLInCodeBlocks:{defaultValue:!1,describe:"Omit the default extra whiteline added to code blocks",type:"boolean"},noHeaderId:{defaultValue:!1,describe:"Turn on/off generated header id",type:"boolean"},prefixHeaderId:{defaultValue:!1,describe:"Add a prefix to the generated header ids. Passing a string will prefix that string to the header id. Setting to true will add a generic 'section-' prefix",type:"string"},rawPrefixHeaderId:{defaultValue:!1,describe:'Setting this option to true will prevent showdown from modifying the prefix. This might result in malformed IDs (if, for instance, the " char is used in the prefix)',type:"boolean"},ghCompatibleHeaderId:{defaultValue:!1,describe:"Generate header ids compatible with github style (spaces are replaced with dashes, a bunch of non alphanumeric chars are removed)",type:"boolean"},rawHeaderId:{defaultValue:!1,describe:"Remove only spaces, ' and \" from generated header ids (including prefixes), replacing them with dashes (-). WARNING: This might result in malformed ids",type:"boolean"},headerLevelStart:{defaultValue:!1,describe:"The header blocks level start",type:"integer"},parseImgDimensions:{defaultValue:!1,describe:"Turn on/off image dimension parsing",type:"boolean"},simplifiedAutoLink:{defaultValue:!1,describe:"Turn on/off GFM autolink style",type:"boolean"},excludeTrailingPunctuationFromURLs:{defaultValue:!1,describe:"Excludes trailing punctuation from links generated with autoLinking",type:"boolean"},literalMidWordUnderscores:{defaultValue:!1,describe:"Parse midword underscores as literal underscores",type:"boolean"},literalMidWordAsterisks:{defaultValue:!1,describe:"Parse midword asterisks as literal asterisks",type:"boolean"},strikethrough:{defaultValue:!1,describe:"Turn on/off strikethrough support",type:"boolean"},tables:{defaultValue:1,describe:"Turn on/off tables support",type:"boolean"},tablesHeaderId:{defaultValue:!1,describe:"Add an id to table headers",type:"boolean"},ghCodeBlocks:{defaultValue:!0,describe:"Turn on/off GFM fenced code blocks support",type:"boolean"},tasklists:{defaultValue:!1,describe:"Turn on/off GFM tasklist support",type:"boolean"},smoothLivePreview:{defaultValue:!1,describe:"Prevents weird effects in live previews due to incomplete input",type:"boolean"},smartIndentationFix:{defaultValue:!1,description:"Tries to smartly fix indentation in es6 strings",type:"boolean"},disableForced4SpacesIndentedSublists:{defaultValue:!1,description:"Disables the requirement of indenting nested sublists by 4 spaces",type:"boolean"},simpleLineBreaks:{defaultValue:1,description:"Parses simple line breaks as <br> (GFM Style)",type:"boolean"},requireSpaceBeforeHeadingText:{defaultValue:!1,description:"Makes adding a space between `#` and the header text mandatory (GFM Style)",type:"boolean"},ghMentions:{defaultValue:!1,description:"Enables github @mentions",type:"boolean"},ghMentionsLink:{defaultValue:"https://github.com/{u}",description:"Changes the link generated by @mentions. Only applies if ghMentions option is enabled.",type:"string"},encodeEmails:{defaultValue:!0,description:"Encode e-mail addresses through the use of Character Entities, transforming ASCII e-mail addresses into its equivalent decimal entities",type:"boolean"},openLinksInNewWindow:{defaultValue:!1,description:"Open all links in new windows",type:"boolean"},backslashEscapesHTMLTags:{defaultValue:!1,description:"Support for HTML Tag escaping. ex: <div>foo</div>",type:"boolean"}};if(!1===e)return JSON.parse(JSON.stringify(r));var t={};for(var n in r)r.hasOwnProperty(n)&&(t[n]=r[n].defaultValue);return t}function r(e,r){"use strict";var t=r?"Error in "+r+" extension->":"Error in unnamed extension",s={valid:!0,error:""};n.helper.isArray(e)||(e=[e]);for(var a=0;a<e.length;++a){var i=t+" sub-extension "+a+": ",o=e[a];if("object"!=typeof o)return s.valid=!1,s.error=i+"must be an object, but "+typeof o+" given",s;if(!n.helper.isString(o.type))return s.valid=!1,s.error=i+'property "type" must be a string, but '+typeof o.type+" given",s;var c=o.type=o.type.toLowerCase();if("language"===c&&(c=o.type="lang"),"html"===c&&(c=o.type="output"),"lang"!==c&&"output"!==c&&"listener"!==c)return s.valid=!1,s.error=i+"type "+c+' is not recognized. Valid values: "lang/language", "output/html" or "listener"',s;if("listener"===c){if(n.helper.isUndefined(o.listeners))return s.valid=!1,s.error=i+'. Extensions of type "listener" must have a property called "listeners"',s}else if(n.helper.isUndefined(o.filter)&&n.helper.isUndefined(o.regex))return s.valid=!1,s.error=i+c+' extensions must define either a "regex" property or a "filter" method',s;if(o.listeners){if("object"!=typeof o.listeners)return s.valid=!1,s.error=i+'"listeners" property must be an object but '+typeof o.listeners+" given",s;for(var l in o.listeners)if(o.listeners.hasOwnProperty(l)&&"function"!=typeof o.listeners[l])return s.valid=!1,s.error=i+'"listeners" property must be an hash of [event name]: [callback]. listeners.'+l+" must be a function but "+typeof o.listeners[l]+" given",s}if(o.filter){if("function"!=typeof o.filter)return s.valid=!1,s.error=i+'"filter" must be a function, but '+typeof o.filter+" given",s}else if(o.regex){if(n.helper.isString(o.regex)&&(o.regex=new RegExp(o.regex,"g")),!(o.regex instanceof RegExp))return s.valid=!1,s.error=i+'"regex" property must either be a string or a RegExp object, but '+typeof o.regex+" given",s;if(n.helper.isUndefined(o.replace))return s.valid=!1,s.error=i+'"regex" extensions must implement a replace string or function',s}}return s}function t(e,r){"use strict";return"¨E"+r.charCodeAt(0)+"E"}var n={},s={},a={},i=e(!0),o="vanilla",c={github:{omitExtraWLInCodeBlocks:!0,simplifiedAutoLink:!0,excludeTrailingPunctuationFromURLs:!0,literalMidWordUnderscores:!0,strikethrough:!0,tables:!0,tablesHeaderId:!0,ghCodeBlocks:!0,tasklists:!0,disableForced4SpacesIndentedSublists:!0,simpleLineBreaks:!0,requireSpaceBeforeHeadingText:!0,ghCompatibleHeaderId:!0,ghMentions:!0,backslashEscapesHTMLTags:!0},original:{noHeaderId:!0,ghCodeBlocks:!1},ghost:{omitExtraWLInCodeBlocks:!0,parseImgDimensions:!0,simplifiedAutoLink:!0,excludeTrailingPunctuationFromURLs:!0,literalMidWordUnderscores:!0,strikethrough:!0,tables:!0,tablesHeaderId:!0,ghCodeBlocks:!0,tasklists:!0,smoothLivePreview:!0,simpleLineBreaks:!0,requireSpaceBeforeHeadingText:!0,ghMentions:!1,encodeEmails:!0},vanilla:e(!0),allOn:function(){"use strict";var r=e(!0),t={};for(var n in r)r.hasOwnProperty(n)&&(t[n]=!0);return t}()};n.helper={},n.extensions={},n.setOption=function(e,r){"use strict";return i[e]=r,this},n.getOption=function(e){"use strict";return i[e]},n.getOptions=function(){"use strict";return i},n.resetOptions=function(){"use strict";i=e(!0)},n.setFlavor=function(e){"use strict";if(!c.hasOwnProperty(e))throw Error(e+" flavor was not found");n.resetOptions();var r=c[e];o=e;for(var t in r)r.hasOwnProperty(t)&&(i[t]=r[t])},n.getFlavor=function(){"use strict";return o},n.getFlavorOptions=function(e){"use strict";if(c.hasOwnProperty(e))return c[e]},n.getDefaultOptions=function(r){"use strict";return e(r)},n.subParser=function(e,r){"use strict";if(n.helper.isString(e)){if(void 0===r){if(s.hasOwnProperty(e))return s[e];throw Error("SubParser named "+e+" not registered!")}s[e]=r}},n.extension=function(e,t){"use strict";if(!n.helper.isString(e))throw Error("Extension 'name' must be a string");if(e=n.helper.stdExtName(e),n.helper.isUndefined(t)){if(!a.hasOwnProperty(e))throw Error("Extension named "+e+" is not registered!");return a[e]}"function"==typeof t&&(t=t()),n.helper.isArray(t)||(t=[t]);var s=r(t,e);if(!s.valid)throw Error(s.error);a[e]=t},n.getAllExtensions=function(){"use strict";return a},n.removeExtension=function(e){"use strict";delete a[e]},n.resetExtensions=function(){"use strict";a={}},n.validateExtension=function(e){"use strict";var t=r(e,null);return!!t.valid||(console.warn(t.error),!1)},n.hasOwnProperty("helper")||(n.helper={}),n.helper.isString=function(e){"use strict";return"string"==typeof e||e instanceof String},n.helper.isFunction=function(e){"use strict";var r={};return e&&"[object Function]"===r.toString.call(e)},n.helper.isArray=function(e){"use strict";return Array.isArray(e)},n.helper.isUndefined=function(e){"use strict";return void 0===e},n.helper.forEach=function(e,r){"use strict";if(n.helper.isUndefined(e))throw new Error("obj param is required");if(n.helper.isUndefined(r))throw new Error("callback param is required");if(!n.helper.isFunction(r))throw new Error("callback param must be a function/closure");if("function"==typeof e.forEach)e.forEach(r);else if(n.helper.isArray(e))for(var t=0;t<e.length;t++)r(e[t],t,e);else{if("object"!=typeof e)throw new Error("obj does not seem to be an array or an iterable object");for(var s in e)e.hasOwnProperty(s)&&r(e[s],s,e)}},n.helper.stdExtName=function(e){"use strict";return e.replace(/[_?*+\/\\.^-]/g,"").replace(/\s/g,"").toLowerCase()},n.helper.escapeCharactersCallback=t,n.helper.escapeCharacters=function(e,r,n){"use strict";var s="(["+r.replace(/([\[\]\\])/g,"\\$1")+"])";n&&(s="\\\\"+s);var a=new RegExp(s,"g");return e=e.replace(a,t)};var l=function(e,r,t,n){"use strict";var s,a,i,o,c,l=n||"",u=l.indexOf("g")>-1,p=new RegExp(r+"|"+t,"g"+l.replace(/g/g,"")),d=new RegExp(r,l.replace(/g/g,"")),h=[];do{for(s=0;i=p.exec(e);)if(d.test(i[0]))s++||(o=(a=p.lastIndex)-i[0].length);else if(s&&!--s){c=i.index+i[0].length;var f={left:{start:o,end:a},match:{start:a,end:i.index},right:{start:i.index,end:c},wholeMatch:{start:o,end:c}};if(h.push(f),!u)return h}}while(s&&(p.lastIndex=a));return h};n.helper.matchRecursiveRegExp=function(e,r,t,n){"use strict";for(var s=l(e,r,t,n),a=[],i=0;i<s.length;++i)a.push([e.slice(s[i].wholeMatch.start,s[i].wholeMatch.end),e.slice(s[i].match.start,s[i].match.end),e.slice(s[i].left.start,s[i].left.end),e.slice(s[i].right.start,s[i].right.end)]);return a},n.helper.replaceRecursiveRegExp=function(e,r,t,s,a){"use strict";if(!n.helper.isFunction(r)){var i=r;r=function(){return i}}var o=l(e,t,s,a),c=e,u=o.length;if(u>0){var p=[];0!==o[0].wholeMatch.start&&p.push(e.slice(0,o[0].wholeMatch.start));for(var d=0;d<u;++d)p.push(r(e.slice(o[d].wholeMatch.start,o[d].wholeMatch.end),e.slice(o[d].match.start,o[d].match.end),e.slice(o[d].left.start,o[d].left.end),e.slice(o[d].right.start,o[d].right.end))),d<u-1&&p.push(e.slice(o[d].wholeMatch.end,o[d+1].wholeMatch.start));o[u-1].wholeMatch.end<e.length&&p.push(e.slice(o[u-1].wholeMatch.end)),c=p.join("")}return c},n.helper.regexIndexOf=function(e,r,t){"use strict";if(!n.helper.isString(e))throw"InvalidArgumentError: first parameter of showdown.helper.regexIndexOf function must be a string";if(r instanceof RegExp==!1)throw"InvalidArgumentError: second parameter of showdown.helper.regexIndexOf function must be an instance of RegExp";var s=e.substring(t||0).search(r);return s>=0?s+(t||0):s},n.helper.splitAtIndex=function(e,r){"use strict";if(!n.helper.isString(e))throw"InvalidArgumentError: first parameter of showdown.helper.regexIndexOf function must be a string";return[e.substring(0,r),e.substring(r)]},n.helper.encodeEmailAddress=function(e){"use strict";var r=[function(e){return"&#"+e.charCodeAt(0)+";"},function(e){return"&#x"+e.charCodeAt(0).toString(16)+";"},function(e){return e}];return e=e.replace(/./g,function(e){if("@"===e)e=r[Math.floor(2*Math.random())](e);else{var t=Math.random();e=t>.9?r[2](e):t>.45?r[1](e):r[0](e)}return e})},"undefined"==typeof console&&(console={warn:function(e){"use strict";alert(e)},log:function(e){"use strict";alert(e)},error:function(e){"use strict";throw e}}),n.helper.regexes={asteriskAndDash:/([*_])/g},n.Converter=function(e){"use strict";function t(e,t){if(t=t||null,n.helper.isString(e)){if(e=n.helper.stdExtName(e),t=e,n.extensions[e])return console.warn("DEPRECATION WARNING: "+e+" is an old extension that uses a deprecated loading method.Please inform the developer that the extension should be updated!"),void s(n.extensions[e],e);if(n.helper.isUndefined(a[e]))throw Error('Extension "'+e+'" could not be loaded. It was either not found or is not a valid extension.');e=a[e]}"function"==typeof e&&(e=e()),n.helper.isArray(e)||(e=[e]);var i=r(e,t);if(!i.valid)throw Error(i.error);for(var o=0;o<e.length;++o){switch(e[o].type){case"lang":d.push(e[o]);break;case"output":h.push(e[o])}if(e[o].hasOwnProperty("listeners"))for(var c in e[o].listeners)e[o].listeners.hasOwnProperty(c)&&l(c,e[o].listeners[c])}}function s(e,t){"function"==typeof e&&(e=e(new n.Converter)),n.helper.isArray(e)||(e=[e]);var s=r(e,t);if(!s.valid)throw Error(s.error);for(var a=0;a<e.length;++a)switch(e[a].type){case"lang":d.push(e[a]);break;case"output":h.push(e[a]);break;default:throw Error("Extension loader error: Type unrecognized!!!")}}function l(e,r){if(!n.helper.isString(e))throw Error("Invalid argument in converter.listen() method: name must be a string, but "+typeof e+" given");if("function"!=typeof r)throw Error("Invalid argument in converter.listen() method: callback must be a function, but "+typeof r+" given");f.hasOwnProperty(e)||(f[e]=[]),f[e].push(r)}function u(e){var r=e.match(/^\s*/)[0].length,t=new RegExp("^\\s{0,"+r+"}","gm");return e.replace(t,"")}var p={},d=[],h=[],f={},g=o;!function(){e=e||{};for(var r in i)i.hasOwnProperty(r)&&(p[r]=i[r]);if("object"!=typeof e)throw Error("Converter expects the passed parameter to be an object, but "+typeof e+" was passed instead.");for(var s in e)e.hasOwnProperty(s)&&(p[s]=e[s]);p.extensions&&n.helper.forEach(p.extensions,t)}(),this._dispatch=function(e,r,t,n){if(f.hasOwnProperty(e))for(var s=0;s<f[e].length;++s){var a=f[e][s](e,r,this,t,n);a&&void 0!==a&&(r=a)}return r},this.listen=function(e,r){return l(e,r),this},this.makeHtml=function(e){if(!e)return e;var r={gHtmlBlocks:[],gHtmlMdBlocks:[],gHtmlSpans:[],gUrls:{},gTitles:{},gDimensions:{},gListLevel:0,hashLinkCounts:{},langExtensions:d,outputModifiers:h,converter:this,ghCodeBlocks:[]};return e=e.replace(/¨/g,"¨T"),e=e.replace(/\$/g,"¨D"),e=e.replace(/\r\n/g,"\n"),e=e.replace(/\r/g,"\n"),e=e.replace(/\u00A0/g," "),p.smartIndentationFix&&(e=u(e)),e="\n\n"+e+"\n\n",e=n.subParser("detab")(e,p,r),e=e.replace(/^[ \t]+$/gm,""),n.helper.forEach(d,function(t){e=n.subParser("runExtension")(t,e,p,r)}),e=n.subParser("hashPreCodeTags")(e,p,r),e=n.subParser("githubCodeBlocks")(e,p,r),e=n.subParser("hashHTMLBlocks")(e,p,r),e=n.subParser("hashCodeTags")(e,p,r),e=n.subParser("stripLinkDefinitions")(e,p,r),e=n.subParser("blockGamut")(e,p,r),e=n.subParser("unhashHTMLSpans")(e,p,r),e=n.subParser("unescapeSpecialChars")(e,p,r),e=e.replace(/¨D/g,"$$"),e=e.replace(/¨T/g,"¨"),n.helper.forEach(h,function(t){e=n.subParser("runExtension")(t,e,p,r)}),e},this.setOption=function(e,r){p[e]=r},this.getOption=function(e){return p[e]},this.getOptions=function(){return p},this.addExtension=function(e,r){t(e,r=r||null)},this.useExtension=function(e){t(e)},this.setFlavor=function(e){if(!c.hasOwnProperty(e))throw Error(e+" flavor was not found");var r=c[e];g=e;for(var t in r)r.hasOwnProperty(t)&&(p[t]=r[t])},this.getFlavor=function(){return g},this.removeExtension=function(e){n.helper.isArray(e)||(e=[e]);for(var r=0;r<e.length;++r){for(var t=e[r],s=0;s<d.length;++s)d[s]===t&&d[s].splice(s,1);for(;0<h.length;++s)h[0]===t&&h[0].splice(s,1)}},this.getAllExtensions=function(){return{language:d,output:h}}},n.subParser("anchors",function(e,r,t){"use strict";var s=function(e,s,a,i,o,c,l){if(n.helper.isUndefined(l)&&(l=""),a=a.toLowerCase(),e.search(/\(<?\s*>? ?(['"].*['"])?\)$/m)>-1)i="";else if(!i){if(a||(a=s.toLowerCase().replace(/ ?\n/g," ")),i="#"+a,n.helper.isUndefined(t.gUrls[a]))return e;i=t.gUrls[a],n.helper.isUndefined(t.gTitles[a])||(l=t.gTitles[a])}var u='<a href="'+(i=i.replace(n.helper.regexes.asteriskAndDash,n.helper.escapeCharactersCallback))+'"';return""!==l&&null!==l&&(u+=' title="'+(l=(l=l.replace(/"/g,"&quot;")).replace(n.helper.regexes.asteriskAndDash,n.helper.escapeCharactersCallback))+'"'),r.openLinksInNewWindow&&(u+=' target="¨E95Eblank"'),u+=">"+s+"</a>"};return e=(e=t.converter._dispatch("anchors.before",e,r,t)).replace(/\[((?:\[[^\]]*]|[^\[\]])*)] ?(?:\n *)?\[(.*?)]()()()()/g,s),e=e.replace(/\[((?:\[[^\]]*]|[^\[\]])*)]()[ \t]*\([ \t]?<([^>]*)>(?:[ \t]*((["'])([^"]*?)\5))?[ \t]?\)/g,s),e=e.replace(/\[((?:\[[^\]]*]|[^\[\]])*)]()[ \t]*\([ \t]?<?([\S]+?(?:\([\S]*?\)[\S]*?)?)>?(?:[ \t]*((["'])([^"]*?)\5))?[ \t]?\)/g,s),e=e.replace(/\[([^\[\]]+)]()()()()()/g,s),r.ghMentions&&(e=e.replace(/(^|\s)(\\)?(@([a-z\d\-]+))(?=[.!?;,[\]()]|\s|$)/gim,function(e,t,s,a,i){if("\\"===s)return t+a;if(!n.helper.isString(r.ghMentionsLink))throw new Error("ghMentionsLink option must be a string");var o=r.ghMentionsLink.replace(/\{u}/g,i),c="";return r.openLinksInNewWindow&&(c=' target="¨E95Eblank"'),t+'<a href="'+o+'"'+c+">"+a+"</a>"})),e=t.converter._dispatch("anchors.after",e,r,t)});var u=/\b(((https?|ftp|dict):\/\/|www\.)[^'">\s]+\.[^'">\s]+)()(?=\s|$)(?!["<>])/gi,p=/\b(((https?|ftp|dict):\/\/|www\.)[^'">\s]+\.[^'">\s]+?)([.!?,()\[\]]?)(?=\s|$)(?!["<>])/gi,d=/<(((https?|ftp|dict):\/\/|www\.)[^'">\s]+)()>/gi,h=/(^|\s)(?:mailto:)?([A-Za-z0-9!#$%&'*+-/=?^_`{|}~.]+@[-a-z0-9]+(\.[-a-z0-9]+)*\.[a-z]+)(?=$|\s)/gim,f=/<()(?:mailto:)?([-.\w]+@[-a-z0-9]+(\.[-a-z0-9]+)*\.[a-z]+)>/gi,g=function(e){"use strict";return function(r,t,n,s,a){var i=t,o="",c="";return/^www\./i.test(t)&&(t=t.replace(/^www\./i,"http://www.")),e.excludeTrailingPunctuationFromURLs&&a&&(o=a),e.openLinksInNewWindow&&(c=' target="¨E95Eblank"'),'<a href="'+t+'"'+c+">"+i+"</a>"+o}},b=function(e,r){"use strict";return function(t,s,a){var i="mailto:";return s=s||"",a=n.subParser("unescapeSpecialChars")(a,e,r),e.encodeEmails?(i=n.helper.encodeEmailAddress(i+a),a=n.helper.encodeEmailAddress(a)):i+=a,s+'<a href="'+i+'">'+a+"</a>"}};n.subParser("autoLinks",function(e,r,t){"use strict";return e=t.converter._dispatch("autoLinks.before",e,r,t),e=e.replace(d,g(r)),e=e.replace(f,b(r,t)),e=t.converter._dispatch("autoLinks.after",e,r,t)}),n.subParser("simplifiedAutoLinks",function(e,r,t){"use strict";return r.simplifiedAutoLink?(e=t.converter._dispatch("simplifiedAutoLinks.before",e,r,t),e=r.excludeTrailingPunctuationFromURLs?e.replace(p,g(r)):e.replace(u,g(r)),e=e.replace(h,b(r,t)),e=t.converter._dispatch("simplifiedAutoLinks.after",e,r,t)):e}),n.subParser("blockGamut",function(e,r,t){"use strict";return e=t.converter._dispatch("blockGamut.before",e,r,t),e=n.subParser("blockQuotes")(e,r,t),e=n.subParser("headers")(e,r,t),e=n.subParser("horizontalRule")(e,r,t),e=n.subParser("lists")(e,r,t),e=n.subParser("codeBlocks")(e,r,t),e=n.subParser("tables")(e,r,t),e=n.subParser("hashHTMLBlocks")(e,r,t),e=n.subParser("paragraphs")(e,r,t),e=t.converter._dispatch("blockGamut.after",e,r,t)}),n.subParser("blockQuotes",function(e,r,t){"use strict";return e=t.converter._dispatch("blockQuotes.before",e,r,t),e=e.replace(/((^ {0,3}>[ \t]?.+\n(.+\n)*\n*)+)/gm,function(e,s){var a=s;return a=a.replace(/^[ \t]*>[ \t]?/gm,"¨0"),a=a.replace(/¨0/g,""),a=a.replace(/^[ \t]+$/gm,""),a=n.subParser("githubCodeBlocks")(a,r,t),a=n.subParser("blockGamut")(a,r,t),a=a.replace(/(^|\n)/g,"$1  "),a=a.replace(/(\s*<pre>[^\r]+?<\/pre>)/gm,function(e,r){var t=r;return t=t.replace(/^  /gm,"¨0"),t=t.replace(/¨0/g,"")}),n.subParser("hashBlock")("<blockquote>\n"+a+"\n</blockquote>",r,t)}),e=t.converter._dispatch("blockQuotes.after",e,r,t)}),n.subParser("codeBlocks",function(e,r,t){"use strict";e=t.converter._dispatch("codeBlocks.before",e,r,t);var s=/(?:\n\n|^)((?:(?:[ ]{4}|\t).*\n+)+)(\n*[ ]{0,3}[^ \t\n]|(?=¨0))/g;return e=(e+="¨0").replace(s,function(e,s,a){var i=s,o=a,c="\n";return i=n.subParser("outdent")(i,r,t),i=n.subParser("encodeCode")(i,r,t),i=n.subParser("detab")(i,r,t),i=i.replace(/^\n+/g,""),i=i.replace(/\n+$/g,""),r.omitExtraWLInCodeBlocks&&(c=""),i="<pre><code>"+i+c+"</code></pre>",n.subParser("hashBlock")(i,r,t)+o}),e=e.replace(/¨0/,""),e=t.converter._dispatch("codeBlocks.after",e,r,t)}),n.subParser("codeSpans",function(e,r,t){"use strict";return void 0===(e=t.converter._dispatch("codeSpans.before",e,r,t))&&(e=""),e=e.replace(/(^|[^\\])(`+)([^\r]*?[^`])\2(?!`)/gm,function(e,s,a,i){var o=i;return o=o.replace(/^([ \t]*)/g,""),o=o.replace(/[ \t]*$/g,""),o=n.subParser("encodeCode")(o,r,t),s+"<code>"+o+"</code>"}),e=t.converter._dispatch("codeSpans.after",e,r,t)}),n.subParser("detab",function(e,r,t){"use strict";return e=t.converter._dispatch("detab.before",e,r,t),e=e.replace(/\t(?=\t)/g,"    "),e=e.replace(/\t/g,"¨A¨B"),e=e.replace(/¨B(.+?)¨A/g,function(e,r){for(var t=r,n=4-t.length%4,s=0;s<n;s++)t+=" ";return t}),e=e.replace(/¨A/g,"    "),e=e.replace(/¨B/g,""),e=t.converter._dispatch("detab.after",e,r,t)}),n.subParser("encodeAmpsAndAngles",function(e,r,t){"use strict";return e=t.converter._dispatch("encodeAmpsAndAngles.before",e,r,t),e=e.replace(/&(?!#?[xX]?(?:[0-9a-fA-F]+|\w+);)/g,"&amp;"),e=e.replace(/<(?![a-z\/?$!])/gi,"&lt;"),e=e.replace(/</g,"&lt;"),e=e.replace(/>/g,"&gt;"),e=t.converter._dispatch("encodeAmpsAndAngles.after",e,r,t)}),n.subParser("encodeBackslashEscapes",function(e,r,t){"use strict";return e=t.converter._dispatch("encodeBackslashEscapes.before",e,r,t),e=e.replace(/\\(\\)/g,n.helper.escapeCharactersCallback),e=e.replace(/\\([`*_{}\[\]()>#+.!~=|-])/g,n.helper.escapeCharactersCallback),e=t.converter._dispatch("encodeBackslashEscapes.after",e,r,t)}),n.subParser("encodeCode",function(e,r,t){"use strict";return e=t.converter._dispatch("encodeCode.before",e,r,t),e=e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/([*_{}\[\]\\=~-])/g,n.helper.escapeCharactersCallback),e=t.converter._dispatch("encodeCode.after",e,r,t)}),n.subParser("escapeSpecialCharsWithinTagAttributes",function(e,r,t){"use strict";var s=/(<[a-z\/!$]("[^"]*"|'[^']*'|[^'">])*>)/gi,a=/<!(--(?:|(?:[^>-]|-[^>])(?:[^-]|-[^-])*)--)>/gi;return e=(e=t.converter._dispatch("escapeSpecialCharsWithinTagAttributes.before",e,r,t)).replace(s,function(e){return e.replace(/(.)<\/?code>(?=.)/g,"$1`").replace(/([\\`*_~=|])/g,n.helper.escapeCharactersCallback)}),e=e.replace(a,function(e){return e.replace(/([\\`*_~=|])/g,n.helper.escapeCharactersCallback)}),e=t.converter._dispatch("escapeSpecialCharsWithinTagAttributes.after",e,r,t)}),n.subParser("githubCodeBlocks",function(e,r,t){"use strict";return r.ghCodeBlocks?(e=t.converter._dispatch("githubCodeBlocks.before",e,r,t),e+="¨0",e=e.replace(/(?:^|\n)```(.*)\n([\s\S]*?)\n```/g,function(e,s,a){var i=r.omitExtraWLInCodeBlocks?"":"\n";return a=n.subParser("encodeCode")(a,r,t),a=n.subParser("detab")(a,r,t),a=a.replace(/^\n+/g,""),a=a.replace(/\n+$/g,""),a="<pre><code"+(s?' class="'+s+" language-"+s+'"':"")+">"+a+i+"</code></pre>",a=n.subParser("hashBlock")(a,r,t),"\n\n¨G"+(t.ghCodeBlocks.push({text:e,codeblock:a})-1)+"G\n\n"}),e=e.replace(/¨0/,""),t.converter._dispatch("githubCodeBlocks.after",e,r,t)):e}),n.subParser("hashBlock",function(e,r,t){"use strict";return e=t.converter._dispatch("hashBlock.before",e,r,t),e=e.replace(/(^\n+|\n+$)/g,""),e="\n\n¨K"+(t.gHtmlBlocks.push(e)-1)+"K\n\n",e=t.converter._dispatch("hashBlock.after",e,r,t)}),n.subParser("hashCodeTags",function(e,r,t){"use strict";e=t.converter._dispatch("hashCodeTags.before",e,r,t);return e=n.helper.replaceRecursiveRegExp(e,function(e,s,a,i){var o=a+n.subParser("encodeCode")(s,r,t)+i;return"¨C"+(t.gHtmlSpans.push(o)-1)+"C"},"<code\\b[^>]*>","</code>","gim"),e=t.converter._dispatch("hashCodeTags.after",e,r,t)}),n.subParser("hashElement",function(e,r,t){"use strict";return function(e,r){var n=r;return n=n.replace(/\n\n/g,"\n"),n=n.replace(/^\n/,""),n=n.replace(/\n+$/g,""),n="\n\n¨K"+(t.gHtmlBlocks.push(n)-1)+"K\n\n"}}),n.subParser("hashHTMLBlocks",function(e,r,t){"use strict";e=t.converter._dispatch("hashHTMLBlocks.before",e,r,t);var s=["pre","div","h1","h2","h3","h4","h5","h6","blockquote","table","dl","ol","ul","script","noscript","form","fieldset","iframe","math","style","section","header","footer","nav","article","aside","address","audio","canvas","figure","hgroup","output","video","p"];r.backslashEscapesHTMLTags&&(e=e.replace(/\\<(\/?[^>]+?)>/g,function(e,r){return"&lt;"+r+"&gt;"}));for(var a=0;a<s.length;++a)for(var i,o=new RegExp("^ {0,3}(<"+s[a]+"\\b[^>]*>)","im"),c="<"+s[a]+"\\b[^>]*>",l="</"+s[a]+">";-1!==(i=n.helper.regexIndexOf(e,o));){var u=n.helper.splitAtIndex(e,i),p=n.helper.replaceRecursiveRegExp(u[1],function(e,r,n,s){var a=e;return-1!==n.search(/\bmarkdown\b/)&&(a=n+t.converter.makeHtml(r)+s),"\n\n¨K"+(t.gHtmlBlocks.push(a)-1)+"K\n\n"},c,l,"im");if(p===u[1])break;e=u[0].concat(p)}return e=e.replace(/(\n {0,3}(<(hr)\b([^<>])*?\/?>)[ \t]*(?=\n{2,}))/g,n.subParser("hashElement")(e,r,t)),e=n.helper.replaceRecursiveRegExp(e,function(e){return"\n\n¨K"+(t.gHtmlBlocks.push(e)-1)+"K\n\n"},"^ {0,3}\x3c!--","--\x3e","gm"),e=e.replace(/(?:\n\n)( {0,3}(?:<([?%])[^\r]*?\2>)[ \t]*(?=\n{2,}))/g,n.subParser("hashElement")(e,r,t)),e=t.converter._dispatch("hashHTMLBlocks.after",e,r,t)}),n.subParser("hashHTMLSpans",function(e,r,t){"use strict";function n(e){return"¨C"+(t.gHtmlSpans.push(e)-1)+"C"}return e=t.converter._dispatch("hashHTMLSpans.before",e,r,t),e=e.replace(/<[^>]+?\/>/gi,function(e){return n(e)}),e=e.replace(/<([^>]+?)>[\s\S]*?<\/\1>/g,function(e){return n(e)}),e=e.replace(/<([^>]+?)\s[^>]+?>[\s\S]*?<\/\1>/g,function(e){return n(e)}),e=e.replace(/<[^>]+?>/gi,function(e){return n(e)}),e=t.converter._dispatch("hashHTMLSpans.after",e,r,t)}),n.subParser("unhashHTMLSpans",function(e,r,t){"use strict";e=t.converter._dispatch("unhashHTMLSpans.before",e,r,t);for(var n=0;n<t.gHtmlSpans.length;++n){for(var s=t.gHtmlSpans[n],a=0;/¨C(\d+)C/.test(s);){var i=RegExp.$1;if(s=s.replace("¨C"+i+"C",t.gHtmlSpans[i]),10===a)break;++a}e=e.replace("¨C"+n+"C",s)}return e=t.converter._dispatch("unhashHTMLSpans.after",e,r,t)}),n.subParser("hashPreCodeTags",function(e,r,t){"use strict";e=t.converter._dispatch("hashPreCodeTags.before",e,r,t);return e=n.helper.replaceRecursiveRegExp(e,function(e,s,a,i){var o=a+n.subParser("encodeCode")(s,r,t)+i;return"\n\n¨G"+(t.ghCodeBlocks.push({text:e,codeblock:o})-1)+"G\n\n"},"^ {0,3}<pre\\b[^>]*>\\s*<code\\b[^>]*>","^ {0,3}</code>\\s*</pre>","gim"),e=t.converter._dispatch("hashPreCodeTags.after",e,r,t)}),n.subParser("headers",function(e,r,t){"use strict";function s(e){var s,a;if(r.customizedHeaderId){var i=e.match(/\{([^{]+?)}\s*$/);i&&i[1]&&(e=i[1])}return s=e,a=n.helper.isString(r.prefixHeaderId)?r.prefixHeaderId:!0===r.prefixHeaderId?"section-":"",r.rawPrefixHeaderId||(s=a+s),s=r.ghCompatibleHeaderId?s.replace(/ /g,"-").replace(/&amp;/g,"").replace(/¨T/g,"").replace(/¨D/g,"").replace(/[&+$,\/:;=?@"#{}|^¨~\[\]`\\*)(%.!'<>]/g,"").toLowerCase():r.rawHeaderId?s.replace(/ /g,"-").replace(/&amp;/g,"&").replace(/¨T/g,"¨").replace(/¨D/g,"$").replace(/["']/g,"-").toLowerCase():s.replace(/[^\w]/g,"").toLowerCase(),r.rawPrefixHeaderId&&(s=a+s),t.hashLinkCounts[s]?s=s+"-"+t.hashLinkCounts[s]++:t.hashLinkCounts[s]=1,s}e=t.converter._dispatch("headers.before",e,r,t);var a=isNaN(parseInt(r.headerLevelStart))?1:parseInt(r.headerLevelStart),i=r.smoothLivePreview?/^(.+)[ \t]*\n={2,}[ \t]*\n+/gm:/^(.+)[ \t]*\n=+[ \t]*\n+/gm,o=r.smoothLivePreview?/^(.+)[ \t]*\n-{2,}[ \t]*\n+/gm:/^(.+)[ \t]*\n-+[ \t]*\n+/gm;e=(e=e.replace(i,function(e,i){var o=n.subParser("spanGamut")(i,r,t),c=r.noHeaderId?"":' id="'+s(i)+'"',l=a,u="<h"+l+c+">"+o+"</h"+l+">";return n.subParser("hashBlock")(u,r,t)})).replace(o,function(e,i){var o=n.subParser("spanGamut")(i,r,t),c=r.noHeaderId?"":' id="'+s(i)+'"',l=a+1,u="<h"+l+c+">"+o+"</h"+l+">";return n.subParser("hashBlock")(u,r,t)});var c=r.requireSpaceBeforeHeadingText?/^(#{1,6})[ \t]+(.+?)[ \t]*#*\n+/gm:/^(#{1,6})[ \t]*(.+?)[ \t]*#*\n+/gm;return e=e.replace(c,function(e,i,o){var c=o;r.customizedHeaderId&&(c=o.replace(/\s?\{([^{]+?)}\s*$/,""));var l=n.subParser("spanGamut")(c,r,t),u=r.noHeaderId?"":' id="'+s(o)+'"',p=a-1+i.length,d="<h"+p+u+">"+l+"</h"+p+">";return n.subParser("hashBlock")(d,r,t)}),e=t.converter._dispatch("headers.after",e,r,t)}),n.subParser("horizontalRule",function(e,r,t){"use strict";e=t.converter._dispatch("horizontalRule.before",e,r,t);var s=n.subParser("hashBlock")("<hr />",r,t);return e=e.replace(/^ {0,2}( ?-){3,}[ \t]*$/gm,s),e=e.replace(/^ {0,2}( ?\*){3,}[ \t]*$/gm,s),e=e.replace(/^ {0,2}( ?_){3,}[ \t]*$/gm,s),e=t.converter._dispatch("horizontalRule.after",e,r,t)}),n.subParser("images",function(e,r,t){"use strict";function s(e,r,s,a,i,o,c,l){var u=t.gUrls,p=t.gTitles,d=t.gDimensions;if(s=s.toLowerCase(),l||(l=""),e.search(/\(<?\s*>? ?(['"].*['"])?\)$/m)>-1)a="";else if(""===a||null===a){if(""!==s&&null!==s||(s=r.toLowerCase().replace(/ ?\n/g," ")),a="#"+s,n.helper.isUndefined(u[s]))return e;a=u[s],n.helper.isUndefined(p[s])||(l=p[s]),n.helper.isUndefined(d[s])||(i=d[s].width,o=d[s].height)}r=r.replace(/"/g,"&quot;").replace(n.helper.regexes.asteriskAndDash,n.helper.escapeCharactersCallback);var h='<img src="'+(a=a.replace(n.helper.regexes.asteriskAndDash,n.helper.escapeCharactersCallback))+'" alt="'+r+'"';return l&&(h+=' title="'+(l=l.replace(/"/g,"&quot;").replace(n.helper.regexes.asteriskAndDash,n.helper.escapeCharactersCallback))+'"'),i&&o&&(h+=' width="'+(i="*"===i?"auto":i)+'"',h+=' height="'+(o="*"===o?"auto":o)+'"'),h+=" />"}var a=/!\[([^\]]*?)][ \t]*()\([ \t]?<?([\S]+?(?:\([\S]*?\)[\S]*?)?)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*(?:(["'])([^"]*?)\6)?[ \t]?\)/g,i=/!\[([^\]]*?)][ \t]*()\([ \t]?<([^>]*)>(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*(?:(?:(["'])([^"]*?)\6))?[ \t]?\)/g,o=/!\[([^\]]*?)][ \t]*()\([ \t]?<?(data:.+?\/.+?;base64,[A-Za-z0-9+/=\n]+?)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*(?:(["'])([^"]*?)\6)?[ \t]?\)/g,c=/!\[([^\]]*?)] ?(?:\n *)?\[([\s\S]*?)]()()()()()/g,l=/!\[([^\[\]]+)]()()()()()/g;return e=(e=t.converter._dispatch("images.before",e,r,t)).replace(c,s),e=e.replace(o,function(e,r,t,n,a,i,o,c){return n=n.replace(/\s/g,""),s(e,r,t,n,a,i,0,c)}),e=e.replace(i,s),e=e.replace(a,s),e=e.replace(l,s),e=t.converter._dispatch("images.after",e,r,t)}),n.subParser("italicsAndBold",function(e,r,t){"use strict";function s(e,s,a){return r.simplifiedAutoLink&&(e=n.subParser("simplifiedAutoLinks")(e,r,t)),s+e+a}return e=t.converter._dispatch("italicsAndBold.before",e,r,t),e=r.literalMidWordUnderscores?(e=(e=e.replace(/\b___(\S[\s\S]*)___\b/g,function(e,r){return s(r,"<strong><em>","</em></strong>")})).replace(/\b__(\S[\s\S]*)__\b/g,function(e,r){return s(r,"<strong>","</strong>")})).replace(/\b_(\S[\s\S]*?)_\b/g,function(e,r){return s(r,"<em>","</em>")}):(e=(e=e.replace(/___(\S[\s\S]*?)___/g,function(e,r){return/\S$/.test(r)?s(r,"<strong><em>","</em></strong>"):e})).replace(/__(\S[\s\S]*?)__/g,function(e,r){return/\S$/.test(r)?s(r,"<strong>","</strong>"):e})).replace(/_([^\s_][\s\S]*?)_/g,function(e,r){return/\S$/.test(r)?s(r,"<em>","</em>"):e}),e=r.literalMidWordAsterisks?(e=(e=e.trim().replace(/(^| )\*{3}(\S[\s\S]*?)\*{3}([ ,;!?.]|$)/g,function(e,r,t,n){return s(t,r+"<strong><em>","</em></strong>"+n)})).trim().replace(/(^| )\*{2}(\S[\s\S]*?)\*{2}([ ,;!?.]|$)/g,function(e,r,t,n){return s(t,r+"<strong>","</strong>"+n)})).trim().replace(/(^| )\*(\S[\s\S]*?)\*([ ,;!?.]|$)/g,function(e,r,t,n){return s(t,r+"<em>","</em>"+n)}):(e=(e=e.replace(/\*\*\*(\S[\s\S]*?)\*\*\*/g,function(e,r){return/\S$/.test(r)?s(r,"<strong><em>","</em></strong>"):e})).replace(/\*\*(\S[\s\S]*?)\*\*/g,function(e,r){return/\S$/.test(r)?s(r,"<strong>","</strong>"):e})).replace(/\*([^\s*][\s\S]*?)\*/g,function(e,r){return/\S$/.test(r)?s(r,"<em>","</em>"):e}),e=t.converter._dispatch("italicsAndBold.after",e,r,t)}),n.subParser("lists",function(e,r,t){"use strict";function s(e,s){t.gListLevel++,e=e.replace(/\n{2,}$/,"\n"),e+="¨0";var a=/(\n)?(^ {0,3})([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(¨0| {0,3}([*+-]|\d+[.])[ \t]+))/gm,i=/\n[ \t]*\n(?!¨0)/.test(e);return r.disableForced4SpacesIndentedSublists&&(a=/(\n)?(^ {0,3})([*+-]|\d+[.])[ \t]+((\[(x|X| )?])?[ \t]*[^\r]+?(\n{1,2}))(?=\n*(¨0|\2([*+-]|\d+[.])[ \t]+))/gm),e=e.replace(a,function(e,s,a,o,c,l,u){u=u&&""!==u.trim();var p=n.subParser("outdent")(c,r,t),d="";return l&&r.tasklists&&(d=' class="task-list-item" style="list-style-type: none;"',p=p.replace(/^[ \t]*\[(x|X| )?]/m,function(){var e='<input type="checkbox" disabled style="margin: 0px 0.35em 0.25em -1.6em; vertical-align: middle;"';return u&&(e+=" checked"),e+=">"})),p=p.replace(/^([-*+]|\d\.)[ \t]+[\S\n ]*/g,function(e){return"¨A"+e}),s||p.search(/\n{2,}/)>-1?(p=n.subParser("githubCodeBlocks")(p,r,t),p=n.subParser("blockGamut")(p,r,t)):(p=(p=n.subParser("lists")(p,r,t)).replace(/\n$/,""),p=(p=n.subParser("hashHTMLBlocks")(p,r,t)).replace(/\n\n+/g,"\n\n"),p=i?n.subParser("paragraphs")(p,r,t):n.subParser("spanGamut")(p,r,t)),p=p.replace("¨A",""),p="<li"+d+">"+p+"</li>\n"}),e=e.replace(/¨0/g,""),t.gListLevel--,s&&(e=e.replace(/\s+$/,"")),e}function a(e,t,n){var a=r.disableForced4SpacesIndentedSublists?/^ ?\d+\.[ \t]/gm:/^ {0,3}\d+\.[ \t]/gm,i=r.disableForced4SpacesIndentedSublists?/^ ?[*+-][ \t]/gm:/^ {0,3}[*+-][ \t]/gm,o="ul"===t?a:i,c="";return-1!==e.search(o)?function e(r){var l=r.search(o);-1!==l?(c+="\n<"+t+">\n"+s(r.slice(0,l),!!n)+"</"+t+">\n",o="ul"===(t="ul"===t?"ol":"ul")?a:i,e(r.slice(l))):c+="\n<"+t+">\n"+s(r,!!n)+"</"+t+">\n"}(e):c="\n<"+t+">\n"+s(e,!!n)+"</"+t+">\n",c}return e=t.converter._dispatch("lists.before",e,r,t),e+="¨0",e=t.gListLevel?e.replace(/^(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(¨0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm,function(e,r,t){return a(r,t.search(/[*+-]/g)>-1?"ul":"ol",!0)}):e.replace(/(\n\n|^\n?)(( {0,3}([*+-]|\d+[.])[ \t]+)[^\r]+?(¨0|\n{2,}(?=\S)(?![ \t]*(?:[*+-]|\d+[.])[ \t]+)))/gm,function(e,r,t,n){return a(t,n.search(/[*+-]/g)>-1?"ul":"ol",!1)}),e=e.replace(/¨0/,""),e=t.converter._dispatch("lists.after",e,r,t)}),n.subParser("outdent",function(e,r,t){"use strict";return e=t.converter._dispatch("outdent.before",e,r,t),e=e.replace(/^(\t|[ ]{1,4})/gm,"¨0"),e=e.replace(/¨0/g,""),e=t.converter._dispatch("outdent.after",e,r,t)}),n.subParser("paragraphs",function(e,r,t){"use strict";for(var s=(e=(e=(e=t.converter._dispatch("paragraphs.before",e,r,t)).replace(/^\n+/g,"")).replace(/\n+$/g,"")).split(/\n{2,}/g),a=[],i=s.length,o=0;o<i;o++){var c=s[o];c.search(/¨(K|G)(\d+)\1/g)>=0?a.push(c):c.search(/\S/)>=0&&(c=(c=n.subParser("spanGamut")(c,r,t)).replace(/^([ \t]*)/g,"<p>"),c+="</p>",a.push(c))}for(i=a.length,o=0;o<i;o++){for(var l="",u=a[o],p=!1;/¨(K|G)(\d+)\1/.test(u);){var d=RegExp.$1,h=RegExp.$2;l=(l="K"===d?t.gHtmlBlocks[h]:p?n.subParser("encodeCode")(t.ghCodeBlocks[h].text,r,t):t.ghCodeBlocks[h].codeblock).replace(/\$/g,"$$$$"),u=u.replace(/(\n\n)?¨(K|G)\d+\2(\n\n)?/,l),/^<pre\b[^>]*>\s*<code\b[^>]*>/.test(u)&&(p=!0)}a[o]=u}return e=a.join("\n"),e=e.replace(/^\n+/g,""),e=e.replace(/\n+$/g,""),t.converter._dispatch("paragraphs.after",e,r,t)}),n.subParser("runExtension",function(e,r,t,n){"use strict";if(e.filter)r=e.filter(r,n.converter,t);else if(e.regex){var s=e.regex;s instanceof RegExp||(s=new RegExp(s,"g")),r=r.replace(s,e.replace)}return r}),n.subParser("spanGamut",function(e,r,t){"use strict";return e=t.converter._dispatch("spanGamut.before",e,r,t),e=n.subParser("codeSpans")(e,r,t),e=n.subParser("escapeSpecialCharsWithinTagAttributes")(e,r,t),e=n.subParser("encodeBackslashEscapes")(e,r,t),e=n.subParser("images")(e,r,t),e=n.subParser("anchors")(e,r,t),e=n.subParser("autoLinks")(e,r,t),e=n.subParser("italicsAndBold")(e,r,t),e=n.subParser("strikethrough")(e,r,t),e=n.subParser("simplifiedAutoLinks")(e,r,t),e=n.subParser("hashHTMLSpans")(e,r,t),e=n.subParser("encodeAmpsAndAngles")(e,r,t),r.simpleLineBreaks?/\n\n¨K/.test(e)||(e=e.replace(/\n+/g,"<br />\n")):e=e.replace(/  +\n/g,"<br />\n"),e=t.converter._dispatch("spanGamut.after",e,r,t)}),n.subParser("strikethrough",function(e,r,t){"use strict";function s(e){return r.simplifiedAutoLink&&(e=n.subParser("simplifiedAutoLinks")(e,r,t)),"<del>"+e+"</del>"}return r.strikethrough&&(e=(e=t.converter._dispatch("strikethrough.before",e,r,t)).replace(/(?:~){2}([\s\S]+?)(?:~){2}/g,function(e,r){return s(r)}),e=t.converter._dispatch("strikethrough.after",e,r,t)),e}),n.subParser("stripLinkDefinitions",function(e,r,t){"use strict";var s=/^ {0,3}\[(.+)]:[ \t]*\n?[ \t]*<?([^>\s]+)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*\n?[ \t]*(?:(\n*)["|'(](.+?)["|')][ \t]*)?(?:\n+|(?=¨0))/gm,a=/^ {0,3}\[(.+)]:[ \t]*\n?[ \t]*<?(data:.+?\/.+?;base64,[A-Za-z0-9+/=\n]+?)>?(?: =([*\d]+[A-Za-z%]{0,4})x([*\d]+[A-Za-z%]{0,4}))?[ \t]*\n?[ \t]*(?:(\n*)["|'(](.+?)["|')][ \t]*)?(?:\n\n|(?=¨0)|(?=\n\[))/gm,i=function(e,s,a,i,o,c,l){return s=s.toLowerCase(),a.match(/^data:.+?\/.+?;base64,/)?t.gUrls[s]=a.replace(/\s/g,""):t.gUrls[s]=n.subParser("encodeAmpsAndAngles")(a,r,t),c?c+l:(l&&(t.gTitles[s]=l.replace(/"|'/g,"&quot;")),r.parseImgDimensions&&i&&o&&(t.gDimensions[s]={width:i,height:o}),"")};return e=(e+="¨0").replace(a,i),e=e.replace(s,i),e=e.replace(/¨0/,"")}),n.subParser("tables",function(e,r,t){"use strict";function s(e){return/^:[ \t]*--*$/.test(e)?' style="text-align:left;"':/^--*[ \t]*:[ \t]*$/.test(e)?' style="text-align:right;"':/^:[ \t]*--*[ \t]*:$/.test(e)?' style="text-align:center;"':""}function a(e,s){var a="";return e=e.trim(),(r.tablesHeaderId||r.tableHeaderId)&&(a=' id="'+e.replace(/ /g,"_").toLowerCase()+'"'),e=n.subParser("spanGamut")(e,r,t),"<th"+a+s+">"+e+"</th>\n"}function i(e,s){return"<td"+s+">"+n.subParser("spanGamut")(e,r,t)+"</td>\n"}function o(e,r){for(var t="<table>\n<thead>\n<tr>\n",n=e.length,s=0;s<n;++s)t+=e[s];for(t+="</tr>\n</thead>\n<tbody>\n",s=0;s<r.length;++s){t+="<tr>\n";for(var a=0;a<n;++a)t+=r[s][a];t+="</tr>\n"}return t+="</tbody>\n</table>\n"}function c(e){var r,t=e.split("\n");for(r=0;r<t.length;++r)/^ {0,3}\|/.test(t[r])&&(t[r]=t[r].replace(/^ {0,3}\|/,"")),/\|[ \t]*$/.test(t[r])&&(t[r]=t[r].replace(/\|[ \t]*$/,""));var c=t[0].split("|").map(function(e){return e.trim()}),l=t[1].split("|").map(function(e){return e.trim()}),u=[],p=[],d=[],h=[];for(t.shift(),t.shift(),r=0;r<t.length;++r)""!==t[r].trim()&&u.push(t[r].split("|").map(function(e){return e.trim()}));if(c.length<l.length)return e;for(r=0;r<l.length;++r)d.push(s(l[r]));for(r=0;r<c.length;++r)n.helper.isUndefined(d[r])&&(d[r]=""),p.push(a(c[r],d[r]));for(r=0;r<u.length;++r){for(var f=[],g=0;g<p.length;++g)n.helper.isUndefined(u[r][g]),f.push(i(u[r][g],d[g]));h.push(f)}return o(p,h)}if(!r.tables)return e;var l=/^ {0,3}\|?.+\|.+\n {0,3}\|?[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|[ \t]*:?[ \t]*(?:[-=]){2,}[\s\S]+?(?:\n\n|¨0)/gm,u=/^ {0,3}\|.+\|\n {0,3}\|[ \t]*:?[ \t]*(?:[-=]){2,}[ \t]*:?[ \t]*\|\n( {0,3}\|.+\|\n)*(?:\n|¨0)/gm;return e=t.converter._dispatch("tables.before",e,r,t),e=e.replace(/\\(\|)/g,n.helper.escapeCharactersCallback),e=e.replace(l,c),e=e.replace(u,c),e=t.converter._dispatch("tables.after",e,r,t)}),n.subParser("unescapeSpecialChars",function(e,r,t){"use strict";return e=t.converter._dispatch("unescapeSpecialChars.before",e,r,t),e=e.replace(/¨E(\d+)E/g,function(e,r){var t=parseInt(r);return String.fromCharCode(t)}),e=t.converter._dispatch("unescapeSpecialChars.after",e,r,t)});var m=this;"function"==typeof define&&define.amd?define(function(){"use strict";return n}):"undefined"!=typeof module&&module.exports?module.exports=n:m.showdown=n}).call(this);
+//# sourceMappingURL=showdown.min.js.map</script>
+
+
+</body>
+
+</html>
+
