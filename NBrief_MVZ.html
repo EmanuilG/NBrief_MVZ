@@ -6,7 +6,7 @@
     <meta name="description" content="Mustertexte und Textbausteine für einen neurologischen Arztbrief">
     <meta name="author" content="Emanuil Giuris">
     <meta license="GNU General Public License 3">
-    <title>NBrief</title>
+    <title>NBrief_MVZ</title>
     <style>
         body {
             position: fixed;
@@ -397,7 +397,7 @@
 
 <body>
     <noscript><p>Der NBrief_MVZ hilft mit Textbausteinen einen Arztbrief zusammenzustellen.<br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. <br>Dieser Code wird von Ihrem Browser interpretiert. <br>Sie sehen diesen Text, weil Javascript in Ihrem Browser deaktiviert ist. Erwägen Sie bitte, Javascript zu aktivieren. <br>Der NBrief_MVZ braucht einen neuen Browser, am besten funktioniert er mit Firefox 45 oder neuer<br>
-<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 11.04.2020</p></noscript>
+<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 13.04.2020</p></noscript>
     <div id="topBar">
         <button class="bt1" onclick="ez1()">Arztbrief</button>
         <button class="bt1" onclick="ez4()">Hilfe</button>
@@ -684,7 +684,7 @@
     <div id="viert" class="wrap2">
         <div class="fleft50">
             <h3>Hilfe</h3>
-            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formattierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 11.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
+            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formattierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 13.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
         </div>
         <div class="fright50">
             <h3>Tastenkombinationen</h3> Die folgenden Tastenkombinationen gelten in den meisten Windows-Anwendungen.<br>Sie helfen bei der Textbearbeitung.<br>Sie gelten auch für das weiße Textfeld im 'NBrief'.
@@ -791,60 +791,138 @@
                     </select>
                 </form><br>
             </div>
-
-
-
             <div class="wrap3" id="ICD-Diagnosen">
                 <p class="stamp">ICD Diagnosen</p>
                 <form>
                     <select id="icd-diagnosen" class="select1 select2" size="" onKeyUp="icddiagn()">
-                <option value="Adipositas">Adipositas</option><br>
-                <option value="Alkoholkrankheit">Alkoholkrankheit</option>
-                <option value="Arterielle Hypertonie">Art. Hypertonie</option><br>
-                <option value="Bandscheibenvorfall">Bandscheibenvorfall</option><br>
-                <option value="COPD Stadium">COPD</option>
-                <option value="Delir">Delir</option><br>
-                <option value="Demenz, leicht, mittelschwer, schwer">Demenz</option>
-                <option value="Depression">Depression</option><br>
-                <option value="Diabetes mellitus Typ 1 2">DM</option>
-                <option value="Epileptischer Anfall, generalisiert tonisch-klonisch, komplex-fokal, fokal, nicht-konvulsiv, Status epilepticus">Epil. Anfall</option><br>
-                <option value="Periphere Fazialisparese rechts links">Fazialisparese</option><br>
-                <option value="Funktionelle Körperbeschwerden">Funktionell</option>
-                <option value="Gutartiger Lagerungsschwindel des hinteren Bogengangs rechts links">Lagerungsschwindel</option><br>
-                <option value="Harnwegsinfekt">Harnwegsinfekt</option>
-                <option value="Herzinsuffizienz NYHA Stadium ">Herzinsuffizienz</option>
-                <option value="Hirnblutung ca.  x cm rechts links">Hirnblutung</option><br>
-                <option value="Hirninfarkt im Stromgebiet der A. cerebri media posterior anterior rechts links">Hirninfarkt</option>
-                <option value="Hyperlipidämie">Hyperlipidämie</option><br>
-                <option value="Hypothyreose">Hypothyreose</option><br>
-                <option value="Guillain-Barré-Syndrom">Guillain-Barré-Syndrom</option><br>
-                <option value="Idiopathisches Parkinson-Syndrom">Parkinson</option>
-                <option value="Infarkt im Hirnstamm Kleinhirn rechts links">Hirnstamm-Kleinhirn</option><br>
-                <option value="Koronare Herzkrankheit">KHK</option>
-                <option value="Migräne mit ohne Aura">Migräne</option><br>
-                <option value="Multiple Sklerose, schubförmig, sekundär primär progredient, EDSS ">Multiple Sklerose</option><br>
-                <option value="Myasthenia gravis">Myasthenia gravis</option><br>
-                <option value="Niereninsuffizienz Stadium">Niereninsuffizienz</option>
-                <option value="Neuritis vestibularis rechts links">Neuritis vestibularis</option>
-                <option value="Pneumonie">Pneumonie</option><br>
-                <option value="Radikulopathie C6 C7 L5 S1 rechts links ">Radikulopathie</option><br>
-                <option value="Kopfschmerzen vom Spannungstyp">Spannungskopfschmerzen</option>
-                <option value="Spinalkanalstenose, lumbal, zervikal">Spinalkanalstenose</option>
-                <option value="Subarachnoidalblutung Hunt Hess mit Ventrikeleinblutung">SAB</option>
-                <option value="Transiente globale Amnesie">TGA</option><br>
-                <option value="Transitorisch-ischämische Attacke">TIA</option>
-                <option value="Vorhofflimmern, Erstdiagnose, ohne unter Antikoagulation mit">VHF</option><br>
-                <option value="Z.n.">Z.n.</option>
+<option value="F10.2 Abhängigkeitssyndrom durch Alkohol">Alkohol-Abhängigkeit</option><br>
+<option value="F10.1 Schädlicher Gebrauch von Alkohol">Alkohol-Schädlicher Gebrauch</option><br>
+<option value="G30.0 Alzheimer-Krankheit mit frühem Beginn (vor 65. LJ)">Alzheimer-Krankheit mit frühem Beginn</option><br>
+<option value="G30.1 Alzheimer-Krankheit mit spätem Beginn (nach 65. LJ)">Alzheimer-Krankheit mit spätem Beginn</option><br>
+<option value="F43.2 Anpassungsstörung">Anpassungsstörung</option><br>
+<option value="R47.0 Dysphasie und Aphasie">Aphasie</option><br>
+<option value="R48.2 Apraxie">Apraxie</option><br>
+<option value="G25.1 Arzneimittelinduzierter Tremor ">Arzneimittelinduzierter Tremor </option><br>
+<option value="R26.0 Ataktischer Gang">Ataktischer Gang</option><br>
+<option value="H81.1 Benigner paroxysmaler Schwindel">Benigner paroxysmaler Schwindel</option><br>
+<option value="Z03.3 Beobachtung bei Verdacht auf neurologische Krankheit - untersuchungsbedürftige aber nach Untersuchung nicht behandlungsbedürftige Symptome">Beobachtung bei Verdacht auf neurologische Krankheit - untersuchungsbedürftige aber nach Untersuchung nicht behandlungsbedürftige Symptome</option><br>
+<option value="R40.2 Bewusstlosigkeit">Bewusstlosigkeit</option><br>
+<option value="F31 Bipolare affektive Störung">Bipolare affektive Störung</option><br>
+<option value="G44.0 Cluster-Kopfschmerz">Cluster-Kopfschmerz</option><br>
+<option value="G90.50 Komplexes regionales Schmerzsyndrom Typ I, (CRPS I) der oberen Extremität">CRPS I der oberen Extremität</option><br>
+<option value="G90.51 Komplexes regionales Schmerzsyndrom Typ I, (CRPS I) der unteren Extremität">CRPS I der unteren Extremität</option><br>
+<option value="G90.60 Komplexes regionales Schmerzsyndrom Typ II, (CRPS II) der oberen Extremität">CRPS II der oberen Extremität</option><br>
+<option value="G90.61 Komplexes regionales Schmerzsyndrom Typ II, (CRPS II) der unteren Extremität">CRPS II der unteren Extremität</option><br>
+<option value="F32.0 Leichte depressive Episode">Depressive Episode, leicht</option><br>
+<option value="F32.1 Mittelgradige depressive Episode">Depressive Episode, mittelgradig</option><br>
+<option value="F32.2 Schwere depressive Episode ohne psychotische Symptome">Depressive Episode, schwer ohne Psychose</option><br>
+<option value="F33.4 Rezidivierende Depressive Störung, gegenwärtig remittiert">Depressive Störung, rezidivierend, gegenwärtig remittiert</option><br>
+<option value="G63.2 Diabetische Polyneuropathie">Diabetische Polyneuropathie</option><br>
+<option value="H53.2 Diplopie">Diplopie</option><br>
+<option value="R47.1 Dysarthrie und Anarthrie">Dysarthrie</option><br>
+<option value="G40.6 Erstmaliger Grand-Mal-Anfall, unprovoziert">Erstmaliger Grand-Mal-Anfall, unprovoziert</option><br>
+<option value="G25.0 Essentieller Tremor">Essentieller Tremor</option><br>
+<option value="G51.1 Fazialisparese (Bell)">Fazialisparese (Bell)</option><br>
+<option value="M79.70 Fibromyalgie">Fibromyalgie</option><br>
+<option value="G31.0 Frontotemporale Demenz">Frontotemporale Demenz</option><br>
+<option value="F45.8 Funktionelle Körperbeschwerden">Funktionelle Körperbeschwerden</option><br>
+<option value="F01.3 Gemischte kortikale und subkortikale vaskuläre Demenz">Gemischte vaskuläre Demenz</option><br>
+<option value="G40.3 Generalisierte idiopathische Epilepsie">Generalisierte idiopathische Epilepsie</option><br>
+<option value="H53.4 Gesichtsfelddefekte">Gesichtsfelddefekte</option><br>
+<option value="G25.2 Gesteigerter physiologischer Tremor">Gesteigerter physiologischer Tremor</option><br>
+<option value="G81.0 Schlaffe Hemiparese und Hemiplegie">Hemiparese schlaff</option><br>
+<option value="G81.1 Spstische Hemiparese und Hemiplegie">Hemiparese spastisch</option><br>
+<option value="I69.1 Folgen einer intrazerebralen Blutung">Hirnblutung-Folgen</option><br>
+<option value="I69.3 Folgen eines Hirninfarktes">Hirninfarkt-Folgen</option><br>
+<option value="G90.2 Horner-Syndrom">Horner-Syndrom</option><br>
+<option value="G47.0 Ein- und Durchschlafstörungen">Insomnie</option><br>
+<option value="F70 Leichte Intelligenzminderung">Intelligenzminderung, leicht</option><br>
+<option value="F71 Mittelgradige Intelligenzminderung">Intelligenzminderung, mittelgradig</option><br>
+<option value="F72 Schwere Intelligenzminderung">Intelligenzminderung, schwer</option><br>
+<option value="F73 Schwerste Intelligenzminderung">Intelligenzminderung, schwerst</option><br>
+<option value="H51.2 Internukleäre Ophthalmoplegie">Internukleäre Ophthalmoplegie</option><br>
+<option value="G93.2 Benigne intrakranielle Hypertension">Intrakranielle Hypertension</option><br>
+<option value="G56.0 Karpaltunnelsyndrom, rechts links leichtgradig mittelgradig schwer">Karpaltunnelsyndrom</option><br>
+<option value="G44.4 Kopfschmerz durch Übergebrauch von Medikamenten">Kopfschmerz durch Übergebrauch von Medikamenten</option><br>
+<option value="M54.5 Kreuzschmerz">Kreuzschmerz</option><br>
+<option value="F06.7 Leichte kognitive Störung">Leichte kognitive Störung</option><br>
+<option value="M54.4 Lumboischialgie">Lumboischialgie</option><br>
+<option value="H81.0 Ménière-Krankheit">Ménière-Krankheit</option><br>
+<option value="G57.1 Meralgia paraesthetica">Meralgia paraesthetica</option><br>
+<option value="G43.1 Migräne mit Aura">Migräne mit Aura</option><br>
+<option value="G43.0 Migräne ohne Aura">Migräne ohne Aura</option><br>
+<option value="G57.8 Sonstige Mononeuropathien der unteren Extremität">Mononeuropathien der unteren Extremität, sonst</option><br>
+<option value="G12.2 Motoneuron-Krankheit">Motoneuron-Krankheit</option><br>
+<option value="F01.1 Multiinfarkt-Demenz (vorwiegend kortikal)">Multiinfarkt-Demenz</option><br>
+<option value="G35.01 Erstmanifestation einer Multiplen Sklerose, mit akuter Exazerbation/Progression ">Multiple Sklerose, Erstmanifestation, mit akuter Exazerbation/Progression </option><br>
+<option value="G35.00 Erstmanifestation einer Multiplen Sklerose, ohne akute Exazerbation/Progression">Multiple Sklerose, Erstmanifestation, ohne akute Exazerbation/Progression</option><br>
+<option value="G35.21 MS, primär-chronischer Verlauf, mit akuter Exazerbation/Progression ">Multiple Sklerose, primär-chronischer Verlauf, mit akuter Exazerbation/Progression </option><br>
+<option value="G35.20 MS, primär-chronischer Verlauf, ohne akute Exazerbation/Progression">Multiple Sklerose, primär-chronischer Verlauf, ohne akute Exazerbation/Progression</option><br>
+<option value="G35.31 MS, sekundär-chronischer Verlauf letzte Stelle, mit akuter Exazerbation/Progression">Multiple Sklerose, sekundär-chronischer Verlauf, mit akuter Exazerbation/Progression</option><br>
+<option value="G35.30 MS, sekundär-chronischer Verlauf letzte Stelle, ohne akute Exazerbation/Progression">Multiple Sklerose, sekundär-chronischer Verlauf, ohne akute Exazerbation/Progression</option><br>
+<option value="G35.11 MS, vorherrschend schubförmiger Verlauf, mit akuter Exazerbation/Progression ">Multiple Sklerose, vorherrschend schubförmiger Verlauf, mit akuter Exazerbation/Progression </option><br>
+<option value="G35.10 MS, vorherrschend schubförmiger Verlauf, ohne akute Exazerbation/Progression">Multiple Sklerose, vorherrschend schubförmiger Verlauf, ohne akute Exazerbation/Progression</option><br>
+<option value="R25.2 Muskelkrämpfe">Muskelkrämpfe</option><br>
+<option value="G70.0 Myasthenia gravis ">Myasthenia gravis </option><br>
+<option value="G72.0 Arzneimittelinduzierte Myopathie">Myopathie, arzneimittelinduziert</option><br>
+<option value="G71.1 Myotone Dystrophie Typ 1 2">Myotone Dystrophie Typ 1 2</option><br>
+<option value="M54.2 Nackenschmerz">Nackenschmerz</option><br>
+<option value="R29.5 Neglect">Neglect</option><br>
+<option value="G53.0 Neuralgie nach Zoster">Neuralgie nach Zoster</option><br>
+<option value="G54.5 Neuralgische Amyotrophie">Neuralgische Amyotrophie</option><br>
+<option value="H81.2 Neuropathia vestibularis">Neuropathia vestibularis</option><br>
+<option value="G91.20 Idiopathischer Normaldruckhydrozephalus">Normaldruckhydrozephalus, idiopathisch</option><br>
+<option value="I95.1 Orthostatische Dysregulation">Orthostatische Dysregulation</option><br>
+<option value="F41.0 Panikstörung oder Panikattacke">Panikstörung Panikattacke</option><br>
+<option value="R26.1 Paretischer Gang">Paretischer Gang</option><br>
+<option value="G20.01 Primäres Parkinson-Syndrom Hoehn und Yahr 0 1 2 mit Wirkungsfluktuation">Parkinson HY 0 1 2 mit WF</option><br>
+<option value="G20.00 Primäres Parkinson-Syndrom Hoehn und Yahr 0 1 2 ohne Wirkungsfluktuation">Parkinson HY 0 1 2 ohne WF</option><br>
+<option value="G20.11 Primäres Parkinson-Syndrom Hoehn und Yahr 3 4 mit Wirkungsfluktuation">Parkinson HY 3 4 mit WF</option><br>
+<option value="G20.10 Primäres Parkinson-Syndrom Hoehn und Yahr 3 4 ohne Wirkungsfluktuation">Parkinson HY 3 4 ohne WF</option><br>
+<option value="G20.21 Primäres Parkinson-Syndrom Hoehn und Yahr 5 mit Wirkungsfluktuation">Parkinson HY 5 mit WF</option><br>
+<option value="G20.20 Primäres Parkinson-Syndrom Hoehn und Yahr 5 ohne Wirkungsfluktuation">Parkinson HY 5 ohne WF</option><br>
+<option value="F40.8 Phobischer Schwankschwindel">Phobischer Schwankschwindel</option><br>
+<option value="S14.3 Verletzung des Plexus brachialis">Plexus brachialis-Verletzung</option><br>
+<option value="G62.1 Alkoholtoxische Polyneuropathie">Polyneuropathie, alkoholtoxisch</option><br>
+<option value="G62.0 Arzneimittelinduzierte Polyneuropathie">Polyneuropathie, arzneimittelinduziert</option><br>
+<option value="G62.9 Polyneuropathie, nicht näher bezeichnet">Polyneuropathie, sonst</option><br>
+<option value="H02.4 Ptosis des Augenlides">Ptosis des Augenlides</option><br>
+<option value="G56.3 Läsion des N. radialis, chronisch ">Radialis-Läsion, chronisch </option><br>
+<option value="G47.8 REM-assoziierte Verhaltensstörung">REM-assoziierte Verhaltensstörung</option><br>
+<option value="G25.81 Syndrom der unruhigen Beine [Restless-Legs-Syndrom]">Restless-Legs-Syndrom</option><br>
+<option value="F20 Schizophrenie">Schizophrenie</option><br>
+<option value="G47.31 Obstruktives Schlafapnoe - Syndrom">Schlafapnoe-Syndrom, obstruktiv</option><br>
+<option value="Z86.7 Krankheiten des Kreislaufsystems in der Eigenanamnese">Schlaganfall-Anamnese ohne Defizit jetzt</option><br>
+<option value="M79.65 Schmerzen in Becken/Oberschenkel">Schmerzen in Becken/Oberschenkel</option><br>
+<option value="M79.67 Schmerzen in Fuß">Schmerzen in Fuß</option><br>
+<option value="M79.64 Schmerzen in Hand">Schmerzen in Hand</option><br>
+<option value="M79.60 Schmerzen in mehreren Bereichen">Schmerzen in mehreren Bereichen</option><br>
+<option value="M79.62 Schmerzen in Oberarm">Schmerzen in Oberarm</option><br>
+<option value="M79.61 Schmerzen in Schulter">Schmerzen in Schulter</option><br>
+<option value="M79.63 Schmerzen in Unterarm">Schmerzen in Unterarm</option><br>
+<option value="M79.66 Schmerzen in Unterschenkel">Schmerzen in Unterschenkel</option><br>
+<option value="H81.3 Sonstiger peripherer Schwindel">Schwindel, peripher, sonstig</option><br>
+<option value="R42 Schwindel und Taumel">Schwindel und Taumel</option><br>
+<option value="H81.4 Schwindel zentralen Ursprungs">Schwindel, zentral</option><br>
+<option value="G44.2 Spannungskopfschmerz">Spannungskopfschmerz</option><br>
+<option value="G51.3 Spasmus hemifacialis">Spasmus hemifacialis</option><br>
+<option value="H50.0 Strabismus concomitans convergens">Strabismus concomitans convergens</option><br>
+<option value="H50.1 Strabismus concomitans divergens">Strabismus concomitans divergens</option><br>
+<option value="R29.6 Sturzneigung">Sturzneigung</option><br>
+<option value="I69.0 Folgen einer Subarachnoidalblutung">Subarachnoidalblutung-Folgen</option><br>
+<option value="F01.2 Subkortikale vaskuläre Demenz ">Subkortikale vaskuläre Demenz</option><br>
+<option value="G40.1 Symptomatische Epilepsie, fokal beginnend">Symptomatische Epilepsie, fokal beginnend</option><br>
+<option value="G40.2 Symptomatische Epilepsie, komplex-fokal beginnend">Symptomatische Epilepsie, komplex-fokal beginnend</option><br>
+<option value="R55 Synkope">Synkope</option><br>
+<option value="H93.1 Tinnitus aurium">Tinnitus aurium</option><br>
+<option value="G50.0 idiopathische Trigeminusneuralgie">Trigeminusneuralgie, idiopathisch</option><br>
+<option value="G56.2 Läsion des N. ulnaris, chronisch">Ulnaris-Läsion, chronisch</option><br>
+<option value="G63.8 Urämische Neuropathie">Urämische Neuropathie</option><br>
+<option value="H81.8 Sonstige Störungen der Vestibularfunktion">Vestibularfunktion-Störung, sonst</option><br>
+<option value="M53.1 Zervikobrachial-Syndrom">Zervikobrachial-Syndrom</option><br>
                 </select></form>
                 <br>
             </div>
-
-
-
-
-
-
-
             <div class="wrap3" id="Diagnosen">
                 <p class="stamp">Diagnosen</p>
                 <form>
@@ -891,10 +969,10 @@
             </div>
             <div class="wrap3" id="Epikrise">
                 <p class="stamp">Epikrise/Symptome</p>
-            <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
-            <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
-            <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
-            <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
+            <!-- <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button> -->
+            <!-- <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button> -->
+            <!-- <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button> -->
+            <!-- <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button> -->
                 <p class="stamp">Subjektive Symptome</p>
                 <form>
                     <select id="symptSubj" class="select1 select2" size="" onKeyUp="symptSu()">
@@ -959,6 +1037,52 @@
                 </form><br>
 
             </div>
+
+            <div class="wrap3" id="Medi-Rezept">
+                <p class="stamp">Medikamente-Rezept</p>
+                <form>
+                    <select id="medi_rezept" class="select1 select2" size="" onKeyUp="medi_rez()">
+<option value="ASS 100 mg 1-0-0">ASS</option>
+<option value="Atorvastatin 20 mg 0-0-1">Atorvastatin</option>
+<option value="Augenschutz durch Uhrglasverband, Augensalbe zur Nacht und neutrale Augentropfen tagsüber.">Augenschutz</option>
+<option value="Bisoprolol 5 mg 1-0-0">Bisoprolol</option>
+<option value="Candesartan 4 8 mg 0-0-1">Candesartan</option>
+<option value="Citalopram 10 20 mg 0-0-1">Citalopram</option>
+<option value="Ibuprofen 400 mg 1-1-1">Ibuprofen</option>
+<option value="Lacosamid 100 mg 1-0-1">Lacosamid</option>
+<option value="Ohne Valproat: Lamotrigin 50 mg 0,5-0-0 in Wochen 1 und 2, 1-0-0 in Wochen 3 und 4, 1-0-0,5 in Wochen 5 und 6, dann 1-0-1.  Mit Valproat: Lamotrigin 25 mg 1-0-0 jeden zweiten Tag in Wochen 1 und 2, 1-0-0 in Wochen 3 und 4, 1-0-0,5 in Wochen 5 und 6, 1-0-1 in Wochen 7 und 8, 1,5-0-1 in Wochen 9 und 10, 1,5-0-1,5 in Wochen 11 und 12, 2-0-1,5 in Wochen 13 und 14, dann 2-0-2.">Lamotrigin</option>
+<option value="Levetiracetam 1000 mg 1-0-1">Levetiracetam</option>
+<option value="Levodopa 100/25 mg 1-1-1">Levodopa</option>
+<option value="Lorazepam 1 mg 1-1-1">Lorazepam</option>
+<option value="Metamizol 500 mg 1-1-1-1">Metamizol</option>
+<option value="Metoprolol 47,5 95 mg 1-0-0">Metoprolol</option>
+<option value="Mirtazapin 7,5 mg 0-0-1">Mirtazapin</option>
+<option value="Pantoprazol 40 mg 1-0-0">Pantoprazol</option>
+<option value="Paracetamol 500 mg 1-1-1">Paracetamol</option>
+<option value="Pipamperon Saft (4 mg/ml) 6 ml 0-0-1">Pipamperon</option>
+<option value="Piribedil: Beginn 50 mg abends, 50 mg alle 2 Wo, max 250 mg">Piribedil</option><br>
+<option value="Pramipexol 1. Woche 0,088 mg 2-3 h vor dem Zubettgehen, 2. Woche 0,18 mg, 3. Woche 0,35 mg">Pramipexol RLS</option><br>
+<option value="Pramipexol 1. Woche 0,088 mg 3x, 2. Woche 0,18 mg 3x, 3. Woche 0,35 mg 3x, max 3,3 mg/d">Pramipexol</option><br>
+<option value="Pramipexol ret. 1. Woche 0,26 mg 1x morgens, 2. Woche 0,52 mg 1x, 3. Woche 1,05 mg 1x, max 3,15 mg/d">Pramipexol ret</option><br>
+<option value="Prednisolon 60 mg 1-0-0 bis Datum, danach täglich um 10 mg reduzieren">Prednisolon</option>
+<option value="Primidon 250 mg 0-0-1/4 für 4 Wochen, 0-0-1/2 für 4 Wochen, 0-0-3/4 für 4 Wochen, dann 0-0-1, dann erneute Beurteilung. Blutbild, Leber- und Nierenwerte Alternative langsamere Eindosierung mit Liskantin Saft (25 mg/ml) 25 mg (1 ml) 0-0-1 für 1 Woche, 0-0-2 für 2 Wochen, 0-0-3 für 2 Wochen, also 1 ml mehr pro 2 Wochen bis 5 ml erreicht worden sind, dann erneute Beurteilung.">Primidon</option><br>
+<option value="Quetiapin 25 mg 1-0-0">Quetiapin</option>
+<option value="Risperidon 1 mg 0-0-1">Risperidon</option>
+<option value="Ropinirol 1. Wo 1 mg 1x, 2. Wo um 1 mg, max 24 mg (verteilt auf 3 Dosen)">Ropinirol</option><br>
+<option value="Ropinirol ret. 1. Wo 2 mg 1x morgens, 2. Wo um 2 mg, max 24 mg">Ropinirol ret</option><br>
+<option value="Rotigotin 1 mg/24h. Pflaster auf saubere, trockene, unverletzte gesunde Haut im Bauchbereich, am Oberschenkel, an der Hüfte, der Flanke, der Schulter oder am Oberarm aufgeklebt werden. Keine Applikation an derselben Stelle innerhalb von 14 Tagen.">Rotigotin RLS</option>
+<option value="Rotigotin trandermal 2 mg, ab 2. Wo um 2 mg, max 8 mg im Frühstadium 16 mg im Spätstadium">Rotigotin</option><br>
+<option value="Tilidin 50 mg 1-1-1">Tilidin</option>
+<option value="Tolcapon Labor vor Beginn, 2x/Monat für 1 J, 1x/Monat für 1/2 J, dann 1x/2 Monaten GGT, ALT, AST, bei Erhöhung über der Norm Tolcapon absetzten.">Tolcapon</option>
+<option value="Trospiumchlorid (Spasmex) 15 mg 1-1-1">Trospiumchlorid (Spasmex)</option>
+<option value="Valproat 500 mg 1-0-1">Valproat</option>
+<option value="Vitamin B1 100 mg 1-0-0">Vitamin B1</option>
+<option value="Vitamin D 1000 I. E. 1-0-0">Vitamin D</option>
+
+</select>
+                </form>
+
+            </div>
             <div class="wrap3" id="Medikamente">
                 <p class="stamp">Medikamente</p>
                 <form>
@@ -995,20 +1119,28 @@
 <option value="Metoprolol 47,5 95 mg 1-0-0">Metoprolol</option>
 <option value="Moxonidin 0,3 mg 1-0-0">Moxonidin</option>
 <option value="Morphin 2,5 mg s. c. 1-1-1-1">Morphin</option>
-<option value="Mirtazapin 30 mg 0-0-1">Mirtazapin</option>
+<option value="Mirtazapin 7,5 mg 0-0-1">Mirtazapin</option>
 <option value="Pantoprazol 40 mg 1-0-0">Pantoprazol</option>
 <option value="Paracetamol 500 mg 1-1-1">Paracetamol</option>
 <option value="Phenprocoumon 3 mg nach INR (Ziel 2-3)">Phenprocoumon</option>
 <option value="Pipamperon Saft (4 mg/ml) 6 ml 0-0-1">Pipamperon</option>
-<option value="Prednisolon 60 mg 1-0-0 bis Datum, danach täglich um 10 mg reduzieren">Prednisolon</option>
+<option value="Piribedil 50 mg 0-0-1">Piribedil</option><br>
+<option value="Pramipexol xxx mg 0-0-1">Pramipexol RLS</option><br>
+<option value="Pramipexol xxx mg 3x">Pramipexol</option><br>
+<option value="Pramipexol ret. xxx mg 1x morgens">Pramipexol ret</option><br>
+<option value="Prednisolon 60 mg 1-0-0">Prednisolon</option>
 <option value="Quetiapin 25 mg 1-0-0">Quetiapin</option>
 <option value="Ramipril 5 mg 1-0-0">Ramipril</option>
 <option value="Risperidon 1 mg 0-0-1">Risperidon</option>
 <option value="Rivaroxaban 20 mg 1-0-0">Rivaroxaban</option>
+<option value="Ropinirol xxx mg 1-1-1">Ropinirol</option><br>
+<option value="Ropinirol ret. xxx mg 1x morgens">Ropinirol ret</option><br>
+<option value="Rotigotin trandermal xxx mg">Rotigotin</option><br>
 <option value="Simvastatin 20 mg 0-0-1">Simvastatin</option>
 <option value="Sitagliptin 100 mg 1-0-0">Sitagliptin</option>
 <option value="Spironolacton 50 mg 1-0-0">Spironolacton</option>
 <option value="Tilidin 50 mg 1-1-1">Tilidin</option>
+<option value="Tolcapon">Tolcapon</option>
 <option value="Torasemid 5 mg 1-0-0">Torasemid</option>
 <option value="Trospiumchlorid (Spasmex) 15 mg 1-1-1">Trospiumchlorid (Spasmex)</option>
 <option value="Valproat 500 mg 1-0-1">Valproat</option>
@@ -1022,7 +1154,8 @@
                 <p class="stamp">Klinischer Befund</p>
 
                 <button class="bt1 bttext" onclick="ed1('Wach, kooperativ, aufmerksam, orientiert. Sprachverständnis, sprachlicher Ausdruck normal, Artikulation normal.\r\nAugen: Bewegung, Pupillen, Gesichtsfelder fingerperimetrisch normal. Kein pathologischer Nystagmus. Sehkraft ohne mit Brille R und L mindestens xxx mm große Zahlen in Leseentfernung.\r\nFundoskopisch keine Stauungspapille bds.\r\nMimik normal, die Zunge wird geradeaus herausgestreckt, der weiche Gaumen hebt sich symmetrisch.\r\nArmhalteversuch, Beinhalteversuch, Kraft, Muskeltrophik, Muskeltonus, Muskeldehnungsreflexe lebhaft/mittellebhaft/schwach, stgl., Plantarreflex normal.\r\nFinger-Nase-Versuch o. B. Kein Tremor, keine unwillkürlichen Bewegungen.\r\nAlgesie, Ästhesie normal. Vibrationssinn im großen Zeh /8.r\nStehen und Gehen normal, Einbeinstand, Rombergversuch, Zehen- und Hackengang.\r\n')">Befund kurz</button>
-                <button class="bt1 bttext" onclick="ed1('Wach, kooperativ, aufmerksam, orientiert.\r\nWach, kooperativ, aufmerksam, zeitlich, örtlich orientiert, nennt ' + sein + ' Geburtsdatum, ' + sein + ' Alter, den laufenden Monat, erinnert sich an 3 Wörter nach 3 Minuten, rechnet korrekt 3 + 4, 20 - 3, zählt rückwärts von 20 bis 10.\r\nMerkfähigkeit, Stimmung normal.\r\nSprachverständnis, sprachlicher Ausdruck normal, Artikulation normal.\r\nAugen: Bewegung, Pupillen, Gesichtsfelder fingerperimetrisch normal. Kein pathologischer Nystagmus.\r\nSehkraft ohne mit Brille R und L mindestens Fingerzählen xxx mm große Buchstaben Zahlen in Leseentfernung.\r\nSehkraft ohne mit Brille R mindestens Fingerzählen xxx mm L xxx mm große Buchstaben Zahlen in Leseentfernung.\r\nFundoskopisch keine Stauungspapille bds.\r\nMimik normal, die Zunge wird geradeaus herausgestreckt, der weiche Gaumen hebt sich symmetrisch. \r\nHören von Fingerreiben beiderseits normal. Kein Meningismus.\r\nArmhalteversuch, Beinhalteversuch, Kraft, Muskeltrophik, Muskeltonus, Muskeldehnungsreflexe lebhaft/mittellebhaft/schwach, stgl., Plantarreflex normal.\r\nFinger-Nase-Versuch, Knie-Hacke-Versuch o. B.\r\nKein Tremor, keine unwillkürlichen Bewegungen.\r\nDie schnellen repetitiven Bewegungen der Hände der Füße sind normal unbeholfen arrythmisch.\r\nAlgesie, Ästhesie normal.\r\nLagesinn im Zeigefinger im Handgelenk im Ellenbogen im großen Zeh im Sprunggelenk normal fehlend.\r\nVibrationssinn im Zeigefinger /8 im Malleolus medialis /8 und im großen Zeh /8.\r\nZwei-Punkt-Diskrimination an der Fingerbeere des Zeigefingers mm.\r\nUnterscheidung spitz-stumpf an den Fußsohlen normal fehlend.\r\nLagerungsmanöver für den rechten linken vertikalen Bogengang negativ positiv.\r\nLagerungsmanöver für den rechten linken horizontalen Bogengang negativ positiv.\r\nKopfimpulstest normal positiv für eine Läsion des rechten linken Gleichgewichtsorgans.\r\nStehen und Gehen normal, Einbeinstand, Rombergversuch, Zehen- und Hackengang, Strichgang, Aufstehen vom Stuhl, Steigen auf eine Treppenstufe mit jedem Bein normal.\r\nAllgemeinzustand gut, Ernährungszustand gut. Haut und Schleimhäute normal. Lunge auskultatorisch normales Atemgeräusch, Herzaktion rhythmisch, keine Herzgeräusche, Bauch weich mit Darmgeräuschen, keine Ödeme, große Gelenke frei beweglich, Wirbelsäule ohne Klopfschmerz.\r\nLasègue-Zeichen negativ positiv.\r\nUmgekehrtes Lasègue-Zeichen negativ positiv.\r\nGroße Gelenke frei beweglich.\r\nHüftaußenrotation und Hüftinnenrotation schmerzfrei.\r\nHWS LWS ohne Klopf- oder Druckschmerz.\r\nPhalen-Test negativ positiv.\r\nTinel-Zeichen des N. medianus ulnaris peroneus negativ positiv.\r\nGleichgewichts-Reflexe normal.\r\nSchmerz in xxx wird ausgelöst durch Druck auf  durch passive Armabduktion R L Armaußenrotation R L Hüftaußenrotation R L Hüftinnenrotation R L.\r\nRR / mmHg, Herzfrequenz /min, Temperatur 36, °C, SpO2 xxx % bei Raumluft.\r\n')">Befund lang</button>
+
+                <button class="bt1 bttext" onclick="ed1('Wach, kooperativ, aufmerksam, orientiert.\r\nWach, kooperativ, aufmerksam, zeitlich, örtlich orientiert, nennt ' + sein + ' Geburtsdatum, ' + sein + ' Alter, den laufenden Monat, erinnert sich an 3 Wörter nach 3 Minuten, rechnet korrekt 3 + 4, 20 - 3, zählt rückwärts von 20 bis 10.\r\nMerkfähigkeit, Stimmung normal.\r\nSprachverständnis, sprachlicher Ausdruck normal, Artikulation normal.\r\nAugen: Bewegung, Pupillen, Gesichtsfelder fingerperimetrisch normal. Kein pathologischer Nystagmus.\r\nSehkraft ohne mit Brille R und L mindestens Fingerzählen xxx mm große Buchstaben Zahlen in Leseentfernung.\r\nSehkraft ohne mit Brille R mindestens Fingerzählen xxx mm L xxx mm große Buchstaben Zahlen in Leseentfernung.\r\nFundoskopisch keine Stauungspapille bds.\r\nMimik normal, die Zunge wird geradeaus herausgestreckt, der weiche Gaumen hebt sich symmetrisch. \r\nHören von Fingerreiben beiderseits normal. Kein Meningismus.\r\nArmhalteversuch, Beinhalteversuch, Kraft, Muskeltrophik, Muskeltonus, Muskeldehnungsreflexe lebhaft/mittellebhaft/schwach, stgl., Plantarreflex normal.\r\nFinger-Nase-Versuch, Knie-Hacke-Versuch o. B.\r\nKein Tremor, keine unwillkürlichen Bewegungen.\r\nDie schnellen repetitiven Bewegungen der Hände der Füße sind normal unbeholfen arrythmisch.\r\nAlgesie, Ästhesie normal.\r\nLagesinn im Zeigefinger im Handgelenk im Ellenbogen im großen Zeh im Sprunggelenk normal fehlend.\r\nVibrationssinn im Zeigefinger /8 im Malleolus medialis /8 und im großen Zeh /8.\r\nZwei-Punkt-Diskrimination an der Fingerbeere des Zeigefingers mm.\r\nUnterscheidung spitz-stumpf an den Fußsohlen normal fehlend.\r\nLagerungsmanöver für den rechten linken vertikalen Bogengang negativ positiv.\r\nLagerungsmanöver für den rechten linken horizontalen Bogengang negativ positiv.\r\nKopfimpulstest normal positiv für eine Läsion des rechten linken Gleichgewichtsorgans.\r\nStehen und Gehen normal, Einbeinstand, Rombergversuch, Zehen- und Hackengang, Strichgang, Aufstehen vom Stuhl, Steigen auf eine Treppenstufe mit jedem Bein normal.\r\nAllgemeinzustand gut, Ernährungszustand gut. Haut und Schleimhäute normal. Lunge auskultatorisch normales Atemgeräusch, Herzaktion rhythmisch, keine Herzgeräusche, Bauch weich mit Darmgeräuschen, keine Ödeme, große Gelenke frei beweglich, Wirbelsäule ohne Klopfschmerz.\r\nLasègue-Zeichen negativ positiv.\r\nUmgekehrtes Lasègue-Zeichen negativ positiv.\r\nGroße Gelenke frei beweglich.\r\nHüftaußenrotation und Hüftinnenrotation schmerzfrei.\r\nHWS LWS ohne Klopf- oder Druckschmerz.\r\nPhalen-Test negativ positiv.\r\nTinel-Zeichen des N. medianus ulnaris peroneus negativ positiv.\r\nGleichgewichts-Reflexe normal.\r\nSchmerz in xxx wird ausgelöst durch Druck auf  durch passive Armabduktion R L Armaußenrotation R L Hüftaußenrotation R L Hüftinnenrotation R L.\r\nRR / mmHg, Herzfrequenz /min, Temperatur 36, °C, SpO2 xxx % bei Raumluft.\r\nTimed Up and Go Test (Aufstehen von einem Stuhl, 3 m Gehen, Zurückkehren, Sich-Hinsetzen) s')">Befund lang</button>
                 <button class="bt1 bttext" onclick="ed1('Schulterblattstabilisierung durch Serratus ant. R normal schwach L normal schwach, Schulterhebung R  L , Armabduktion R  L , Armadduktion R  L , Arminnenrotation R  L , Armaußenrotation R  L , Armbeugung R  L , Armstreckung R  L , Unterarmpronation R  L , Unterarmsupination R  L , Handbeugung R  L , Handstreckung R  L , Fingerstreckung R  L , Fingerbeugung R  L , Abduktion der Finger II und V R  L , Beugung der MCP-Gelenke R  L , Streckung der MCP-Gelenke R  L , Beugung der IP-Gelenke R  L , Streckung der IP-Gelenke R  L  nach MRC.\r\nHüftbeugung R  L , Hüftstreckung R  L , Hüftinnenrotation R  L , Hüftaußenrotation R  L , Kniebeugung R  L , Kniestreckung R  L , Fußhebung R  L , Fußsenkung R  L , Fußpronation R  L , Fußsupination R  L , Zehenstreckung R  L , Zehenbeugung R  L  nach MRC.\r\n\r\n--- Ohne MRC-Grad ---\r\nSchulterblattstabilisierung durch Serratus ant. normal, Schulterhebung, Armabduktion, Armadduktion, Arminnenrotation, Armaußenrotation, Armbeugung, Armstreckung, Unterarmpronation, Unterarmsupination, Handbeugung, Handstreckung, Fingerstreckung, Fingerbeugung, Abduktion der Finger II und V, Beugung der MCP-Gelenke, Streckung der MCP-Gelenke, Beugung der IP-Gelenke, Streckung der IP-Gelenke.\r\nHüftbeugung, Hüftstreckung, Hüftinnenrotation, Hüftaußenrotation, Kniebeugung, Kniestreckung, Fußhebung, Fußsenkung, Fußpronation, Fußsupination, Zehenstreckung, Zehenbeugung.\r\n\r\nMuskelatrophie in Mm. biceps br. triceps br. kleinen Handmuskeln Thenar quadriceps femoris gastrocnemius tibialis ant. R L.\r\nHautregion ohne Schweiß:  R L. \r\n\r\nMasseter-Reflex , BSR R  L , TSR R  L , PSR R  L , ASR R  L  .\r\nMuskeldehnungsreflexe: (0: fehlend, 1: schwach, 2: mittellebhaft, 3: lebhaft ohne Klonus, 4: mit Klonus)\r\n\r\nLasègue-Zeichen R bei Grad  positiv L bei Grad  positiv. \r\nUmgekehrtes Lasègue-Zeichen R positiv L positiv. \r\nSchmerz in xxx wird ausgelöst durch Druck auf  durch passive Armabduktion R L Armaußenrotation R L Hüftaußenrotation R L Hüftinnenrotation R L \r\n\r\nPassiver Bewegungsumfang\r\n\r\nSchultergelenk\r\nAbduktion - Adduktion (Frontalebene): R -- L -- (Normal: 180-0-30)\r\nArm vorwärts - rückwärts (Sagittalebene): R -- L -- (Normal: 160-0-40)\r\nArmaußenrotation - Arminnenrotation: R -- L -- (Normal: 60-0-75)\r\n\r\nEllenbogen\r\nStreckung - Beugung: R -- L -- (Normal: 10-0-135) \r\n\r\nHandgelenk\r\nStreckung - Beugung: R -- L -- (Normal: 50-0-60)\r\n\r\nHüftgelenk\r\nStreckung - Beugung: R -- L -- (Normal: 5-0-130)\r\nAbduktion - Adduktion: R -- L -- (Normal: 40-0-30)\r\nAußen- und Innenrotation in Beugung von 90 Grad: R -- L -- (Normal: 40-0-40)\r\n\r\nKniegelenk\r\nStreckung - Beugung: R -- L -- (Normal: 5-0-130)\r\n\r\nOberes Sprunggelenk \r\nHebung - Senkung: R -- L -- (Normal: 20-0-40)\r\n')">Peripher</button>
                 <button class="bt1 bttext" onclick="ed1('Lagerungsmanöver für den rechten linken vertikalen Bogengang negativ positiv.\r\nLagerungsmanöver für den rechten linken horizontalen Bogengang negativ positiv.\r\nKopfimpulstest normal positiv für eine Läsion des rechten linken Gleichgewichtsorgans.\r\n')">Schwindel-Befund</button><br>
                 <button class="bt1 bttext" onclick="ed1('Mini-Mental-Status-Test xxx von 30 Punkten.\r\n' + Der_Patient + ' konnte xxx.\r\n\r\nUhren-Zeichen-Test nach Shulman 1 Punkt xxx Punkte\r\n(Bestes Ergebnis 1, ungünstigstes Ergebnis 6).\r\n')">MMST/UhrT</button>
@@ -1037,7 +1170,8 @@
                 <button class="bt1 bttext" onclick="ed1('Es handelt sich um eine leichtgradige mittelgradige Demenz, wahrscheinlich vom Alzheimer-Typ.\r\nZum Ausschluss einer behandelbaren (Mit-)Ursache der Demenz bitte ich um folgende Labordiagnostik, wenn nicht bereits durchgeführt: Blutbild, Vitamin B12 (besser Holotranscobalamin), Folsäure, Glukose, Kreatinin, Leberenzyme, Na, K, Ca, TSH, CRP.\r\nZum Ausschluss einer strukturellen Läsion habe ich zum Schädel-CT Schädel-MRT überwiesen.\r\nIch habe ein Informationsblatt mitgegeben und über vertrauenswürdige Internet-Quellen zur Demenz sowie über die Senioren-Beratung des Landkreises Hersfeld-Rotenburg informiert. Ich habe Ratschläge zum Umgang mit ' + dem_Patienten + ' gegeben, insbesondere habe ich über Milde, Akzeptanz und Erhaltung der Selbstständigkeit gesprochen.\r\n')">Demenz</button>
                 <button class="bt1 bttext" onclick="ed1('Depression\r\n')">Depression</button>
                 <button class="bt1 bttext" onclick="ed1('Epilepsie\r\n')">Epilepsie</button>
-                <button class="bt1 bttext" onclick="ed1('E_Tremor\r\n')">E_Tremor</button>
+                <button class="bt1 bttext" onclick="ed1('Archimedes-Spirale mit leichtesten Abweichungen.\r\n' + Der_Patient + ' zeichnet eine Linie in 2 s, ich zähle xxx Wellen, also der Tremor ist xxx Hz._Tremor\r\n')">Essent_Tremor</button>
+
                 <button class="bt1 bttext" onclick="ed1('FunktKB\r\n')">FunktKB</button>
                 <button class="bt1 bttext" onclick="ed1('Kopfschmerz\r\n')">Kopfschmerz</button>
                 <button class="bt1 bttext" onclick="ed1('Es handelt sich um eine milde Meralgia paresthetica rechts links, es ist ein Nervenwurzelkompressions-Syndrom des N. cutaneus femoris lateralis im Leistenband. ' + Der_Patient + ' soll langes Stehen vermeiden, ebenfalls soll ' + er +  ' keine das Becken beengende Kleidung tragen.\r\nZunächst würde ich Verlaufsbeobachtung und keine weitere neurologische Diagnostik oder Behandlung empfehlen.\r\n')">Meralgia</button>
@@ -1128,7 +1262,7 @@
             <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button><br>
             <!--the star logo-->
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<svg height="40" width="40"><polygon points="20.0,2.0 8.0,39.6 38.0,15.6 2.0,15.6 32.0,39.6" style="fill:hsla(40, 100%, 70%, 1);"/></svg></p>
-            <span>NBrief_MVZ 1.2 <br>11.04.2020</span>
+            <span>NBrief_MVZ 1.2 <br>13.04.2020</span>
         </div>
     </div>
     
@@ -1240,6 +1374,7 @@ function showNil1() {
     document.getElementById('ICD-Diagnosen').style.display = 'none';
     document.getElementById('Epikrise').style.display = 'none';
     document.getElementById('Medikamente').style.display = 'none';
+    document.getElementById('Medi-Rezept').style.display = 'none';
     document.getElementById('Klinischer_Befund').style.display = 'none';
     document.getElementById('MS').style.display = 'none';
     document.getElementById('RS').style.display = 'none';
@@ -1298,6 +1433,7 @@ function showGeri() {
 function showMedi() {
     showNil1();
     document.getElementById('Medikamente').style.display = 'block';
+    document.getElementById('Medi-Rezept').style.display = 'block';
 }
 
 function showKlBef() {
@@ -1497,6 +1633,12 @@ function medi() {
     let y0 =
         document.getElementById('medikamente').value;
     edein(y0 + ',  ');
+}
+
+function medi_rez() {
+    let y9 =
+        document.getElementById('medi_rezept').value;
+    edein(y9 + '\r\n');
 }
 
 function diagn() {
