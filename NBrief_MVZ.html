@@ -684,7 +684,7 @@
     <div id="viert" class="wrap2">
         <div class="fleft50">
             <h3>Hilfe</h3>
-            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formattierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 18.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
+            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formatierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 18.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
         </div>
         <div class="fright50">
             <h3>Tastenkombinationen</h3> Die folgenden Tastenkombinationen gelten in den meisten Windows-Anwendungen.<br>Sie helfen bei der Textbearbeitung.<br>Sie gelten auch für das weiße Textfeld im 'NBrief'.
@@ -710,7 +710,7 @@
             </textarea>
         </div>
         <div id="targetwrap" class="fright50_1">
-            &nbsp;&nbsp;Formattierter Text - bearbeiten Sie den linken Textbereich
+            &nbsp;&nbsp;Formatierter Text - bearbeiten Sie den linken Textbereich
             <div id="target1"></div>
             </div>
     </div>
@@ -1123,7 +1123,44 @@
 </select>
                 </form>
                 <br>
-                <button class="bt1 bttext" onclick="ed1('Lamotrigin Tabletten 50 mg\r\n\r\n| Morgens | Abends | Wie lange | Tagesdosis mg |\r\n|:-------:|:------:|:---------:|:-------------:|\r\n| 0,5 | 0 | 14 Tage | 25 |\r\n| 1 | 0 | 14 Tage | 50 |\r\n| 1 | 0,5 | 14 Tage | 75 |\r\n| 1 | 1 | 14 Tage | 100 |\r\n| 1,5 | 1 | 14 Tage | 125 |\r\n| 1,5 | 1,5 | dauerhaft | 150 |\r\n\r\n')">Lamotrigin 1</button>
+
+                <button class="bt1 bttext" onclick="ed1('\r\n---\r\n**Medikament** Tabletten xx mg\r\n\r\n| Morgens | Mittags | Abends | Wie lange | Tagesdosis mg |\r\n|:-------:|:-------:|:------:|:---------:|:-------------:|\r\n| xx      | xx      | xx     | xx Tage   | xxx           |\r\n| xx      | xx      | xx     | xx Tage   | xxx           |\r\n| xx      | xx      | xx     | xx Tage   | xxx           |\r\n| xx      | xx      | xx     | xx Tage   | xxx           |\r\n| xx      | xx      | xx     | s.u.   | xxx           |\r\n\r\n_Bitte sprechen Sie dann noch mal mit dem Arzt._\r\n\r\n')">AnyMed</button>
+
+                <button class="bt1 bttext" onclick="ed1('### Medikamenten-Dosis-Plan\r\n\r\nPatienten-Name: xxx\r\n\r\nDiagnose: xxx\r\n\r\nDatum: ' + dateGerman() + '\r\n\r\nDr. med. Emanuil Giuris, Facharzt für Neurologie\r\nMVZ Hersfeld-Rotenburg - Frankfurter Straße\r\nTel. 06621 88-55200\r\n_Lesen Sie bitte die Packungsbeilage_\r\n_Bei jedem Problem mit dem Medikament rufen Sie den Arzt an_\r\n\r\n')">Dosierplan-Text</button> 
+
+                <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
+
+            <button class="bt1" onclick="md2_ez3()">Konvert</button>
+                <br>
+                <br>
+
+<button class="bt1 bttext" onclick="ed1('\r\n---\r\n**Pramipexol** Tabletten 0,18 mg\r\n\r\n| 2-3 Stunden vor dem Zubettgehen | Wie lange | Tagesdosis mg |\r\n|:-------------------------------:|:---------:|:-------------:|\r\n| 0,5                             | 7 Tage    | 0,088         |\r\n| 1                               | 7 Tage    | 0,18          |\r\n| 2                               | 7 Tage    | 0,35          |\r\n\r\n_Bitte sprechen Sie am Ende der ersten Woche (Tagesdosis noch 0,088 mg) mit dem Arzt._\r\n\r\n')">Pramipexol RLS</button>
+
+<button class="bt1 bttext" onclick="ed1('\r\n---\r\n**Levodopa/Benserazid** Tabletten 100/25 mg\r\n\r\n_Nehmen Sie die Tabletten 1 Stunde nach dem Essen_\r\n_Verteilen Sie die Tabletten gleichmäßig über die 24 Stunden_\r\n\r\n| Morgens | Mittags | Nachmittags | Abends | Wie lange | Tagesdosis mg |\r\n|:-------:|:-------:|:-----------:|:------:|:---------:|:-------------:|\r\n| 0,5     | 0       | 0           | 0,5    | 14 Tage    | 100/25        |\r\n| 0,5     | 0,5     | 0           | 0,5    | 14 Tage    | 150/37,5      |\r\n| 0,5     | 0,5     | 0,5         | 0,5    | 28 Tage   | 200/50        |\r\n| 1       | 0,5     | 1           | 0,5    | s.u.      | 300/75        |\r\n| 1       | 1       | 1           | 1      | s.u.      | 400/100       |\r\n\r\n_Bitte sprechen Sie dann noch mal mit dem Arzt._\r\n\r\n')">Levodopa/Benserazid</button>
+
+<button class="bt1 bttext" onclick="ed1('\r\n---\r\n**Propranolol** Tabletten 40 mg\r\n\r\n| Morgens | Mittags | Abends | Wie lange | Tagesdosis mg |\r\n|:-------:|:-------:|:------:|:---------:|:-------------:|\r\n|         |         | 1      | 14 Tage   | 40            |\r\n| 1       |         | 1      | 14 Tage   | 80            |\r\n| 1       | 1       | 1      | s.u.      | 120           |\r\n\r\n_Bitte sprechen Sie dann noch mal mit dem Arzt._\r\n\r\n')">Propranolol</button>
+
+<button class="bt1 bttext" onclick="ed1('\r\n---\r\n**Wirkstoff: Primidon, Handelsname: Liskantin** Saft 25 mg/ml\r\n\r\n_Labor: Blutbild, Leber- und Nierenwerte jeden Monat in den ersten 3 Monaten_\r\n\r\n| Morgens | Abends | Wie lange | Tagesdosis mg |\r\n|:-------:|:------:|:---------:|:-------------:|\r\n| 0       | 1 ml   | 14 Tage   | 25            |\r\n| 0       | 2 ml   | 14 Tage   | 50            |\r\n| 0       | 3 ml   | 1 Monat   | 75            |\r\n| 1 ml    | 3 ml   | 1 Monat   | 100           |\r\n| 1 ml    | 4 ml   | s.u.      | 125           |\r\n\r\n_Bitte sprechen Sie dann noch mal mit dem Arzt._\r\n\r\n')">Primidon</button>
+
+                <button class="bt1 bttext" onclick="ed1('\r\n---\r\n**Lamotrigin** Tabletten 50 mg\r\n\r\n| Morgens | Abends | Wie lange | Tagesdosis mg |\r\n|:-------:|:------:|:---------:|:-------------:|\r\n| 0,5     | 0      | 14 Tage   | 25            |\r\n| 1       | 0      | 14 Tage   | 50            |\r\n| 1       | 0,5    | 14 Tage   | 75            |\r\n| 1       | 1      | 14 Tage   | 100           |\r\n| 1,5     | 1      | 14 Tage   | 125           |\r\n| 1,5     | 1,5    | s.u. | 150           |\r\n\r\n_Bitte sprechen Sie dann noch mal mit dem Arzt_\r\n\r\n')">Lamotrigin 1</button>
+
+<button class="bt1 bttext" onclick="ed1('\r\n---\r\n**Lamotrigin** Tabletten 25 mg\r\n\r\n| Morgens | Abends | Wie lange | Tagesdosis mg |\r\n|:-------:|:------:|:---------:|:-------------:|\r\n| 0,5     | 0      | 14 Tage   | 12,5          |\r\n| 1       | 0      | 14 Tage   | 25            |\r\n| 1       | 0,5    | 14 Tage   | 37,5          |\r\n| 1       | 1      | 14 Tage   | 50            |\r\n| 1,5     | 1      | 14 Tage   | 62,5          |\r\n| 1,5     | 1,5    | 14 Tage   | 75            |\r\n| 2       | 1,5    | 14 Tage   | 87,5          |\r\n| 2       | 2      | s.u.      | 100           |\r\n\r\n_Bitte sprechen Sie dann noch mal mit dem Arzt._\r\n\r\n')">Lamotrigin m. Valpr.</button>
+
+                <button class="bt1 bttext" onclick="ed1('\r\n---\r\n**Verapamil** Tabletten 80 mg\r\n\r\n| Morgens | Mittags | Abends | Wie lange | Tagesdosis mg |\r\n|:-------:|:-------:|:------:|:---------:|:-------------:|\r\n| 1       | 1       | 1      | 7 Tage    | 240           |\r\n| 2       | 1       | 1      | 7 Tage    | 320           |\r\n| 2       | 1       | 2      | 7 Tage    | 400           |\r\n| 2       | 2       | 2      | s.u.    | 480           |\r\n\r\n_Bitte sprechen Sie dann noch mal mit dem Arzt_\r\n\r\n')">Verapamil 1</button>
+
+
+                <button class="bt1 bttext" onclick="ed1('\r\n---\r\n**Prednisolon** Tabletten 20 mg \r\n\r\n| Morgens | Mittags | Abends | Wie lange | Tagesdosis mg |\r\n|:-------:|:-------:|:------:|:---------:|:-------------:|\r\n| 4       | 0       | 0      | 4 Tage    | 80            |\r\n| 3       | 0       | 0      | 1 Tag     | 60            |\r\n| 2,5     | 0       | 0      | 1 Tag     | 50            |\r\n| 2       | 0       | 0      | 2 Tage    | 40            |\r\n| 1,5     | 0       | 0      | 2 Tage    | 30            |\r\n| 1       | 0       | 0      | 2 Tage    | 20            |\r\n| 0,5     | 0       | 0      | 2 Tage    | 10            |\r\n| 0,25    | 0       | 0      | 2 Tage    | 5             |\r\n\r\n_Bitte sprechen Sie dann noch mal mit dem Arzt_\r\n\r\n')">Prednisolon_CK</button>
+
+
+
+                <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
+
+                <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
+
+
+
+
+
             </div>
 
 
@@ -1240,6 +1277,7 @@
             <button class="bt1" onclick="ddel()">Lösch alles</button><br>
             <button class="bt1" onclick="selCopTx()">Kopiere alles</button><br>
             <button class="bt1" onclick="typogr3()">TypKorrekt</button><br>
+            <button class="bt1" onclick="md2_ez3()">Konvert</button><br>
             <br><br><br>
                 <button class="bt1 bttext" onclick="ed1('xxx: bitte NLG N. medianus bds. und ulnaris rechts links\r\nxxx: bitte Handgelenkstütze bds. rechts links\r\nxxx: bitte NLG N. tibialis bds. und suralis rechts links sowie SEP tibialis\r\nxxx: bitte Ü Schädel-CT Schädel-MRT HWS-MRT (Kopfschmerz, Schwindel, Gangstörung, Demenz)\r\nxxx: bitte Rezept Physiotherapie Logopädie (Diagnose: xxx)\r\nxxx: bitte EEG (heute in wenigen Tagen irgendwann)\r\nxxx: bitte vom Hausarzt Befunde Arztbrief faxen lassen.\r\nxxx: bitte von der Klinik für Neurologie im Klinikum Arztbrief faxen lassen.\r\nxxx: bitte AU für xxx Tage (Diagnose: xxx).\r\nxxx: bitte Termin für Duplex Karotiden bei Dr. Sonntag geben\r\nxxx: bitte Fußorthese rechts links\r\nxxx: bitte Einweisung in die Klinik für Neurologie im Klinikum Bad Hersfeld (Diagnose: xxx) \r\n')">MFA-Chat</button>
                 <button class="bt1 bttext" onclick="ed1('Bitte sehen Sie meinen Bericht vom ' + dateGerman() + '.\r\nDer Laborbefund vom ' + dateGerman() + ' ist am ' + dateGerman() + ' eingegangen.\r\nDer Befund vom Schädel-CT Schädel-MRT HWS-MRT LWS-MRT vom ' + dateGerman() + ' ist am ' + dateGerman() + ' eingegangen. Gemäß radiologischer Beurteilung xxx.\r\nAus neurologischer Sicht besteht kein Handlungsbedarf. Bei Persistenz oder Verschlimmerung der Beschwerden bitte ich um Wiedervorstellung.\r\n')">Befund-Kommentar</button>
@@ -1510,6 +1548,7 @@ function selCopTx() {
     return tz;
 }
 
+
 // a helper function to get the sum of all elements. See function ldopaCalc
 function getSum(total, num) {
     return total + num;
@@ -1725,6 +1764,24 @@ function runmd() {
         converter11 = new showdown.Converter(),
         html11 = converter11.makeHtml(text11);
         target_a.innerHTML = html11;
+}
+// 2020-04-19T05:15:02+00:00
+// to convert from main textarea 
+
+function runmd2() {
+    var text11 = document.getElementById('hh').value,
+        target_a = document.getElementById('target1'),
+        converter11 = new showdown.Converter(),
+        html11 = converter11.makeHtml(text11);
+        target_a.innerHTML = html11;
+}
+
+// 2020-04-19T05:15:02+00:00
+// to convert from main textarea and open the formatted view
+
+function md2_ez3() {
+        runmd2(),
+        ez3()
 }
 
 // 16.02.2019 
