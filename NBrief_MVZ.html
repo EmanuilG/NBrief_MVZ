@@ -397,7 +397,7 @@
 
 <body>
     <noscript><p>Der NBrief_MVZ hilft mit Textbausteinen einen Arztbrief zusammenzustellen.<br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. <br>Dieser Code wird von Ihrem Browser interpretiert. <br>Sie sehen diesen Text, weil Javascript in Ihrem Browser deaktiviert ist. Erwägen Sie bitte, Javascript zu aktivieren. <br>Der NBrief_MVZ braucht einen neuen Browser, am besten funktioniert er mit Firefox 45 oder neuer<br>
-<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 20.04.2020</p></noscript>
+<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 22.04.2020</p></noscript>
     <div id="topBar">
         <button class="bt1" onclick="ez1()">Arztbrief</button>
         <button class="bt1" onclick="ez4()">Hilfe</button>
@@ -684,7 +684,7 @@
     <div id="viert" class="wrap2">
         <div class="fleft50">
             <h3>Hilfe</h3>
-            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formatierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 20.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
+            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formatierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 22.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
         </div>
         <div class="fright50">
             <h3>Tastenkombinationen</h3> Die folgenden Tastenkombinationen gelten in den meisten Windows-Anwendungen.<br>Sie helfen bei der Textbearbeitung.<br>Sie gelten auch für das weiße Textfeld im 'NBrief'.
@@ -1130,8 +1130,7 @@
                 <button class="bt1 bttext" onclick="ed1('## Medikamenten-Dosis-Plan\r\n\r\nPatienten-Name: xxx\r\n\r\nDiagnose: xxx\r\n\r\nDatum: ' + dateGerman() + '\r\n\r\nDr. med. Emanuil Giuris, Facharzt für Neurologie\r\nMVZ Hersfeld-Rotenburg - Frankfurter Straße\r\nTel. 06621 88-55200\r\n_Lesen Sie bitte die Packungsbeilage_\r\n_Bei jedem Problem mit dem Medikament rufen Sie den Arzt an_\r\n')">Dosierplan-Text</button> 
 
                 <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
-
-            <button class="bt1" onclick="md2_ez3()">Konvert</button>
+                <button class="bt1" onclick="konv_kop_form()">Kopier_Form</button>
                 <br>
                 <br>
 
@@ -1251,8 +1250,8 @@
                 <button class="bt1 bttext" onclick="ed1('Grundrhythmus Hz, normale visuelle Blockade-Reaktion, keine epilepsietypischen Potentiale, keine regionale Verlangsamung. Flaches EEG\r\nÜberwiegend Beta-Wellen ca. Hz\r\nPulsartefakt\r\nElektrodenartefakt \r\nAugenartefakte\r\nMuskelartefakte \r\n\r\nPolymorphe Wellen Hz, keine unsichere visuelle Blockade-Reaktion, keine epilepsietypischen Potentiale. \r\nKomplexe aus Spitze und Welle spitze Wellen bilateral synchron alle xxx Sekunden. \r\nMTA-Notiz: wach, ansprechbar, müde, schläfrig, schnarcht, schläft, komatös, unruhig.\r\n\r\nNormalbefund.\r\n\r\nAltersentsprechender Normalbefund.\r\n\r\nBefund hinweisend auf eine leichtgradige mittelgradige schwere diffuse Hirnfunktionsstörung. \r\n\r\nBefund hinweisend auf eine erhöhte zerebrale Erregbarkeit. \r\n\r\nBefund hinweisend auf eine Funktionsstörung in der rechten linken Hirnhemisphäre. \r\n\r\nKeine pathologische Reaktion auf Hyperventilation. \r\n\r\nEs ist keine iktuale Aktivität zu beobachten.\r\n\r\nBurst-Suppression-Muster.\r\n\r\nSchlafstadium nach Rechtschaffen und Kales .\r\n')">EEG</button>
                 <button class="bt1 bttext" onclick="ed1('Motorische Neurographie\r\nN. medianus (Aufzeichnung: Thenar, Stimulation: Ellenbeuge) bds. normal\r\nN. ulnaris (Aufzeichnung: Hypothenar, Stimulation: Handgelenk sowie distal und proximal des Sulcus ulnaris) bds. normal\r\nN. tibialis (Aufzeichnung: medialer Fußrand, Stimulation: dorsal des Malleolus medialis und in der Kniekehle) bds. normal\r\nN. peroneus (Aufzeichnung: Bauch des M. tibialis anterior, Stimulation: distal und proximal des Fibulaköpfchens) bds. normal\r\n\r\nSensible Neurographie\r\nN. medianus (Aufzeichnung: Dig. II, Stimulation: Handgelenk) bds. normal\r\nN. ulnaris (Aufzeichnung: Dig. V, Stimulation: Handgelenk) bds. normal\r\nN. suralis (Aufzeichnung: dorsal des Malleolus lat., Stimulation: dorsaler Unterschenkel) bds. normal\r\n')">Neurograph-S</button>
 
-                <button class="bt1 bttext" onclick="ed1('Motorische Neurographie\r\nN. medianus (Aufzeichnung: Thenar, Stimulation: Ellenbeuge)\r\n- Bds. normal\r\n- Rechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n- Links\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nN. ulnaris (Aufzeichnung: Hypothenar, Stimulation: Handgelenk sowie distal und proximal des Sulcus ulnaris)\r\n- Bds. normal\r\n- Rechts\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnaris\r\n- Links\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnarisn\r\nSensible Neurographie\r\nN. medianus (Aufzeichnung: Dig. II, Stimulation: Handgelenk)\r\n- Bds. normal\r\n- Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n- Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nN. ulnaris (Aufzeichnung: Dig. V, Stimulation: Handgelenk)\r\n- Bds. normal\r\n- Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n- Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nBefund hinweisend auf \r\nein leichtgradiges mittelgradiges schweres Karpaltunnelsyndrom rechts links \r\ntechnisch nicht verwertbar\r\nNormalbefund.')">Neurographie Arme</button>
-                <button class="bt1 bttext" onclick="ed1('Motorische Neurographie\r\nN. tibialis (Aufzeichnung: medialer Fußrand, Stimulation: dorsal des Malleolus medialis und in der Kniekehle)\r\n- Bds. normal\r\n- Rechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n- Links\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nN. peroneus (Aufzeichnung: Bauch des M. tibialis anterior, Stimulation: distal und proximal des Fibulaköpfchens)\r\n- Bds. normal\r\n- Rechts \r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n- Links \r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n(Aufzeichnung: , Stimulation: )\r\nSensible Neurographie\r\nN. suralis (Aufzeichnung: dorsal des Malleolus lat., Stimulation: dorsaler Unterschenkel)\r\n- Bds. normal\r\n- Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n- Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n\r\nBefund hinweisend auf \r\nDer Befund vom rechten linken N. peroneus bedeutet nicht zwangsläufig eine Läsion des Nervenstamms des N. peroneus oder des spinalen Nervs L5 oder S1, es kann sich um eine lokale Läsion des motorischen Astes zum M. ext. dig. brevis handeln. \r\nDie verminderte Geschwindigkeit im N. suralis bds. kann im altersentsprechenden Normbereich sein.\r\nNormalbefund.')">Neurographie Beine</button>
+                <button class="bt1 bttext" onclick="ed1('Motorische Neurographie\r\nN. medianus (Aufzeichnung: Thenar, Stimulation: Ellenbeuge)\r\n-Bds. normal\r\n-Rechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n-Links\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nN. ulnaris (Aufzeichnung: Hypothenar, Stimulation: Handgelenk sowie distal und proximal des Sulcus ulnaris)\r\n-Bds. normal\r\n-Rechts\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnaris\r\n-Links\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnarisn\r\nSensible Neurographie\r\nN. medianus (Aufzeichnung: Dig. II, Stimulation: Handgelenk)\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nN. ulnaris (Aufzeichnung: Dig. V, Stimulation: Handgelenk)\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nBefund hinweisend auf \r\nein leichtgradiges mittelgradiges schweres Karpaltunnelsyndrom rechts links \r\ntechnisch nicht verwertbar\r\nNormalbefund.')">Neurographie Arme</button>
+                <button class="bt1 bttext" onclick="ed1('Motorische Neurographie\r\nN. tibialis (Aufzeichnung: medialer Fußrand, Stimulation: dorsal des Malleolus medialis und in der Kniekehle)\r\n-Bds. normal\r\n-Rechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n-Links\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nN. peroneus (Aufzeichnung: Bauch des M. tibialis anterior, Stimulation: distal und proximal des Fibulaköpfchens)\r\n-Bds. normal\r\n-Rechts \r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n-Links \r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n(Aufzeichnung: , Stimulation: )\r\nSensible Neurographie\r\nN. suralis (Aufzeichnung: dorsal des Malleolus lat., Stimulation: dorsaler Unterschenkel)\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n\r\nBefund hinweisend auf \r\nDer Befund vom rechten linken N. peroneus bedeutet nicht zwangsläufig eine Läsion des Nervenstamms des N. peroneus oder des spinalen Nervs L5 oder S1, es kann sich um eine lokale Läsion des motorischen Astes zum M. ext. dig. brevis handeln. \r\nDie verminderte Geschwindigkeit im N. suralis bds. kann im altersentsprechenden Normbereich sein.\r\nNormalbefund.')">Neurographie Beine</button>
                 <button class="bt1 bttext" onclick="ed1('EMG rechts links \r\nMuskeln\r\n\r\nAlle untersuchten Muskeln hatten keine pathologische Spontanaktivität, die Potentiale motorischer Einheiten erschienen normal und das Interferenzmuster war normal. \r\n\r\nNormalbefund. \r\n\r\nMuskeln\r\n\r\nDeltoideus \r\nBiceps br.\r\nBrachioradialis\r\nTriceps br.\r\nExt. dig. comm.\r\nInt. dors I\r\nPronator teres\r\nAbd. poll. longus\r\nExt. ind. proprius\r\nFlex. dig. prof. (uln.)\r\nAbd. poll. brevis \r\nOpponens poll.\r\nAbd. dig. min. manus\r\nInter. dorsalis I \r\n\r\nRectus fem.\r\nVastus med.\r\nVastus lat.\r\nTib. ant.\r\nSemimembranosus \r\nBiceps fem.\r\nGluteus med. \r\nGluteus max. \r\nPeroneus longus\r\nExt. hall. longus\r\nGastrocn. lat. \r\nGastrocn. med. \r\n\r\nPotentiale motorischer Einheiten polyphasisch normal\r\npathologische Spontanaktivität \r\nFibrillationen\r\nFaszikulationen\r\npositive scharfe Wellen\r\n\r\n\r\nAbkürzungen\r\n\r\nPMA: Potentiale motorischer Einheiten \r\nIF: Interferenzmuster\r\nWA: Willentliche Aktivität \r\nFib: Fibrillationen\r\nPSW: positive scharfe Wellen \r\nFasz: Faszikulationen \r\nKRE: komplexe repetitive Entladungen\r\n\r\nBefund hinweisend auf eine Läsion xxx \r\n')">EMG</button>
                 <button class="bt1 bttext" onclick="ed1('Somatosensible evozierte Potentiale \r\nN. medianus (Stimulation: Handgelenk, Aufzeichnung: 2 cm hinter C3/C4)\r\nbds. normal\r\nRechts normal verzögert, links normal verzögert\r\nN. tibialis (Stimulation: Malleolus med., Aufzeichnung: 2 cm hinter Cz)\r\nbds. normal\r\nRechts normal verzögert, links normal verzögert\r\n')">SEP</button>
 
@@ -1278,9 +1277,11 @@
             <button class="bt1 bt2 bttext" onclick="ed1(timeGerman() + ' ')">Uhrzeit</button>
             <button class="bt1 bt2 bttext" onclick="ed1('\t')">Tab</button><br><br>
             <button class="bt1" onclick="ddel()">Lösch alles</button><br>
-            <button class="bt1" onclick="selCopTx()">Kopiere alles</button><br>
             <button class="bt1" onclick="typogr3()">TypKorrekt</button><br>
-            <button class="bt1" onclick="md2_ez3()">Konvert</button><br>
+            <button class="bt1" onclick="selCopTx()">Kopiere alles</button><br>
+            <button class="bt1" onclick="konv_kop_form()">Kopier_Form</button>
+
+
             <br><br><br>
                 <button class="bt1 bttext" onclick="ed1('xxx: bitte NLG N. medianus bds. und ulnaris rechts links\r\nxxx: bitte Handgelenkstütze bds. rechts links\r\nxxx: bitte NLG N. tibialis bds. und suralis rechts links sowie SEP tibialis\r\nxxx: bitte Ü Schädel-CT Schädel-MRT HWS-MRT (Kopfschmerz, Schwindel, Gangstörung, Demenz)\r\nxxx: bitte Rezept Physiotherapie Logopädie (Diagnose: xxx)\r\nxxx: bitte EEG (heute in wenigen Tagen irgendwann)\r\nxxx: bitte vom Hausarzt Befunde Arztbrief faxen lassen.\r\nxxx: bitte von der Klinik für Neurologie im Klinikum Arztbrief faxen lassen.\r\nxxx: bitte AU für xxx Tage (Diagnose: xxx).\r\nxxx: bitte Termin für Duplex Karotiden bei Dr. Sonntag geben\r\nxxx: bitte Fußorthese rechts links\r\nxxx: bitte Einweisung in die Klinik für Neurologie im Klinikum Bad Hersfeld (Diagnose: xxx) \r\n')">MFA-Chat</button>
                 <button class="bt1 bttext" onclick="ed1('Bitte sehen Sie meinen Bericht vom ' + dateGerman() + '.\r\nDer Laborbefund vom ' + dateGerman() + ' ist am ' + dateGerman() + ' eingegangen.\r\nDer Befund vom Schädel-CT Schädel-MRT HWS-MRT LWS-MRT vom ' + dateGerman() + ' ist am ' + dateGerman() + ' eingegangen. Gemäß radiologischer Beurteilung xxx.\r\nAus neurologischer Sicht besteht kein Handlungsbedarf. Bei Persistenz oder Verschlimmerung der Beschwerden bitte ich um Wiedervorstellung.\r\n')">Befund-Kommentar</button>
@@ -1292,7 +1293,7 @@
             <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button><br>
             <!--the star logo-->
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<svg height="40" width="40"><polygon points="20.0,2.0 8.0,39.6 38.0,15.6 2.0,15.6 32.0,39.6" style="fill:hsla(40, 100%, 70%, 1);"/></svg></p>
-            <span>NBrief_MVZ 1.2 <br>20.04.2020</span>
+            <span>NBrief_MVZ 1.2 <br>22.04.2020</span>
         </div>
     </div>
     
@@ -1779,13 +1780,6 @@ function runmd2() {
         target_a.innerHTML = html11;
 }
 
-// 2020-04-19T05:15:02+00:00
-// to convert from main textarea and open the formatted view
-
-function md2_ez3() {
-        runmd2(),
-        ez3()
-}
 
 // 16.02.2019 
 
@@ -1879,6 +1873,28 @@ function ed3(inp) {
 
 // 2020-04-10 I call the function frauSx to default to females
 frauSx()
+
+
+// 2020-04-22T18:16:58+00:00
+function kopier_formatiert() {
+  let tx = document.getElementById('target1').innerHTML
+  function passau(j) {
+    j.clipboardData.setData("text/html", tx);
+    j.preventDefault();
+  }
+  document.addEventListener("copy", passau);
+  document.execCommand("copy");
+  document.removeEventListener("copy", passau);
+};
+
+//  2020-04-22T17:51:12+00:00
+//  konvert to formatiertem Text in die div target1 und kopiere den formatierten Text in die Zwischenablage
+
+function konv_kop_form() {
+  runmd2();
+  kopier_formatiert();
+}
+
 
 </script>
 
