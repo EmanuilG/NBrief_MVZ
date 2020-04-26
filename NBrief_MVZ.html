@@ -397,7 +397,7 @@
 
 <body>
     <noscript><p>Der NBrief_MVZ hilft mit Textbausteinen einen Arztbrief zusammenzustellen.<br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. <br>Dieser Code wird von Ihrem Browser interpretiert. <br>Sie sehen diesen Text, weil Javascript in Ihrem Browser deaktiviert ist. Erwägen Sie bitte, Javascript zu aktivieren. <br>Der NBrief_MVZ braucht einen neuen Browser, am besten funktioniert er mit Firefox 45 oder neuer<br>
-<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 22.04.2020</p></noscript>
+<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 25.04.2020</p></noscript>
     <div id="topBar">
         <button class="bt1" onclick="ez1()">Arztbrief</button>
         <button class="bt1" onclick="ez4()">Hilfe</button>
@@ -684,7 +684,7 @@
     <div id="viert" class="wrap2">
         <div class="fleft50">
             <h3>Hilfe</h3>
-            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formatierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 22.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
+            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formatierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 25.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
         </div>
         <div class="fright50">
             <h3>Tastenkombinationen</h3> Die folgenden Tastenkombinationen gelten in den meisten Windows-Anwendungen.<br>Sie helfen bei der Textbearbeitung.<br>Sie gelten auch für das weiße Textfeld im 'NBrief'.
@@ -747,152 +747,186 @@
                 <p class="stamp">ICD Diagnosen</p>
                 <form>
                     <select id="icd-diagnosen" class="select1 select2" size="" onKeyUp="icddiagn()">
-<option value="F10.2 Abhängigkeitssyndrom durch Alkohol">Alkohol-Abhängigkeit</option><br>
-<option value="F10.1 Schädlicher Gebrauch von Alkohol">Alkohol-Schädlicher Gebrauch</option><br>
-<option value="G30.0 Alzheimer-Krankheit mit frühem Beginn (vor 65. LJ)">Alzheimer-Krankheit mit frühem Beginn</option><br>
-<option value="G30.1 Alzheimer-Krankheit mit spätem Beginn (nach 65. LJ)">Alzheimer-Krankheit mit spätem Beginn</option><br>
-<option value="F43.2 Anpassungsstörung">Anpassungsstörung</option><br>
-<option value="R47.0 Dysphasie">Aphasie</option><br>
-<option value="R48.2 Apraxie">Apraxie</option><br>
-<option value="G25.1 Arzneimittelinduzierter Tremor ">Arzneimittelinduzierter Tremor </option><br>
-<option value="R26.0 Ataktischer Gang">Ataktischer Gang</option><br>
-<option value="H81.1 Benigner paroxysmaler Schwindel">Benigner paroxysmaler Schwindel</option><br>
-<option value="Z03.3 Beobachtung bei Verdacht auf neurologische Krankheit - untersuchungsbedürftige aber nach Untersuchung nicht behandlungsbedürftige Symptome">Beobachtung bei Verdacht auf neurologische Krankheit - untersuchungsbedürftige aber nach Untersuchung nicht behandlungsbedürftige Symptome</option><br>
-<option value="R40.2 Bewusstlosigkeit">Bewusstlosigkeit</option><br>
-<option value="F31 Bipolare affektive Störung">Bipolare affektive Störung</option><br>
-<option value="M70.6 V.a. Bursitis trochanterica rechts links">Bursitis trochanterica rechts links</option><br>
-<option value="G44.0 Cluster-Kopfschmerz">Cluster-Kopfschmerz</option><br>
-<option value="G90.50 Komplexes regionales Schmerzsyndrom Typ I, (CRPS I) der oberen Extremität">CRPS I der oberen Extremität</option><br>
-<option value="G90.51 Komplexes regionales Schmerzsyndrom Typ I, (CRPS I) der unteren Extremität">CRPS I der unteren Extremität</option><br>
-<option value="G90.60 Komplexes regionales Schmerzsyndrom Typ II, (CRPS II) der oberen Extremität">CRPS II der oberen Extremität</option><br>
-<option value="G90.61 Komplexes regionales Schmerzsyndrom Typ II, (CRPS II) der unteren Extremität">CRPS II der unteren Extremität</option><br>
-<option value="F32.0 Leichte depressive Episode">Depressive Episode, leicht</option><br>
-<option value="F32.1 Mittelgradige depressive Episode">Depressive Episode, mittelgradig</option><br>
-<option value="F32.2 Schwere depressive Episode ohne psychotische Symptome">Depressive Episode, schwer ohne Psychose</option><br>
-<option value="F33.4 Rezidivierende Depressive Störung, gegenwärtig remittiert">Depressive Störung, rezidivierend, gegenwärtig remittiert</option><br>
-<option value="F34.1 Depressive Verstimmung">Depressive Verstimmung</option><br>
-<option value="G63.2 Diabetische Polyneuropathie">Diabetische Polyneuropathie</option><br>
-<option value="H53.2 Diplopie">Diplopie</option><br>
-<option value="R47.1 Dysarthrie und Anarthrie">Dysarthrie</option><br>
-<option value="G25.2 Dystoner Tremor">Dystoner Tremor</option><br>
-<option value="M77.1 Epicondylitis radialis humeri rechts links">Epicondylitis radialis humeri</option><br>
-<option value="M77.0 Epicondylitis ulnaris humeri rechts links">Epicondylitis ulnaris humeri</option><br>
-<option value="G40.6 Erstmaliger Grand-Mal-Anfall, unprovoziert">Erstmaliger Grand-Mal-Anfall, unprovoziert</option><br>
-<option value="G25.0 Essentieller Tremor">Essentieller Tremor</option><br>
-<option value="R25.3 Faszikulationen in den Waden">Faszikulationen in den Waden</option><br>
-<option value="G51.1 Fazialisparese (Bell)">Fazialisparese (Bell)</option><br>
-<option value="M79.70 Fibromyalgie">Fibromyalgie</option><br>
-<option value="G31.0 Frontotemporale Demenz">Frontotemporale Demenz</option><br>
-<option value="F45.8 Funktionelle Körperbeschwerden">Funktionelle Körperbeschwerden</option><br>
-<option value="R26.2 Unspezifische Gangunsicherheit">Gangunsicherheit</option><br>
-<option value="F01.3 Gemischte kortikale und subkortikale vaskuläre Demenz">Gemischte vaskuläre Demenz</option><br>
-<option value="G40.3 Generalisierte idiopathische Epilepsie">Generalisierte idiopathische Epilepsie</option><br>
-<option value="H53.4 Gesichtsfelddefekte">Gesichtsfelddefekte</option><br>
-<option value="G25.2 Gesteigerter physiologischer Tremor">Gesteigerter physiologischer Tremor</option><br>
-<option value="G61.0 Guillain-Barré-Syndrom">Guillain-Barré-Syndrom</option><br>
-<option value="G81.0 Schlaffe Hemiparese und Hemiplegie">Hemiparese schlaff</option><br>
-<option value="G81.1 Spastische Hemiparese und Hemiplegie">Hemiparese spastisch</option><br>
-<option value="I69.1 Folgen einer intrazerebralen Blutung">Hirnblutung-Folgen</option><br>
-<option value="I69.3 Folgen eines Hirninfarktes">Hirninfarkt-Folgen</option><br>
-<option value="G90.2 Horner-Syndrom">Horner-Syndrom</option><br>
-<option value="G47.0 Ein- und Durchschlafstörungen">Insomnie</option><br>
-<option value="F70 Leichte Intelligenzminderung">Intelligenzminderung, leicht</option><br>
-<option value="F71 Mittelgradige Intelligenzminderung">Intelligenzminderung, mittelgradig</option><br>
-<option value="F72 Schwere Intelligenzminderung">Intelligenzminderung, schwer</option><br>
-<option value="F73 Schwerste Intelligenzminderung">Intelligenzminderung, schwerst</option><br>
-<option value="H51.2 Internukleäre Ophthalmoplegie rechts links">Internukleäre Ophthalmoplegie</option><br>
-<option value="G93.2 Benigne intrakranielle Hypertension">Intrakranielle Hypertension</option><br>
-<option value="G56.0 Karpaltunnelsyndrom leichtgradig bds. rechts links mittelgradig bds. rechts links schwer bds. rechts links">Karpaltunnelsyndrom</option><br>
-<option value="G44.4 Kopfschmerz durch Übergebrauch von Medikamenten">Kopfschmerz durch Übergebrauch von Medikamenten</option><br>
-<option value="M16.1 Koxarthrose rechts links">Koxarthrose rechts links</option><br>
-<option value="M54.5 Kreuzschmerz">Kreuzschmerz</option><br>
-<option value="F06.7 Leichte kognitive Störung">Leichte kognitive Störung</option><br>
-<option value="M51.1 V.a. lumbale Radikulopathie durch Bandscheibenvorfall">Lumbale Radikulopathie durch Bandscheibenvorfall</option><br>
-<option value="M48.06 Lumbale Spinalkanalstenose">Lumbale Spinalkanalstenose</option><br>
-<option value="M54.4 Lumboischialgie">Lumboischialgie</option><br>
-<option value="H81.0 Ménière-Krankheit">Ménière-Krankheit</option><br>
-<option value="G57.1 Meralgia paraesthetica">Meralgia paraesthetica</option><br>
-<option value="G43.1 Migräne mit Aura">Migräne mit Aura</option><br>
-<option value="G43.0 Migräne ohne Aura">Migräne ohne Aura</option><br>
-<option value="G57.8 Sonstige Mononeuropathien der unteren Extremität">Mononeuropathien der unteren Extremität, sonst</option><br>
-<option value="G12.2 Motoneuron-Krankheit">Motoneuron-Krankheit</option><br>
-<option value="F01.1 Multiinfarkt-Demenz (vorwiegend kortikal)">Multiinfarkt-Demenz</option><br>
-<option value="G35.01 Erstmanifestation einer Multiplen Sklerose, mit akuter Exazerbation/Progression ">Multiple Sklerose, Erstmanifestation, mit akuter Exazerbation/Progression </option><br>
-<option value="G35.00 Erstmanifestation einer Multiplen Sklerose, ohne akute Exazerbation/Progression">Multiple Sklerose, Erstmanifestation, ohne akute Exazerbation/Progression</option><br>
-<option value="G35.21 MS, primär-chronischer Verlauf, mit akuter Exazerbation/Progression ">Multiple Sklerose, primär-chronischer Verlauf, mit akuter Exazerbation/Progression </option><br>
-<option value="G35.20 MS, primär-chronischer Verlauf, ohne akute Exazerbation/Progression">Multiple Sklerose, primär-chronischer Verlauf, ohne akute Exazerbation/Progression</option><br>
-<option value="G35.31 MS, sekundär-chronischer Verlauf letzte Stelle, mit akuter Exazerbation/Progression">Multiple Sklerose, sekundär-chronischer Verlauf, mit akuter Exazerbation/Progression</option><br>
-<option value="G35.30 MS, sekundär-chronischer Verlauf letzte Stelle, ohne akute Exazerbation/Progression">Multiple Sklerose, sekundär-chronischer Verlauf, ohne akute Exazerbation/Progression</option><br>
-<option value="G35.11 MS, vorherrschend schubförmiger Verlauf, mit akuter Exazerbation/Progression ">Multiple Sklerose, vorherrschend schubförmiger Verlauf, mit akuter Exazerbation/Progression </option><br>
-<option value="G35.10 MS, vorherrschend schubförmiger Verlauf, ohne akute Exazerbation/Progression">Multiple Sklerose, vorherrschend schubförmiger Verlauf, ohne akute Exazerbation/Progression</option><br>
-<option value="R25.2 Muskelkrämpfe">Muskelkrämpfe</option><br>
-<option value="G70.0 Myasthenia gravis ">Myasthenia gravis </option><br>
-<option value="G72.0 Arzneimittelinduzierte Myopathie">Myopathie, arzneimittelinduziert</option><br>
-<option value="G71.1 Myotone Dystrophie Typ 1 2">Myotone Dystrophie Typ 1 2</option><br>
-<option value="M54.2 Nackenschmerz">Nackenschmerz</option><br>
-<option value="R29.5 Neglect">Neglect</option><br>
-<option value="G53.0 Neuralgie nach Zoster">Neuralgie nach Zoster</option><br>
-<option value="G54.5 Neuralgische Amyotrophie">Neuralgische Amyotrophie</option><br>
-<option value="H81.2 Neuropathia vestibularis">Neuropathia vestibularis</option><br>
-<option value="M79.2[0-9] Neuropathischer Schmerz">Neuropathischer Schmerz</option><br>
-<option value="G91.20 Idiopathischer Normaldruckhydrozephalus">Normaldruckhydrozephalus, idiopathisch</option><br>
-<option value="I95.1 Orthostatische Dysregulation">Orthostatische Dysregulation</option><br>
-<option value="F41.0 Panikstörung oder Panikattacke">Panikstörung Panikattacke</option><br>
-<option value="R26.1 Paretischer Gang">Paretischer Gang</option><br>
-<option value="G20.01 Primäres Parkinson-Syndrom Hoehn und Yahr 0 1 2 mit Wirkungsfluktuation">Parkinson HY 0 1 2 mit WF</option><br>
-<option value="G20.00 Primäres Parkinson-Syndrom Hoehn und Yahr 0 1 2 ohne Wirkungsfluktuation">Parkinson HY 0 1 2 ohne WF</option><br>
-<option value="G20.11 Primäres Parkinson-Syndrom Hoehn und Yahr 3 4 mit Wirkungsfluktuation">Parkinson HY 3 4 mit WF</option><br>
-<option value="G20.10 Primäres Parkinson-Syndrom Hoehn und Yahr 3 4 ohne Wirkungsfluktuation">Parkinson HY 3 4 ohne WF</option><br>
-<option value="G20.21 Primäres Parkinson-Syndrom Hoehn und Yahr 5 mit Wirkungsfluktuation">Parkinson HY 5 mit WF</option><br>
-<option value="G20.20 Primäres Parkinson-Syndrom Hoehn und Yahr 5 ohne Wirkungsfluktuation">Parkinson HY 5 ohne WF</option><br>
-<option value="G57.3 Läsion des N. peronaeus">Peronaeus-Läsion rechts links</option><br>
-<option value="F40.8 Phobischer Schwankschwindel">Phobischer Schwankschwindel</option><br>
-<option value="S14.3 Verletzung des Plexus brachialis">Plexus brachialis-Verletzung</option><br>
-<option value="G62.1 Alkoholtoxische Polyneuropathie">Polyneuropathie, alkoholtoxisch</option><br>
-<option value="G62.0 Arzneimittelinduzierte Polyneuropathie">Polyneuropathie, arzneimittelinduziert</option><br>
-<option value="G62.9 Polyneuropathie, nicht näher bezeichnet">Polyneuropathie, sonst</option><br>
-<option value="H02.4 Ptosis des Augenlides">Ptosis des Augenlides</option><br>
-<option value="G56.3 Läsion des N. radialis, chronisch ">Radialis-Läsion, chronisch </option><br>
-<option value="G47.8 REM-assoziierte Verhaltensstörung">REM-assoziierte Verhaltensstörung</option><br>
-<option value="G25.81 Syndrom der unruhigen Beine [Restless-Legs-Syndrom]">Restless-Legs-Syndrom</option><br>
-<option value="M18.0 Rhizarthrose, beidseitig">Rhizarthrose, beidseitig</option><br>
-<option value="M18.1 Rhizarthrose rechts links">Rhizarthrose rechts links</option><br>
-<option value="S06.0 Gehirnerschütterung">Gehirnerschütterung</option><br>
-<option value="F20 Schizophrenie">Schizophrenie</option><br>
-<option value="G47.31 Obstruktives Schlafapnoe - Syndrom">Schlafapnoe-Syndrom, obstruktiv</option><br>
-<option value="Z86.7 Krankheiten des Kreislaufsystems in der Eigenanamnese">Schlaganfall-Anamnese ohne Defizit jetzt</option><br>
-<option value="M79.65 Schmerzen in Becken/Oberschenkel">Schmerzen in Becken/Oberschenkel</option><br>
-<option value="M79.67 Schmerzen in Fuß">Schmerzen in Fuß</option><br>
-<option value="M79.64 Schmerzen in Hand">Schmerzen in Hand</option><br>
-<option value="M79.60 Schmerzen in mehreren Bereichen">Schmerzen in mehreren Bereichen</option><br>
-<option value="M79.62 Schmerzen in Oberarm">Schmerzen in Oberarm</option><br>
-<option value="M79.61 Schmerzen in Schulter">Schmerzen in Schulter</option><br>
-<option value="M79.63 Schmerzen in Unterarm">Schmerzen in Unterarm</option><br>
-<option value="M79.66 Schmerzen in Unterschenkel">Schmerzen in Unterschenkel</option><br>
-<option value="H81.3 Sonstiger peripherer Schwindel">Schwindel, peripher, sonstig</option><br>
-<option value="R42 Schwindel und Taumel">Schwindel und Taumel</option><br>
-<option value="H81.4 Schwindel zentralen Ursprungs">Schwindel, zentral</option><br>
-<option value="G44.2 Spannungskopfschmerz">Spannungskopfschmerz</option><br>
-<option value="G51.3 Spasmus hemifacialis">Spasmus hemifacialis</option><br>
-<option value="G82.1 Spastische Paraparese">Spastische Paraparese</option><br>
-<option value="H50.0 Strabismus concomitans convergens">Strabismus concomitans convergens</option><br>
-<option value="H50.1 Strabismus concomitans divergens">Strabismus concomitans divergens</option><br>
-<option value="R29.6 Sturzneigung">Sturzneigung</option><br>
-<option value="I69.0 Folgen einer Subarachnoidalblutung">Subarachnoidalblutung-Folgen</option><br>
-<option value="F01.2 Subkortikale vaskuläre Demenz ">Subkortikale vaskuläre Demenz</option><br>
-<option value="G40.1 Symptomatische Epilepsie, fokal beginnend">Symptomatische Epilepsie, fokal beginnend</option><br>
-<option value="G40.2 Symptomatische Epilepsie, komplex-fokal beginnend">Symptomatische Epilepsie, komplex-fokal beginnend</option><br>
-<option value="R55 Synkope">Synkope</option><br>
-<option value="M65.83 V.a. Tenosynovitis im Unterarm rechts links">Tenosynovitis im Unterarm</option><br>
-<option value="H93.1 Tinnitus aurium">Tinnitus aurium</option><br>
-<option value="G50.0 idiopathische Trigeminusneuralgie">Trigeminusneuralgie, idiopathisch</option><br>
-<option value="G56.2 Läsion des N. ulnaris, chronisch">Ulnaris-Läsion, chronisch</option><br>
-<option value="G63.8 Urämische Neuropathie">Urämische Neuropathie</option><br>
-<option value="H81.8 Sonstige Störungen der Vestibularfunktion">Vestibularfunktion-Störung, sonst</option><br>
-<option value="G24.3 Zervikale Dystonie">Zervikale Dystonie</option><br>
-<option value="M48.02 Zervikale Spinalkanalstenose">Zervikale Spinalkanalstenose</option><br>
-<option value="M53.1 Zervikobrachial-Syndrom">Zervikobrachial-Syndrom</option><br>
-
+<option value="F17.2 VAG Abhängigkeitssyndrom (Tabak)">Abhängigkeitssyndrom (Tabak)</option><br>
+<option value="M75.0 VAG BRL Adhäsive Entzündung der Schultergelenkkapsel">Adhäsive Entzündung der Schultergelenkkapsel</option><br>
+<option value="E66.00 VAG Adipositas, BMI 30-35">Adipositas, BMI 30-35</option><br>
+<option value="E66.01 VAG Adipositas, BMI 35-40">Adipositas, BMI 35-40</option><br>
+<option value="E66.02 VAG Adipositas, BMI mehr als 40">Adipositas, BMI mehr als 40</option><br>
+<option value="E66.09 VAG Adipositas, BMI nicht bekannt">Adipositas, BMI nicht bekannt</option><br>
+<option value="F31 VAG Bipolare affektive Störung">Affektive Störung bipolar</option><br>
+<option value="F10.2 VAG Abhängigkeitssyndrom durch Alkohol">Alkohol-Abhängigkeit</option><br>
+<option value="F10.1 VAG Schädlicher Gebrauch von Alkohol">Alkohol-Schädlicher Gebrauch</option><br>
+<option value="F43.2 VAG Anpassungsstörung">Anpassungsstörung</option><br>
+<option value="R47.0 VAG Dysphasie">Aphasie</option><br>
+<option value="R48.2 VAG Apraxie">Apraxie</option><br>
+<option value="M19.94 V BRL Arthrose der Hand">Arthrose der Hand</option><br>
+<option value="M19.9 [0-9] V BRL Arthrose">Arthrose</option><br>
+<option value="Z03.3 VAG Beobachtung bei Verdacht auf neurologische Krankheit - untersuchungsbedürftige aber nach Untersuchung nicht behandlungsbedürftige Symptome">Beobachtung bei Verdacht auf neurologische Krankheit - untersuchungsbedürftige aber nach Untersuchung nicht behandlungsbedürftige Symptome</option><br>
+<option value="R40.2 VAG Bewusstlosigkeit">Bewusstlosigkeit</option><br>
+<option value="M70.6 VAG BRL V.a. Bursitis trochanterica rechts links">Bursitis trochanterica rechts links</option><br>
+<option value="F45.41 VAG Chronische Schmerzstörung mit somatischen und psychischen Faktoren">Chronische Schmerzstörung mit somatischen und psychischen Faktoren</option><br>
+<option value="G90.50 VAG BRL Komplexes regionales Schmerzsyndrom Typ I, (CRPS I) der oberen Extremität">CRPS I der oberen Extremität</option><br>
+<option value="G90.51 VAG BRL Komplexes regionales Schmerzsyndrom Typ I, (CRPS I) der unteren Extremität">CRPS I der unteren Extremität</option><br>
+<option value="G90.60 VAG BRL Komplexes regionales Schmerzsyndrom Typ II, (CRPS II) der oberen Extremität">CRPS II der oberen Extremität</option><br>
+<option value="G90.61 VAG BRL Komplexes regionales Schmerzsyndrom Typ II, (CRPS II) der unteren Extremität">CRPS II der unteren Extremität</option><br>
+<option value="G30.0 F00.0* VAG Alzheimer-Krankheit mit frühem Beginn (vor 65. LJ)">Demenz: Alzheimer früher Beginn</option><br>
+<option value="G30.1 F00.1* VAG Alzheimer-Krankheit mit spätem Beginn (nach 65. LJ)">Demenz: Alzheimer später Beginn</option><br>
+<option value="G31.0 VAG Frontotemporale Demenz">Demenz: frontotemporal</option><br>
+<option value="F01.3 VAG Gemischte kortikale und subkortikale vaskuläre Demenz">Demenz: gemischt vaskulär</option><br>
+<option value="F01.1 VAG Multiinfarkt-Demenz (vorwiegend kortikal)">Demenz: multiinfarkt</option><br>
+<option value="F01.2 VAG Subkortikale vaskuläre Demenz ">Demenz: subkortikal vaskulär</option><br>
+<option value="F32.0 VAG Leichte depressive Episode">Depressive Episode (leicht): 2 VAG KS, 2 VAG ZS, beruflich/sozial schwierig, sonst Alltag OK</option><br>
+<option value="F32.1 VAG Mittelgradige depressive Episode">Depressive Episode (mittelgradig): 2 VAG KS, 3 VAG ZS, Alltag erschwert</option><br>
+<option value="F32.2 VAG Schwere depressive Episode">Depressive Episode (schwere): 3 VAG KS, 4 VAG ZS, Alltag sehr erschwert</option><br>
+<option value="F33.0 VAG Rezidivierende depressive Störung, gegenwärtig leichte Episode">Depressive Störung, gegenwärtig leichte Episode</option><br>
+<option value="F33.1 VAG Rezidivierende depressive Störung, gegenwärtig mittelgradige Episode">Depressive Störung, gegenwärtig mittelgradige Episode</option><br>
+<option value="F33.2 VAG Rezidivierende depressive Störung, gegenwärtig schwere Episode">Depressive Störung, gegenwärtig schwere Episode</option><br>
+<option value="F33.4 VAG Rezidivierende depressive Störung, gegenwärtig remittiert">Depressive Störung, rezidivierend, gegenwärtig remittiert</option><br>
+<option value="F34.1 VAG Dysthymia">Depressive Verstimmung, chronisch, leicht</option><br>
+<option value="E11.40 G63.2* VAG Diabetische Polyneuropathie">Diabetische Polyneuropathie</option><br>
+<option value="H53.2 VAG Diplopie">Diplopie</option><br>
+<option value="R47.1 VAG Dysarthrie und Anarthrie">Dysarthrie</option><br>
+<option value="G24.3 VAG Zervikale Dystonie">Dystonie zervikal</option><br>
+<option value="M77.1 VAG BRL Epicondylitis radialis humeri rechts links">Epicondylitis radialis humeri</option><br>
+<option value="M77.0 VAG BRL Epicondylitis ulnaris humeri rechts links">Epicondylitis ulnaris humeri</option><br>
+<option value="G40.3 VAG Generalisierte idiopathische Epilepsie">Epilepsie generalisiert idiopathisch</option><br>
+<option value="G40.1 VAG Symptomatische Epilepsie, fokal beginnend">Epilepsie symptomatisch, fokal beginnend</option><br>
+<option value="G40.2 VAG Symptomatische Epilepsie, komplex-fokal beginnend">Epilepsie symptomatisch, komplex-fokal beginnend</option><br>
+<option value="G40.6 VAG Erstmaliger Grand-Mal-Anfall, unprovoziert">Epileptisch: Erstmaliger Grand-Mal-Anfall, unprovoziert</option><br>
+<option value="R25.3 VAG Faszikulationen in den Waden">Faszikulationen in den Waden</option><br>
+<option value="G51.1 VAG Fazialisparese (Bell)">Fazialisparese (Bell)</option><br>
+<option value="M79.70 VAG Fibromyalgie">Fibromyalgie</option><br>
+<option value="F45.8 VAG Funktionelle Körperbeschwerden">Funktionelle Körperbeschwerden</option><br>
+<option value="R26.0 VAG Ataktischer Gang">Gang ataktisch</option><br>
+<option value="R26.1 VAG Paretischer Gang">Gang paretisch</option><br>
+<option value="R26.2 VAG Unspezifische Gangunsicherheit">Gangunsicherheit</option><br>
+<option value="R54 VAG Gebrechlichkeit">Gebrechlichkeit</option><br>
+<option value="R26.2 VAG Gehbeschwerden">Gehbeschwerden</option><br>
+<option value="S06.0 VAG Gehirnerschütterung">Gehirnerschütterung</option><br>
+<option value="M25.5 [0-9] BRL Gelenkschmerz">Gelenkschmerz</option><br>
+<option value="H53.4 VAG BRL Gesichtsfelddefekte">Gesichtsfelddefekte</option><br>
+<option value="G61.0 VAG Guillain-Barré-Syndrom">Guillain-Barré-Syndrom</option><br>
+<option value="G57.8 VAG BRL Läsion des medialen Hallux-Astes des N. cutaneus dorsalis medialis">Hallux-Hautnerv-Läsion</option><br>
+<option value="R32 VAG Harninkontinenz">Harninkontinenz</option><br>
+<option value="G81.0 VAG Schlaffe Hemiparese und Hemiplegie">Hemiparese schlaff</option><br>
+<option value="G81.1 VAG BRL Spastische Hemiparese und Hemiplegie">Hemiparese spastisch</option><br>
+<option value="I69.1 VAG Folgen einer intrazerebralen Blutung">Hirnblutung-Folgen</option><br>
+<option value="I69.3 VAG Folgen eines Hirninfarktes">Hirninfarkt-Folgen</option><br>
+<option value="G90.2 VAG BRL Horner-Syndrom">Horner-Syndrom</option><br>
+<option value="H91.9 VAG BRL Hörverlust">Hörverlust</option><br>
+<option value="E78.0 VAG Reine Hypercholesterinämie">Hypercholesterinämie, reine</option><br>
+<option value="M75.4 VAG BRL Impingement-Syndrom der Schulter">Impingement-Syndrom der Schulter  </option><br>
+<option value="F51.0 VAG Insomnie">Insomnie</option><br>
+<option value="G47.0 VAG Ein- und Durchschlafstörungen">Insomnie</option><br>
+<option value="F70 VAG Leichte Intelligenzminderung">Intelligenzminderung, leicht</option><br>
+<option value="F71 VAG Mittelgradige Intelligenzminderung">Intelligenzminderung, mittelgradig</option><br>
+<option value="F72 VAG Schwere Intelligenzminderung">Intelligenzminderung, schwer</option><br>
+<option value="F73 VAG Schwerste Intelligenzminderung">Intelligenzminderung, schwerst</option><br>
+<option value="H51.2 VAG BRL Internukleäre Ophthalmoplegie rechts links">Internukleäre Ophthalmoplegie</option><br>
+<option value="G93.2 VAG Benigne intrakranielle Hypertension">Intrakranielle Hypertension</option><br>
+<option value="I65.2 VAG Verschluss und Stenose der A. carotis">Karotisstenose</option><br>
+<option value="G56.0 VAG BRL Karpaltunnelsyndrom leichtgradig bds. rechts links mittelgradig bds. rechts links schwer bds. rechts links">Karpaltunnelsyndrom</option><br>
+<option value="F06.7 VAG Leichte kognitive Störung">Kognitive Störung leicht</option><br>
+<option value="G44.0 VAG Cluster-Kopfschmerz">Kopfschmerz Cluster</option><br>
+<option value="G44.4 VAG Kopfschmerz durch Übergebrauch von Medikamenten">Kopfschmerz durch Übergebrauch von Medikamenten</option><br>
+<option value="G43.1 VAG Migräne mit Aura">Kopfschmerz Migräne mit Aura</option><br>
+<option value="G43.0 VAG Migräne ohne Aura">Kopfschmerz Migräne ohne Aura</option><br>
+<option value="G44.2 VAG Spannungskopfschmerz">Kopfschmerz Spannungs-</option><br>
+<option value="M16.1 VAG BRL Koxarthrose rechts links">Koxarthrose rechts links</option><br>
+<option value="M54.5 VAG Kreuzschmerz">Kreuzschmerz</option><br>
+<option value="M75.1 VAG BRL Läsionen der Rotatorenmanschette">Läsionen der Rotatorenmanschette</option><br>
+<option value="M51.1 VAG BRL V.a. lumbale Radikulopathie durch Bandscheibenvorfall">Lumbale Radikulopathie durch Bandscheibenvorfall</option><br>
+<option value="M48.06 VAG Lumbale Spinalkanalstenose">Lumbale Spinalkanalstenose</option><br>
+<option value="M47.26 VAG G55.2* Lumbale Spondylose mit Radikulopathie">Lumbale Spondylose mit Radikulopathie</option><br>
+<option value="M54.4 VAG Lumboischialgie">Lumboischialgie</option><br>
+<option value="H81.0 VAG Ménière-Krankheit">Ménière-Krankheit</option><br>
+<option value="G57.1 VAG BRL Meralgia paraesthetica">Meralgia paraesthetica</option><br>
+<option value="G12.2 VAG Motoneuron-Krankheit">Motoneuron-Krankheit</option><br>
+<option value="G35.01 VAG Erstmanifestation einer Multiplen Sklerose, mit akuter Exazerbation/Progression ">Multiple Sklerose, Erstmanifestation, mit akuter Exazerbation/Progression </option><br>
+<option value="G35.00 VAG Erstmanifestation einer Multiplen Sklerose, ohne akute Exazerbation/Progression">Multiple Sklerose, Erstmanifestation, ohne akute Exazerbation/Progression</option><br>
+<option value="G35.21 VAG MS, primär-chronischer Verlauf, mit akuter Exazerbation/Progression ">Multiple Sklerose, primär-chronischer Verlauf, mit akuter Exazerbation/Progression </option><br>
+<option value="G35.20 VAG MS, primär-chronischer Verlauf, ohne akute Exazerbation/Progression">Multiple Sklerose, primär-chronischer Verlauf, ohne akute Exazerbation/Progression</option><br>
+<option value="G35.31 VAG MS, sekundär-chronischer Verlauf letzte Stelle, mit akuter Exazerbation/Progression">Multiple Sklerose, sekundär-chronischer Verlauf, mit akuter Exazerbation/Progression</option><br>
+<option value="G35.30 VAG MS, sekundär-chronischer Verlauf letzte Stelle, ohne akute Exazerbation/Progression">Multiple Sklerose, sekundär-chronischer Verlauf, ohne akute Exazerbation/Progression</option><br>
+<option value="G35.11 VAG MS, vorherrschend schubförmiger Verlauf, mit akuter Exazerbation/Progression ">Multiple Sklerose, vorherrschend schubförmiger Verlauf, mit akuter Exazerbation/Progression </option><br>
+<option value="G35.10 VAG MS, vorherrschend schubförmiger Verlauf, ohne akute Exazerbation/Progression">Multiple Sklerose, vorherrschend schubförmiger Verlauf, ohne akute Exazerbation/Progression</option><br>
+<option value="R25.2 VAG Muskelkrämpfe">Muskelkrämpfe</option><br>
+<option value="G70.0 VAG Myasthenia gravis ">Myasthenia gravis </option><br>
+<option value="G72.0 VAG Arzneimittelinduzierte Myopathie">Myopathie, arzneimittelinduziert</option><br>
+<option value="G71.1 VAG Myotone Dystrophie Typ 1 VAG 2">Myotone Dystrophie Typ 1 VAG 2</option><br>
+<option value="R29.5 VAG BRL Neglect">Neglect</option><br>
+<option value="G53.0 VAG BRL Neuralgie nach Zoster">Neuralgie nach Zoster</option><br>
+<option value="G54.5 VAG BRL Neuralgische Amyotrophie">Neuralgische Amyotrophie</option><br>
+<option value="H81.2 VAG BRL Neuropathia vestibularis">Neuropathia vestibularis</option><br>
+<option value="G63.8 VAG Urämische Neuropathie">Neuropathie urämisch</option><br>
+<option value="M79.2[0-9] VAG Neuropathischer Schmerz">Neuropathischer Schmerz</option><br>
+<option value="G91.20 VAG Idiopathischer Normaldruckhydrozephalus">Normaldruckhydrozephalus, idiopathisch</option><br>
+<option value="I95.1 VAG Orthostatische Dysregulation">Orthostatische Dysregulation</option><br>
+<option value="F41.0 VAG Panikstörung oder Panikattacke">Panikstörung Panikattacke</option><br>
+<option value="G82.1 VAG Spastische Paraparese">Paraparese spastisch</option><br>
+<option value="G20.01 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 0 VAG 1 2 VAG mit Wirkungsfluktuation">Parkinson HY 0 VAG 1 2 VAG mit WF</option><br>
+<option value="G20.00 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 0 VAG 1 2 VAG ohne Wirkungsfluktuation">Parkinson HY 0 VAG 1 2 VAG ohne WF</option><br>
+<option value="G20.11 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 3 VAG 4 mit Wirkungsfluktuation">Parkinson HY 3 VAG 4 mit WF</option><br>
+<option value="G20.10 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 3 VAG 4 ohne Wirkungsfluktuation">Parkinson HY 3 VAG 4 ohne WF</option><br>
+<option value="G20.21 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 5 VAG mit Wirkungsfluktuation">Parkinson HY 5 VAG mit WF</option><br>
+<option value="G20.20 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 5 VAG ohne Wirkungsfluktuation">Parkinson HY 5 VAG ohne WF</option><br>
+<option value="G57.3 VAG BRL Läsion des N. peronaeus">Peronaeus-Läsion rechts links</option><br>
+<option value="S14.3 VAG BRL Verletzung des Plexus brachialis">Plexus brachialis-Verletzung</option><br>
+<option value="G62.1 VAG Alkoholtoxische Polyneuropathie">Polyneuropathie, alkoholtoxisch</option><br>
+<option value="G62.0 VAG Arzneimittelinduzierte Polyneuropathie">Polyneuropathie, arzneimittelinduziert</option><br>
+<option value="G63.2 VAG Diabetische Polyneuropathie">Polyneuropathie diabetisch</option><br>
+<option value="G62.9 VAG Polyneuropathie, nicht näher bezeichnet">Polyneuropathie, sonst</option><br>
+<option value="Z56 VAG Arbeitsplatzbedingte Schwierigkeiten">Probleme im Berufsleben</option><br>
+<option value="Z72.0 VAG Probleme mit Bezug auf: Konsum von Alkohol, Tabak, Arzneimitteln oder Drogen">Probleme mit Alkohol, Tabak, Arzneimitteln oder Drogen</option><br>
+<option value="Z73 VAG Probleme mit der Lebensbewältigung">Probleme mit Lebensbewältigung</option><br>
+<option value="Z60 VAG Probleme wegen Ausgrenzung, Vereinsamung">Probleme wegen Ausgrenzung, Vereinsamung</option><br>
+<option value="Z65 VAG Probleme wegen erlebter drohender Gefahr (Folter, Krieg, Gerichtsprozes)">Probleme wegen erlebter drohender Gefahr (Folter, Krieg, Gerichtsprozes)</option><br>
+<option value="Z59 VAG Kontaktanlässe mit Bezug auf das Wohnumfeld oder die wirtschaftliche Lage">Probleme Wohnen u/o Geld</option><br>
+<option value="H02.4 VAG BRL Ptosis des Augenlides">Ptosis des Augenlides</option><br>
+<option value="G56.3 VAG BRL Läsion des N. radialis">Radialis-Läsion</option><br>
+<option value="G47.8 VAG REM-assoziierte Verhaltensstörung">REM-assoziierte Verhaltensstörung</option><br>
+<option value="G25.81 VAG Syndrom der unruhigen Beine [Restless-Legs-Syndrom]">Restless-Legs-Syndrom</option><br>
+<option value="M18.0 VG Rhizarthrose, beidseitig">Rhizarthrose, beidseitig</option><br>
+<option value="M18.1 VG Rhizarthrose rechts links">Rhizarthrose rechts links</option><br>
+<option value="R45.1 G Ruhelosigkeit">Ruhelosigkeit</option><br>
+<option value="F20 VAG Schizophrenie">Schizophrenie</option><br>
+<option value="G47.31 VAG Obstruktives Schlafapnoe - Syndrom">Schlafapnoe-Syndrom, obstruktiv</option><br>
+<option value="Z86.7 VAG Krankheiten des Kreislaufsystems in der Eigenanamnese">Schlaganfall-Anamnese ohne Defizit jetzt</option><br>
+<option value="M79.65 VAG BRL Schmerzen in Becken/Oberschenkel">Schmerzen in Becken/Oberschenkel</option><br>
+<option value="M79.67 VAG BRL Schmerzen in Fuß">Schmerzen in Fuß</option><br>
+<option value="M79.64 VAG BRL Schmerzen in Hand">Schmerzen in Hand</option><br>
+<option value="M79.60 VAG Schmerzen in mehreren Bereichen">Schmerzen in mehreren Bereichen</option><br>
+<option value="79.62 VAG BRL BRL Schmerzen in Oberarm">Schmerzen in Oberarm</option><br>
+<option value="M79.61 VAG BRL Schmerzen in Schulter">Schmerzen in Schulter</option><br>
+<option value="M79.63 VAG BRL Schmerzen in Unterarm">Schmerzen in Unterarm</option><br>
+<option value="M79.66 VAG BRL Schmerzen in Unterschenkel">Schmerzen in Unterschenkel</option><br>
+<option value="M54.2 G BRL Nackenschmerz">Schmerz im Nacken</option><br>
+<option value="H81.1 VAG BRL Benigner paroxysmaler Schwindel des hinteren Bogengangs"> Schwindel: Lagerungsschwindel</option><br>
+<option value="H81.3 VAG Sonstiger peripherer Schwindel">Schwindel: peripher, sonstig</option><br>
+<option value="F40.8 VAG Phobischer Schwankschwindel">Schwindel: phobisch</option><br>
+<option value="R42 Schwindel und Taumel">Schwindel/Taumel</option><br>
+<option value="H81.4 VAG Schwindel zentralen Ursprungs">Schwindel: zentral</option><br>
+<option value="G51.3 VAG RL Spasmus hemifacialis">Spasmus hemifacialis</option><br>
+<option value="R46.0 G Stark vernachlässigte Körperpflege">Stark vernachlässigte Körperpflege</option><br>
+<option value="H50.0 G Strabismus concomitans convergens">Strabismus concomitans convergens</option><br>
+<option value="H50.1 G Strabismus concomitans divergens">Strabismus concomitans divergens</option><br>
+<option value="R29.6 VAG Sturzneigung">Sturzneigung</option><br>
+<option value="I69.0 VAG Folgen einer Subarachnoidalblutung">Subarachnoidalblutung-Folgen</option><br>
+<option value="R55 VAG Synkope">Synkope</option><br>
+<option value="M65.83 V BRL V.a. Tenosynovitis im Unterarm rechts links">Tenosynovitis im Unterarm</option><br>
+<option value="H93.1 G BRL Tinnitus aurium">Tinnitus aurium</option><br>
+<option value="G25.1 VAG Arzneimittelinduzierter Tremor ">Tremor arzneimittelinduziert</option><br>
+<option value="G25.2 VG BRL Dystoner Tremor">Tremor dyston</option><br>
+<option value="G25.0 VAG Essentieller Tremor">Tremor essentiell</option><br>
+<option value="G25.2 VG Gesteigerter physiologischer Tremor">Tremor gesteigert physiologisch</option><br>
+<option value="G50.0 VAG BRL idiopathische Trigeminusneuralgie">Trigeminusneuralgie, idiopathisch</option><br>
+<option value="G56.2 VAG BRL Läsion des N. ulnaris">Ulnaris-Läsion</option><br>
+<option value="R53 Unwohlsein und Ermüdung">Unwohlsein und Ermüdung</option><br>
+<option value="H81.8 VAG Sonstige Störungen der Vestibularfunktion">Vestibularfunktion-Störung, sonst</option><br>
+<option value="M48.02 VAG Zervikale Spinalkanalstenose">Zervikale Spinalkanalstenose</option><br>
+<option value="M47.12 VAG G99.2* Zervikale Spondylose mit Myelopathie">Zervikale Spondylose mit Myelopathie</option><br>
+<option value="M47.22 VAG G55.2* Zervikale Spondylose mit Radikulopathie">Zervikale Spondylose mit Radikulopathie</option><br>
+<option value="M53.1 VAG BRL Zervikobrachial-Syndrom">Zervikobrachial-Syndrom</option><br>
                 </select></form>
                 <br>
             </div>
@@ -939,6 +973,11 @@
                 <option value="Z.n.">Z.n.</option>
                 </select></form>
                 <br>
+<button class="bt1 bttext" onclick="ed1('M - Lokalisation\r\n0: Mehrere Lokalisationen\r\n1: Schulterregion [Klavikula, Skapula, Akromioklavikular-, Schulter-, Sternoklavikulargelenk]\r\n2: Oberarm [Humerus, Ellenbogengelenk]\r\n3: Unterarm [Radius, Ulna, Handgelenk]\r\n4: Hand [Finger, Handwurzel, Mittelhand, Gelenke zwischen diesen Knochen]\r\n5: Beckenregion und Oberschenkel [Becken, Femur, Gesäß, Hüfte, Hüftgelenk, Iliosakralgelenk]\r\n6: Unterschenkel [Fibula, Tibia, Kniegelenk]\r\n7: Knöchel und Fuß [Fußwurzel, Mittelfuß, Zehen, Sprunggelenk, sonstige Gelenke des Fußes]\r\n8: Sonstige [Hals, Kopf, Rippen, Rumpf, Schädel, Wirbelsäule]\r\n9: Nicht näher bezeichnete Lokalisation\r\n')">M-Lokalisation</button>
+
+
+<button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
+
             </div>
             <div class="wrap3" id="Epikrise">
                 <p class="stamp">Epikrise/Symptome</p>
@@ -1174,7 +1213,7 @@
                 <button class="bt1 bttext" onclick="ed1('Schulterblattstabilisierung durch Serratus ant. R normal schwach L normal schwach, Schulterhebung R  L , Armabduktion R  L , Armadduktion R  L , Arminnenrotation R  L , Armaußenrotation R  L , Armbeugung R  L , Armstreckung R  L , Unterarmpronation R  L , Unterarmsupination R  L , Handbeugung R  L , Handstreckung R  L , Fingerstreckung R  L , Fingerbeugung R  L , Abduktion der Finger II und V R  L , Beugung der MCP-Gelenke R  L , Streckung der MCP-Gelenke R  L , Beugung der IP-Gelenke R  L , Streckung der IP-Gelenke R  L  nach MRC.\r\nHüftbeugung R  L , Hüftstreckung R  L , Hüftinnenrotation R  L , Hüftaußenrotation R  L , Kniebeugung R  L , Kniestreckung R  L , Fußhebung R  L , Fußsenkung R  L , Fußpronation R  L , Fußsupination R  L , Zehenstreckung R  L , Zehenbeugung R  L  nach MRC.\r\n\r\n--- Ohne MRC-Grad ---\r\nSchulterblattstabilisierung durch Serratus ant. normal, Schulterhebung, Armabduktion, Armadduktion, Arminnenrotation, Armaußenrotation, Armbeugung, Armstreckung, Unterarmpronation, Unterarmsupination, Handbeugung, Handstreckung, Fingerstreckung, Fingerbeugung, Abduktion der Finger II und V, Beugung der MCP-Gelenke, Streckung der MCP-Gelenke, Beugung der IP-Gelenke, Streckung der IP-Gelenke.\r\nHüftbeugung, Hüftstreckung, Hüftinnenrotation, Hüftaußenrotation, Kniebeugung, Kniestreckung, Fußhebung, Fußsenkung, Fußpronation, Fußsupination, Zehenstreckung, Zehenbeugung.\r\n\r\nMuskelatrophie in Mm. biceps br. triceps br. kleinen Handmuskeln Thenar quadriceps femoris gastrocnemius tibialis ant. R L.\r\nHautregion ohne Schweiß:  R L. \r\n\r\nMasseter-Reflex , BSR R  L , TSR R  L , PSR R  L , ASR R  L  .\r\nMuskeldehnungsreflexe: (0: fehlend, 1: schwach, 2: mittellebhaft, 3: lebhaft ohne Klonus, 4: mit Klonus)\r\n\r\nLasègue-Zeichen R bei Grad  positiv L bei Grad  positiv. \r\nUmgekehrtes Lasègue-Zeichen R positiv L positiv. \r\nSchmerz in xxx wird ausgelöst durch Druck auf  durch passive Armabduktion R L Armaußenrotation R L Hüftaußenrotation R L Hüftinnenrotation R L \r\n\r\nPassiver Bewegungsumfang\r\n\r\nSchultergelenk\r\nAbduktion - Adduktion (Frontalebene): R -- L -- (Normal: 180-0-30)\r\nArm vorwärts - rückwärts (Sagittalebene): R -- L -- (Normal: 160-0-40)\r\nArmaußenrotation - Arminnenrotation: R -- L -- (Normal: 60-0-75)\r\n\r\nEllenbogen\r\nStreckung - Beugung: R -- L -- (Normal: 10-0-135) \r\n\r\nHandgelenk\r\nStreckung - Beugung: R -- L -- (Normal: 50-0-60)\r\n\r\nHüftgelenk\r\nStreckung - Beugung: R -- L -- (Normal: 5-0-130)\r\nAbduktion - Adduktion: R -- L -- (Normal: 40-0-30)\r\nAußen- und Innenrotation in Beugung von 90 Grad: R -- L -- (Normal: 40-0-40)\r\n\r\nKniegelenk\r\nStreckung - Beugung: R -- L -- (Normal: 5-0-130)\r\n\r\nOberes Sprunggelenk \r\nHebung - Senkung: R -- L -- (Normal: 20-0-40)\r\n')">Peripher</button>
                 <button class="bt1 bttext" onclick="ed1('Lagerungsmanöver für den rechten linken vertikalen Bogengang negativ positiv.\r\nLagerungsmanöver für den rechten linken horizontalen Bogengang negativ positiv.\r\nKopfimpulstest normal positiv für eine Läsion des rechten linken Gleichgewichtsorgans.\r\n')">Schwindel-Befund</button><br>
                 <button class="bt1 bttext" onclick="ed1('Timed Up and Go Test (Aufstehen von einem Stuhl, 3 m Gehen, Zurückkehren, Sich-Hinsetzen) s.\r\n')">TUG-Test</button>
-                <button class="bt1 bttext" onclick="ed1('Mini-Mental-Status-Test xxx von 30 Punkten.\r\n' + Der_Patient + ' konnte xxx.\r\n\r\nUhren-Zeichen-Test nach Shulman 1 Punkt xxx Punkte\r\n(Bestes Ergebnis 1, ungünstigstes Ergebnis 6).\r\n')">MMST/UhrT</button>
+                <button class="bt1 bttext" onclick="ed1('**Neuropsychologie**\r\n\r\nMini-Mental-Status-Test xxx von 30 Punkten.\r\n' + Der_Patient + ' konnte xxx.\r\n\r\nUhren-Zeichen-Test nach Shulman 1 Punkt xxx Punkte\r\n(Bestes Ergebnis 1, ungünstigstes Ergebnis 6).\r\n')">MMST/UhrT</button>
             </div>
             <div class="wrap3" id="MS">
                 <p class="stamp">Texte_A</p>
@@ -1192,12 +1231,12 @@
                 <button class="bt1 bttext" onclick="ed1('Kopfschmerz\r\n')">Kopfschmerz</button>
                 <button class="bt1 bttext" onclick="ed1('Es handelt sich um eine milde Meralgia paresthetica rechts links, es ist ein Nervenwurzelkompressions-Syndrom des N. cutaneus femoris lateralis im Leistenband. ' + Der_Patient + ' soll langes Stehen vermeiden, ebenfalls soll ' + er +  ' keine das Becken beengende Kleidung tragen.\r\nZunächst würde ich Verlaufsbeobachtung und keine weitere neurologische Diagnostik oder Behandlung empfehlen.\r\n')">Meralgia</button>
 
-                <button class="bt1 bttext" onclick="ed1('berichtet über starke, eher pochende drückende Kopfschmerzen seit xxx, ca. x/Monat, sie dauern xxx bis xxx Stunden Tage.\r\nDie Kopfschmerzen sind meistens oft begleitet von Übelkeit Licht-, Lärm-, Bewegungs- Empfindlichkeit.\r\nEine Aura tritt vor den Kopfschmerzen auf: Flimmern vor den Augen Gesichtsfeld-Einschränkung Taubheitsgefühl Sprachstörung\r\nDie Kopfschmerzen werden durch xxx ausgelöst, durch xxx und Schlaf gelindert.\r\nEs besteht kein zeitlicher Zusammenhang mit der Monatsblutung.\r\nFamilienanamnese: xxx hat starke Kopfschmerzen mit Übelkeit.\r\n\r\nEs handelt sich um eine Migräne mit ohne Aura.\r\nWir besprachen Aspekte einen gesunden Lebensstils zur Vorbeugung von Migräne (tägliche körperliche Aktivität, Schlafhygiene, kein Rauchen, kein Alkohol).\r\nDer Ovulationshemmer könnte eine ungünstige Wirkung auf die Migräne haben, die Patientin könnte eine andere nicht-hormonelle Verhütungsmethode anwenden.\r\nSie erklärte, dass sie nicht schwanger ist und keine Schwangerschaft plant. Ich klärte auf, dass wir die Medikamente vor einer Schwangerschaft ggf. ändern müssen.\r\nIch habe über den Kopfschmerz bei Übergebrauch von Schmerzmitteln aufgeklärt und ein Kopfschmerz-Tagebuch empfohlen.\r\nEine medikamentöse Prophylaxe ist noch nicht indiziert.\r\nBei Einsetzen von Kopfschmerz sollte ' + der_Patient + ' Paracetamol 1000 mg und Metoclopramid 10 mg einnehmen. Über relevante Nebenwirkungen (Metoclopramid kann Schläfrigkeit verursachen) habe ich aufgeklärt. Ich habe Metoclopramid verschrieben.\r\nGerne Wiedervorstellung.\r\n')">Migräne</button>
-                <button class="bt1 bttext" onclick="ed1('Ich habe über vertrauenswürdige Internet-Quellen zur MS (Kompetenznetz Multiple Sklerose) und über Selbsthilfegruppen informiert.\r\nWir besprachen Aspekte einen gesunden Lebensstils. Ich empfahl eine zweite Meinung in einem MS-Zentrum. Ich empfahl ein verlaufsmodifizierendes Medikament, insbesondere Interferon oder Glatirameracetat und gab die Aufklärungsbögen dazu.\r\nWir vereinbarten einen zweiten Termin für die Therapieentscheidung.\r\n\r\nDimethylfumarat\r\nBei Leukopenien unter 3.000/μl oder Lymphozytenwerten unter 500/μl Aussetzen der Medikation\r\nBei Grad-2-Lymphopenien im Bereich von 500-800/μl engmaschige Blutbildkontrollen und vermehrte Vigilanz auf PML (klinisch alle 3 Monate) Danach sollten Kontrolluntersuchungen\r\nbis zur Normalisierung des Blutbilds erfolgen alle 4 Wochen. Sollten nach einem Jahr dauerhafter Therapie die Werte unauffällig sein, so ist danach eine drei bis sechsmonatliche Kontrolle ausreichend (obligat). Kommentar: Im Einzelfall kann eine PML unter Dimethylfumarat auch ohne ausgeprägte Lymphopenie auftreten, sodass auch Grad 2-Lymphopenien im Bereich von 500 – 800/μl aufmerksam verfolgt werden müssen.\r\n')">MS</button>
+                <button class="bt1 bttext" onclick="ed1('berichtet über starke, eher pochende drückende Kopfschmerzen seit xxx, ca. x/Monat, sie dauern xxx bis xxx Stunden Tage.\r\nDie Kopfschmerzen sind meistens oft begleitet von Übelkeit Licht-, Lärm-, Bewegungs- Empfindlichkeit.\r\nEine Aura tritt vor den Kopfschmerzen auf: Flimmern vor den Augen Gesichtsfeld-Einschränkung Taubheitsgefühl Sprachstörung\r\nDie Kopfschmerzen werden durch xxx ausgelöst, durch xxx und Schlaf gelindert.\r\nEs besteht kein zeitlicher Zusammenhang mit der Monatsblutung.\r\nFamilienanamnese: xxx hat starke Kopfschmerzen mit Übelkeit.\r\n\r\nEs handelt sich um eine Migräne mit ohne Aura.\r\nWir besprachen Aspekte eines gesunden Lebensstils zur Vorbeugung von Migräne (tägliche körperliche Aktivität, Schlafhygiene, kein Rauchen, kein Alkohol).\r\nDer Ovulationshemmer könnte eine ungünstige Wirkung auf die Migräne haben, die Patientin könnte eine andere nicht-hormonelle Verhütungsmethode anwenden.\r\nSie erklärte, dass sie nicht schwanger ist und keine Schwangerschaft plant. Ich klärte auf, dass wir die Medikamente vor einer Schwangerschaft ggf. ändern müssen.\r\nIch habe über den Kopfschmerz bei Übergebrauch von Schmerzmitteln aufgeklärt und ein Kopfschmerz-Tagebuch empfohlen.\r\nEine medikamentöse Prophylaxe ist noch nicht indiziert.\r\nBei Einsetzen von Kopfschmerz sollte ' + der_Patient + ' Paracetamol 1000 mg und Metoclopramid 10 mg einnehmen. Über relevante Nebenwirkungen (Metoclopramid kann Schläfrigkeit verursachen) habe ich aufgeklärt. Ich habe Metoclopramid verschrieben.\r\nGerne Wiedervorstellung.\r\n')">Migräne</button>
+                <button class="bt1 bttext" onclick="ed1('Ich habe über vertrauenswürdige Internet-Quellen zur MS (Kompetenznetz Multiple Sklerose) und über Selbsthilfegruppen informiert.\r\nWir besprachen Aspekte eines gesunden Lebensstils. Ich empfahl eine zweite Meinung in einem MS-Zentrum. Ich empfahl ein verlaufsmodifizierendes Medikament, insbesondere Interferon oder Glatirameracetat und gab die Aufklärungsbögen dazu.\r\nWir vereinbarten einen zweiten Termin für die Therapieentscheidung.\r\n\r\nDimethylfumarat\r\nBei Leukopenien unter 3.000/μl oder Lymphozytenwerten unter 500/μl Aussetzen der Medikation\r\nBei Grad-2-Lymphopenien im Bereich von 500-800/μl engmaschige Blutbildkontrollen und vermehrte Vigilanz auf PML (klinisch alle 3 Monate) Danach sollten Kontrolluntersuchungen\r\nbis zur Normalisierung des Blutbilds erfolgen alle 4 Wochen. Sollten nach einem Jahr dauerhafter Therapie die Werte unauffällig sein, so ist danach eine drei bis sechsmonatliche Kontrolle ausreichend (obligat). Kommentar: Im Einzelfall kann eine PML unter Dimethylfumarat auch ohne ausgeprägte Lymphopenie auftreten, sodass auch Grad 2-Lymphopenien im Bereich von 500 – 800/μl aufmerksam verfolgt werden müssen.\r\n')">MS</button>
                 <br>
                 <br>
                 <button class="bt1 bttext" onclick="ed1('Ich klärte ' + den_Patienten + ' und den Angehörigen die Angehörigen auf, dass die Kraftfahreignung für mindestens 6 Monate 1 Jahr nicht besteht. Danach sollte die Kraftfahreignung erneut neurologisch beurteilt werden.\r\n')">Autofahren</button>
-                <button class="bt1 bttext" onclick="ed1('Wir besprachen Aspekte einen gesunden Lebensstils (insbesondere das Aufhören mit dem Rauchen), ich empfahl www.rauchfrei-info.de.\r\n')">Rauchen</button>
+                <button class="bt1 bttext" onclick="ed1('Wir besprachen Aspekte eines gesunden Lebensstils (insbesondere das Aufhören mit dem Rauchen), ich empfahl www.rauchfrei-info.de.\r\n')">Rauchen</button>
                 <button class="bt1 bttext" onclick="ed1('Statine verursachen nach langer Anwendung selten sensible und sensomotorische Polyneuropathien, die nach Absetzen des Statins reversibel sind. Erwägen Sie ein Absetzen des Statins.\r\n')">Statine</button>
                 <button class="bt1 bttext" onclick="ed1('Ich habe über den spinalen Notfall aufgeklärt (Taubheitsgefühl um die Genitalorgane, Schwierigkeit beim Wasserlassen, Lähmungen) und die Notwendigkeit, sich dann sofort in einer Notaufnahme vorzustellen.\r\n')">Spinaler Notfall</button>
                 <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
@@ -1248,10 +1287,12 @@
             <div class="wrap3" id="Bef">
                 <p class="stamp">Apparative Befunde</p>
                 <button class="bt1 bttext" onclick="ed1('Grundrhythmus Hz, normale visuelle Blockade-Reaktion, keine epilepsietypischen Potentiale, keine regionale Verlangsamung. Flaches EEG\r\nÜberwiegend Beta-Wellen ca. Hz\r\nPulsartefakt\r\nElektrodenartefakt \r\nAugenartefakte\r\nMuskelartefakte \r\n\r\nPolymorphe Wellen Hz, keine unsichere visuelle Blockade-Reaktion, keine epilepsietypischen Potentiale. \r\nKomplexe aus Spitze und Welle spitze Wellen bilateral synchron alle xxx Sekunden. \r\nMTA-Notiz: wach, ansprechbar, müde, schläfrig, schnarcht, schläft, komatös, unruhig.\r\n\r\nNormalbefund.\r\n\r\nAltersentsprechender Normalbefund.\r\n\r\nBefund hinweisend auf eine leichtgradige mittelgradige schwere diffuse Hirnfunktionsstörung. \r\n\r\nBefund hinweisend auf eine erhöhte zerebrale Erregbarkeit. \r\n\r\nBefund hinweisend auf eine Funktionsstörung in der rechten linken Hirnhemisphäre. \r\n\r\nKeine pathologische Reaktion auf Hyperventilation. \r\n\r\nEs ist keine iktuale Aktivität zu beobachten.\r\n\r\nBurst-Suppression-Muster.\r\n\r\nSchlafstadium nach Rechtschaffen und Kales .\r\n')">EEG</button>
-                <button class="bt1 bttext" onclick="ed1('Motorische Neurographie\r\nN. medianus (Aufzeichnung: Thenar, Stimulation: Ellenbeuge) bds. normal\r\nN. ulnaris (Aufzeichnung: Hypothenar, Stimulation: Handgelenk sowie distal und proximal des Sulcus ulnaris) bds. normal\r\nN. tibialis (Aufzeichnung: medialer Fußrand, Stimulation: dorsal des Malleolus medialis und in der Kniekehle) bds. normal\r\nN. peroneus (Aufzeichnung: Bauch des M. tibialis anterior, Stimulation: distal und proximal des Fibulaköpfchens) bds. normal\r\n\r\nSensible Neurographie\r\nN. medianus (Aufzeichnung: Dig. II, Stimulation: Handgelenk) bds. normal\r\nN. ulnaris (Aufzeichnung: Dig. V, Stimulation: Handgelenk) bds. normal\r\nN. suralis (Aufzeichnung: dorsal des Malleolus lat., Stimulation: dorsaler Unterschenkel) bds. normal\r\n')">Neurograph-S</button>
+                <button class="bt1 bttext" onclick="ed1('**Motorische Neurographie**\r\nN. medianus bds. normal\r\nN. ulnaris bds. normal\r\nN. tibialis bds. normal\r\nN. peroneus bds. normal\r\n\r\n**Sensible Neurographie**\r\nN. medianus bds. normal\r\nN. ulnaris bds. normal\r\nN. suralis bds. normal\r\n')">Neurograph-S</button>
 
-                <button class="bt1 bttext" onclick="ed1('Motorische Neurographie\r\nN. medianus (Aufzeichnung: Thenar, Stimulation: Ellenbeuge)\r\n-Bds. normal\r\n-Rechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n-Links\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nN. ulnaris (Aufzeichnung: Hypothenar, Stimulation: Handgelenk sowie distal und proximal des Sulcus ulnaris)\r\n-Bds. normal\r\n-Rechts\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnaris\r\n-Links\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnarisn\r\nSensible Neurographie\r\nN. medianus (Aufzeichnung: Dig. II, Stimulation: Handgelenk)\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nN. ulnaris (Aufzeichnung: Dig. V, Stimulation: Handgelenk)\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nBefund hinweisend auf \r\nein leichtgradiges mittelgradiges schweres Karpaltunnelsyndrom rechts links \r\ntechnisch nicht verwertbar\r\nNormalbefund.')">Neurographie Arme</button>
-                <button class="bt1 bttext" onclick="ed1('Motorische Neurographie\r\nN. tibialis (Aufzeichnung: medialer Fußrand, Stimulation: dorsal des Malleolus medialis und in der Kniekehle)\r\n-Bds. normal\r\n-Rechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n-Links\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\nN. peroneus (Aufzeichnung: Bauch des M. tibialis anterior, Stimulation: distal und proximal des Fibulaköpfchens)\r\n-Bds. normal\r\n-Rechts \r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n-Links \r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n(Aufzeichnung: , Stimulation: )\r\nSensible Neurographie\r\nN. suralis (Aufzeichnung: dorsal des Malleolus lat., Stimulation: dorsaler Unterschenkel)\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert\r\n\r\nBefund hinweisend auf \r\nDer Befund vom rechten linken N. peroneus bedeutet nicht zwangsläufig eine Läsion des Nervenstamms des N. peroneus oder des spinalen Nervs L5 oder S1, es kann sich um eine lokale Läsion des motorischen Astes zum M. ext. dig. brevis handeln. \r\nDie verminderte Geschwindigkeit im N. suralis bds. kann im altersentsprechenden Normbereich sein.\r\nNormalbefund.')">Neurographie Beine</button>
+                <button class="bt1 bttext" onclick="ed1('**Motorische Neurographie**\r\nN. medianus \r\n-Bds. normal\r\n-Rechts\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n-Links\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\nN. ulnaris\r\n-Bds. normal\r\n-Rechts\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert kein Potential\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnaris\r\n-Links\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert kein Potential\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnarisn\r\n\r\n**Sensible Neurographie**\r\nN. medianus\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\nN. ulnaris\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\nBefund hinweisend auf \r\nein leichtgradiges mittelgradiges schweres Karpaltunnelsyndrom rechts links \r\ntechnisch nicht verwertbar\r\nNormalbefund.')">Neurographie Arme</button>
+                <button class="bt1 bttext" onclick="ed1('**Motorische Neurographie**\r\nN. medianus (Aufzeichnung: Thenar, Stimulation: Ellenbeuge)\r\n-Bds. normal\r\n-Rechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n-Links\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\nN. ulnaris (Aufzeichnung: Hypothenar, Stimulation: Handgelenk sowie distal und proximal des Sulcus ulnaris)\r\n-Bds. normal\r\n-Rechts\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert kein Potential\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnaris\r\n-Links\r\nnormal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit im Unterarm normal vermindert\r\nGeschwindigkeit um den Sulcus ulnaris vermindert\r\nAmplitude normal vermindert kein Potential\r\nAmplitude nach Stimulation am Handgelenk normal vermindert\r\nAmplituden-Verminderung um xxx % um den Sulcus ulnarisn\r\n\r\n**Sensible Neurographie**\r\nN. medianus (Aufzeichnung: Dig. II, Stimulation: Handgelenk)\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\nN. ulnaris (Aufzeichnung: Dig. V, Stimulation: Handgelenk)\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\nBefund hinweisend auf \r\nein leichtgradiges mittelgradiges schweres Karpaltunnelsyndrom rechts links \r\ntechnisch nicht verwertbar\r\nNormalbefund.')">Neurogr-Arme-Det</button>
+                <button class="bt1 bttext" onclick="ed1('**Motorische Neurographie**\r\nN. tibialis\r\n-Bds. normal\r\n-Rechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n-Links\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\nN. peroneus\r\n-Bds. normal\r\n-Rechts \r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert kein Potential\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n-Links normal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert kein Potential\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n\r\n**Sensible Neurographie**\r\nN. suralis\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n\r\nBefund hinweisend auf \r\nDer Befund vom rechten linken N. peroneus bedeutet nicht zwangsläufig eine Läsion des Nervenstamms des N. peroneus oder des spinalen Nervs L5 oder S1, es kann sich um eine lokale Läsion des motorischen Astes zum M. ext. dig. brevis handeln. \r\nDie verminderte Geschwindigkeit im N. suralis bds. kann im altersentsprechenden Normbereich sein.\r\nNormalbefund.')">Neurographie Beine</button>
+                <button class="bt1 bttext" onclick="ed1('**Motorische Neurographie**\r\nN. tibialis (Aufzeichnung: medialer Fußrand, Stimulation: dorsal des Malleolus medialis und in der Kniekehle)\r\n-Bds. normal\r\n-Rechts\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n-Links\r\nnormal.\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\nN. peroneus (Aufzeichnung: Bauch des M. tibialis anterior, Stimulation: distal und proximal des Fibulaköpfchens)\r\n-Bds. normal\r\n-Rechts \r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert kein Potential\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n-Links normal\r\ndistal motorische Latenz normal verlängert\r\nGeschwindigkeit normal vermindert \r\nGeschwindigkeit um das Fibulaköpfchen vermindert\r\nAmplitude normal vermindert kein Potential\r\nAmplitude nach Stimulation proximal des Fibulaköpfchens um xxx % vermindert im Vergleich zur Amplitude nach Stimulation distal des Fibulaköpfchens\r\n(Aufzeichnung: , Stimulation: )\r\n\r\n**Sensible Neurographie**\r\nN. suralis (Aufzeichnung: dorsal des Malleolus lat., Stimulation: dorsaler Unterschenkel)\r\n-Bds. normal\r\n-Rechts\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n-Links\r\nGeschwindigkeit normal vermindert \r\nAmplitude normal vermindert kein Potential\r\n\r\nBefund hinweisend auf \r\nDer Befund vom rechten linken N. peroneus bedeutet nicht zwangsläufig eine Läsion des Nervenstamms des N. peroneus oder des spinalen Nervs L5 oder S1, es kann sich um eine lokale Läsion des motorischen Astes zum M. ext. dig. brevis handeln. \r\nDie verminderte Geschwindigkeit im N. suralis bds. kann im altersentsprechenden Normbereich sein.\r\nNormalbefund.')">Neurogr-Beine-Det</button>
                 <button class="bt1 bttext" onclick="ed1('EMG rechts links \r\nMuskeln\r\n\r\nAlle untersuchten Muskeln hatten keine pathologische Spontanaktivität, die Potentiale motorischer Einheiten erschienen normal und das Interferenzmuster war normal. \r\n\r\nNormalbefund. \r\n\r\nMuskeln\r\n\r\nDeltoideus \r\nBiceps br.\r\nBrachioradialis\r\nTriceps br.\r\nExt. dig. comm.\r\nInt. dors I\r\nPronator teres\r\nAbd. poll. longus\r\nExt. ind. proprius\r\nFlex. dig. prof. (uln.)\r\nAbd. poll. brevis \r\nOpponens poll.\r\nAbd. dig. min. manus\r\nInter. dorsalis I \r\n\r\nRectus fem.\r\nVastus med.\r\nVastus lat.\r\nTib. ant.\r\nSemimembranosus \r\nBiceps fem.\r\nGluteus med. \r\nGluteus max. \r\nPeroneus longus\r\nExt. hall. longus\r\nGastrocn. lat. \r\nGastrocn. med. \r\n\r\nPotentiale motorischer Einheiten polyphasisch normal\r\npathologische Spontanaktivität \r\nFibrillationen\r\nFaszikulationen\r\npositive scharfe Wellen\r\n\r\n\r\nAbkürzungen\r\n\r\nPMA: Potentiale motorischer Einheiten \r\nIF: Interferenzmuster\r\nWA: Willentliche Aktivität \r\nFib: Fibrillationen\r\nPSW: positive scharfe Wellen \r\nFasz: Faszikulationen \r\nKRE: komplexe repetitive Entladungen\r\n\r\nBefund hinweisend auf eine Läsion xxx \r\n')">EMG</button>
                 <button class="bt1 bttext" onclick="ed1('Somatosensible evozierte Potentiale \r\nN. medianus (Stimulation: Handgelenk, Aufzeichnung: 2 cm hinter C3/C4)\r\nbds. normal\r\nRechts normal verzögert, links normal verzögert\r\nN. tibialis (Stimulation: Malleolus med., Aufzeichnung: 2 cm hinter Cz)\r\nbds. normal\r\nRechts normal verzögert, links normal verzögert\r\n')">SEP</button>
 
@@ -1293,7 +1334,7 @@
             <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button><br>
             <!--the star logo-->
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<svg height="40" width="40"><polygon points="20.0,2.0 8.0,39.6 38.0,15.6 2.0,15.6 32.0,39.6" style="fill:hsla(40, 100%, 70%, 1);"/></svg></p>
-            <span>NBrief_MVZ 1.2 <br>22.04.2020</span>
+            <span>NBrief_MVZ 1.2 <br>25.04.2020</span>
         </div>
     </div>
     
