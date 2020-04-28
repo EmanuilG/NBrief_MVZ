@@ -397,7 +397,7 @@
 
 <body>
     <noscript><p>Der NBrief_MVZ hilft mit Textbausteinen einen Arztbrief zusammenzustellen.<br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. <br>Dieser Code wird von Ihrem Browser interpretiert. <br>Sie sehen diesen Text, weil Javascript in Ihrem Browser deaktiviert ist. Erwägen Sie bitte, Javascript zu aktivieren. <br>Der NBrief_MVZ braucht einen neuen Browser, am besten funktioniert er mit Firefox 45 oder neuer<br>
-<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 25.04.2020</p></noscript>
+<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 28.04.2020</p></noscript>
     <div id="topBar">
         <button class="bt1" onclick="ez1()">Arztbrief</button>
         <button class="bt1" onclick="ez4()">Hilfe</button>
@@ -684,7 +684,7 @@
     <div id="viert" class="wrap2">
         <div class="fleft50">
             <h3>Hilfe</h3>
-            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formatierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 25.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
+            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formatierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 28.04.2020<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
         </div>
         <div class="fright50">
             <h3>Tastenkombinationen</h3> Die folgenden Tastenkombinationen gelten in den meisten Windows-Anwendungen.<br>Sie helfen bei der Textbearbeitung.<br>Sie gelten auch für das weiße Textfeld im 'NBrief'.
@@ -746,8 +746,10 @@
             <div class="wrap3" id="ICD-Diagnosen">
                 <p class="stamp">ICD Diagnosen</p>
                 <form>
-                    <select id="icd-diagnosen" class="select1 select2" size="" onKeyUp="icddiagn()">
+                    <select id="icd-diagnosen" class="select1 select2" size="1" onKeyUp="icddiagn()">
 <option value="F17.2 VAG Abhängigkeitssyndrom (Tabak)">Abhängigkeitssyndrom (Tabak)</option><br>
+<option value="R41.3 VAG Amnesie">Amnesie, unspezifisch</option><br>
+<option value="F43.2 Anpassungsstörung">Anpassungsstörung: Depr/Angst/Sorge mit Auslöser, bis 6 Mo</option><br>
 <option value="M75.0 VAG BRL Adhäsive Entzündung der Schultergelenkkapsel">Adhäsive Entzündung der Schultergelenkkapsel</option><br>
 <option value="E66.00 VAG Adipositas, BMI 30-35">Adipositas, BMI 30-35</option><br>
 <option value="E66.01 VAG Adipositas, BMI 35-40">Adipositas, BMI 35-40</option><br>
@@ -760,7 +762,8 @@
 <option value="R47.0 VAG Dysphasie">Aphasie</option><br>
 <option value="R48.2 VAG Apraxie">Apraxie</option><br>
 <option value="M19.94 V BRL Arthrose der Hand">Arthrose der Hand</option><br>
-<option value="M19.9 [0-9] V BRL Arthrose">Arthrose</option><br>
+<option value="M19.9 [0-9] V BRL Arthrose">Arthrose außer Knie</option><br>
+<option value="M17.9 VAG BRL Gonarthrose">Arthrose im Knie</option><br>
 <option value="Z03.3 VAG Beobachtung bei Verdacht auf neurologische Krankheit - untersuchungsbedürftige aber nach Untersuchung nicht behandlungsbedürftige Symptome">Beobachtung bei Verdacht auf neurologische Krankheit - untersuchungsbedürftige aber nach Untersuchung nicht behandlungsbedürftige Symptome</option><br>
 <option value="R40.2 VAG Bewusstlosigkeit">Bewusstlosigkeit</option><br>
 <option value="M70.6 VAG BRL V.a. Bursitis trochanterica rechts links">Bursitis trochanterica rechts links</option><br>
@@ -769,11 +772,16 @@
 <option value="G90.51 VAG BRL Komplexes regionales Schmerzsyndrom Typ I, (CRPS I) der unteren Extremität">CRPS I der unteren Extremität</option><br>
 <option value="G90.60 VAG BRL Komplexes regionales Schmerzsyndrom Typ II, (CRPS II) der oberen Extremität">CRPS II der oberen Extremität</option><br>
 <option value="G90.61 VAG BRL Komplexes regionales Schmerzsyndrom Typ II, (CRPS II) der unteren Extremität">CRPS II der unteren Extremität</option><br>
+<option value="F03 Demenz noch unklarer Ursache">Demenz: unklare Ursache</option><br>
+<option value="F10.7 Demenz bei Alkoholkrankheit">Demenz: Alkoholkrankheit</option><br>
 <option value="G30.0 F00.0* VAG Alzheimer-Krankheit mit frühem Beginn (vor 65. LJ)">Demenz: Alzheimer früher Beginn</option><br>
 <option value="G30.1 F00.1* VAG Alzheimer-Krankheit mit spätem Beginn (nach 65. LJ)">Demenz: Alzheimer später Beginn</option><br>
-<option value="G31.0 VAG Frontotemporale Demenz">Demenz: frontotemporal</option><br>
+<option value="G31.0 F02.0* VAG Frontotemporale Demenz">Demenz: frontotemporal</option><br>
 <option value="F01.3 VAG Gemischte kortikale und subkortikale vaskuläre Demenz">Demenz: gemischt vaskulär</option><br>
+<option value="G31.82 F02.8* VAG Lewy-Körper-Demenz">Demenz: Lewy-Körper</option><br>
 <option value="F01.1 VAG Multiinfarkt-Demenz (vorwiegend kortikal)">Demenz: multiinfarkt</option><br>
+<option value="F02.3* VAG Demenz bei primären Parkinson-Syndrom">Demenz: bei Parkinson</option><br>
+<option value="F02.8* Demenz bei anderenorts klassifizierten Krankheitsbildern">Demenz: bei sonstigen Erkrankungen</option><br>
 <option value="F01.2 VAG Subkortikale vaskuläre Demenz ">Demenz: subkortikal vaskulär</option><br>
 <option value="F32.0 VAG Leichte depressive Episode">Depressive Episode (leicht): 2 VAG KS, 2 VAG ZS, beruflich/sozial schwierig, sonst Alltag OK</option><br>
 <option value="F32.1 VAG Mittelgradige depressive Episode">Depressive Episode (mittelgradig): 2 VAG KS, 3 VAG ZS, Alltag erschwert</option><br>
@@ -786,9 +794,11 @@
 <option value="E11.40 G63.2* VAG Diabetische Polyneuropathie">Diabetische Polyneuropathie</option><br>
 <option value="H53.2 VAG Diplopie">Diplopie</option><br>
 <option value="R47.1 VAG Dysarthrie und Anarthrie">Dysarthrie</option><br>
+<option value="R13.9 Dysphagie">Dysphagie</option><br>
 <option value="G24.3 VAG Zervikale Dystonie">Dystonie zervikal</option><br>
 <option value="M77.1 VAG BRL Epicondylitis radialis humeri rechts links">Epicondylitis radialis humeri</option><br>
 <option value="M77.0 VAG BRL Epicondylitis ulnaris humeri rechts links">Epicondylitis ulnaris humeri</option><br>
+<option value="G40.6 VAG Epilepsie, Grand-Mal, unklarer Ursache">Epilepsie Grand-Mal, unklarer Ursache</option><br>
 <option value="G40.3 VAG Generalisierte idiopathische Epilepsie">Epilepsie generalisiert idiopathisch</option><br>
 <option value="G40.1 VAG Symptomatische Epilepsie, fokal beginnend">Epilepsie symptomatisch, fokal beginnend</option><br>
 <option value="G40.2 VAG Symptomatische Epilepsie, komplex-fokal beginnend">Epilepsie symptomatisch, komplex-fokal beginnend</option><br>
@@ -811,13 +821,14 @@
 <option value="G81.0 VAG Schlaffe Hemiparese und Hemiplegie">Hemiparese schlaff</option><br>
 <option value="G81.1 VAG BRL Spastische Hemiparese und Hemiplegie">Hemiparese spastisch</option><br>
 <option value="I69.1 VAG Folgen einer intrazerebralen Blutung">Hirnblutung-Folgen</option><br>
+<option value="I63.9 VAG Hirninfarkt">Hirninfarkt, nnb.</option><br>
 <option value="I69.3 VAG Folgen eines Hirninfarktes">Hirninfarkt-Folgen</option><br>
 <option value="G90.2 VAG BRL Horner-Syndrom">Horner-Syndrom</option><br>
 <option value="H91.9 VAG BRL Hörverlust">Hörverlust</option><br>
 <option value="E78.0 VAG Reine Hypercholesterinämie">Hypercholesterinämie, reine</option><br>
 <option value="M75.4 VAG BRL Impingement-Syndrom der Schulter">Impingement-Syndrom der Schulter  </option><br>
-<option value="F51.0 VAG Insomnie">Insomnie</option><br>
-<option value="G47.0 VAG Ein- und Durchschlafstörungen">Insomnie</option><br>
+<option value="F51.0 VAG Insomnie">Insomnie: nicht organisch</option><br>
+<option value="G47.0 VAG Ein- und Durchschlafstörungen">Insomnie: organisch</option><br>
 <option value="F70 VAG Leichte Intelligenzminderung">Intelligenzminderung, leicht</option><br>
 <option value="F71 VAG Mittelgradige Intelligenzminderung">Intelligenzminderung, mittelgradig</option><br>
 <option value="F72 VAG Schwere Intelligenzminderung">Intelligenzminderung, schwer</option><br>
@@ -826,18 +837,21 @@
 <option value="G93.2 VAG Benigne intrakranielle Hypertension">Intrakranielle Hypertension</option><br>
 <option value="I65.2 VAG Verschluss und Stenose der A. carotis">Karotisstenose</option><br>
 <option value="G56.0 VAG BRL Karpaltunnelsyndrom leichtgradig bds. rechts links mittelgradig bds. rechts links schwer bds. rechts links">Karpaltunnelsyndrom</option><br>
-<option value="F06.7 VAG Leichte kognitive Störung">Kognitive Störung leicht</option><br>
+<option value="F06.7 VAG Leichte kognitive Beeinträchtigung">Kognitive Beeinträchtigung leicht</option><br>
+<option value="R51 G Kopfschmerz unklarer Ursache">Kopfschmerz unklarer Ursache</option><br>
 <option value="G44.0 VAG Cluster-Kopfschmerz">Kopfschmerz Cluster</option><br>
 <option value="G44.4 VAG Kopfschmerz durch Übergebrauch von Medikamenten">Kopfschmerz durch Übergebrauch von Medikamenten</option><br>
 <option value="G43.1 VAG Migräne mit Aura">Kopfschmerz Migräne mit Aura</option><br>
 <option value="G43.0 VAG Migräne ohne Aura">Kopfschmerz Migräne ohne Aura</option><br>
+<option value="G43.8 VAG Migräne, sonstige">Kopfschmerz Migräne sonstige</option><br>
 <option value="G44.2 VAG Spannungskopfschmerz">Kopfschmerz Spannungs-</option><br>
 <option value="M16.1 VAG BRL Koxarthrose rechts links">Koxarthrose rechts links</option><br>
 <option value="M54.5 VAG Kreuzschmerz">Kreuzschmerz</option><br>
 <option value="M75.1 VAG BRL Läsionen der Rotatorenmanschette">Läsionen der Rotatorenmanschette</option><br>
-<option value="M51.1 VAG BRL V.a. lumbale Radikulopathie durch Bandscheibenvorfall">Lumbale Radikulopathie durch Bandscheibenvorfall</option><br>
+<option value="G54.4 VAG BRL Lumbale Radikulopathie unklarer Ursache">Lumbale Radikulopathie unklarer Ursache</option><br>
+<option value="M51.1 G55.1* VAG BRL Lumbale Radikulopathie durch Bandscheibenvorfall">Lumbale Radikulopathie durch Bandscheibenvorfall</option><br>
 <option value="M48.06 VAG Lumbale Spinalkanalstenose">Lumbale Spinalkanalstenose</option><br>
-<option value="M47.26 VAG G55.2* Lumbale Spondylose mit Radikulopathie">Lumbale Spondylose mit Radikulopathie</option><br>
+<option value="M47.26 G55.2* VAG BRL Lumbale Spondylose mit Radikulopathie">Lumbale Spondylose mit Radikulopathie</option><br>
 <option value="M54.4 VAG Lumboischialgie">Lumboischialgie</option><br>
 <option value="H81.0 VAG Ménière-Krankheit">Ménière-Krankheit</option><br>
 <option value="G57.1 VAG BRL Meralgia paraesthetica">Meralgia paraesthetica</option><br>
@@ -861,9 +875,11 @@
 <option value="G63.8 VAG Urämische Neuropathie">Neuropathie urämisch</option><br>
 <option value="M79.2[0-9] VAG Neuropathischer Schmerz">Neuropathischer Schmerz</option><br>
 <option value="G91.20 VAG Idiopathischer Normaldruckhydrozephalus">Normaldruckhydrozephalus, idiopathisch</option><br>
+<option value="H46 VAG BRL Neuritis nervi optici">Neuritis nervi optici</option><br>
 <option value="I95.1 VAG Orthostatische Dysregulation">Orthostatische Dysregulation</option><br>
 <option value="F41.0 VAG Panikstörung oder Panikattacke">Panikstörung Panikattacke</option><br>
 <option value="G82.1 VAG Spastische Paraparese">Paraparese spastisch</option><br>
+<option value="R20.2 VAG BRL Parästhesien der Haut">Parästhesien der Haut</option><br>
 <option value="G20.01 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 0 VAG 1 2 VAG mit Wirkungsfluktuation">Parkinson HY 0 VAG 1 2 VAG mit WF</option><br>
 <option value="G20.00 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 0 VAG 1 2 VAG ohne Wirkungsfluktuation">Parkinson HY 0 VAG 1 2 VAG ohne WF</option><br>
 <option value="G20.11 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 3 VAG 4 mit Wirkungsfluktuation">Parkinson HY 3 VAG 4 mit WF</option><br>
@@ -882,11 +898,13 @@
 <option value="Z60 VAG Probleme wegen Ausgrenzung, Vereinsamung">Probleme wegen Ausgrenzung, Vereinsamung</option><br>
 <option value="Z65 VAG Probleme wegen erlebter drohender Gefahr (Folter, Krieg, Gerichtsprozes)">Probleme wegen erlebter drohender Gefahr (Folter, Krieg, Gerichtsprozes)</option><br>
 <option value="Z59 VAG Kontaktanlässe mit Bezug auf das Wohnumfeld oder die wirtschaftliche Lage">Probleme Wohnen u/o Geld</option><br>
+<option value="F06.9 VAG Organische psychische Störung">Psychische Störung, organisch, o.n.A.</option><br>
 <option value="H02.4 VAG BRL Ptosis des Augenlides">Ptosis des Augenlides</option><br>
 <option value="G56.3 VAG BRL Läsion des N. radialis">Radialis-Läsion</option><br>
 <option value="G47.8 VAG REM-assoziierte Verhaltensstörung">REM-assoziierte Verhaltensstörung</option><br>
 <option value="G25.81 VAG Syndrom der unruhigen Beine [Restless-Legs-Syndrom]">Restless-Legs-Syndrom</option><br>
 <option value="M18.0 VG Rhizarthrose, beidseitig">Rhizarthrose, beidseitig</option><br>
+<option value="M31.6 VAG Riesenzellarteriitis">Riesenzellarteriitis (3 von: 1. über 50, 2. KS lokal, 3. Druckschmerz/abgeschwächte Pulsation, 4. BSG über 50, 5. Sono positiv oder Biopsie)</option><br>
 <option value="M18.1 VG Rhizarthrose rechts links">Rhizarthrose rechts links</option><br>
 <option value="R45.1 G Ruhelosigkeit">Ruhelosigkeit</option><br>
 <option value="F20 VAG Schizophrenie">Schizophrenie</option><br>
@@ -900,7 +918,7 @@
 <option value="M79.61 VAG BRL Schmerzen in Schulter">Schmerzen in Schulter</option><br>
 <option value="M79.63 VAG BRL Schmerzen in Unterarm">Schmerzen in Unterarm</option><br>
 <option value="M79.66 VAG BRL Schmerzen in Unterschenkel">Schmerzen in Unterschenkel</option><br>
-<option value="M54.2 G BRL Nackenschmerz">Schmerz im Nacken</option><br>
+<option value="M54.92 G BRL Nackenschmerz">Schmerz im Nacken</option><br>
 <option value="H81.1 VAG BRL Benigner paroxysmaler Schwindel des hinteren Bogengangs"> Schwindel: Lagerungsschwindel</option><br>
 <option value="H81.3 VAG Sonstiger peripherer Schwindel">Schwindel: peripher, sonstig</option><br>
 <option value="F40.8 VAG Phobischer Schwankschwindel">Schwindel: phobisch</option><br>
@@ -914,18 +932,23 @@
 <option value="I69.0 VAG Folgen einer Subarachnoidalblutung">Subarachnoidalblutung-Folgen</option><br>
 <option value="R55 VAG Synkope">Synkope</option><br>
 <option value="M65.83 V BRL V.a. Tenosynovitis im Unterarm rechts links">Tenosynovitis im Unterarm</option><br>
+<option value="G45.12 VAG Transitorisch-ischämische Attacke">TIA ACI-Gebiet 1-24 h</option><br>
+<option value="G45.13 VAG Transitorisch-ischämische Attacke">TIA ACI-Gebiet bis 1 h</option><br>
 <option value="H93.1 G BRL Tinnitus aurium">Tinnitus aurium</option><br>
+<option value="S00.95 Oberflächliche Verletzung des Kopfes">Kopfprellung</option><br>
 <option value="G25.1 VAG Arzneimittelinduzierter Tremor ">Tremor arzneimittelinduziert</option><br>
 <option value="G25.2 VG BRL Dystoner Tremor">Tremor dyston</option><br>
 <option value="G25.0 VAG Essentieller Tremor">Tremor essentiell</option><br>
 <option value="G25.2 VG Gesteigerter physiologischer Tremor">Tremor gesteigert physiologisch</option><br>
+<option value="R25.1 Unspezifischer Tremor unklarer Ursache">Tremor unspezifisch</option><br>
 <option value="G50.0 VAG BRL idiopathische Trigeminusneuralgie">Trigeminusneuralgie, idiopathisch</option><br>
 <option value="G56.2 VAG BRL Läsion des N. ulnaris">Ulnaris-Läsion</option><br>
 <option value="R53 Unwohlsein und Ermüdung">Unwohlsein und Ermüdung</option><br>
 <option value="H81.8 VAG Sonstige Störungen der Vestibularfunktion">Vestibularfunktion-Störung, sonst</option><br>
+<option value="M50.1 G55.1* VAG BRL Zervikale Radikulopathie durch Bandscheibenvorfall">Zervikale Radikulopathie durch Bandscheibenvorfall</option><br>
 <option value="M48.02 VAG Zervikale Spinalkanalstenose">Zervikale Spinalkanalstenose</option><br>
-<option value="M47.12 VAG G99.2* Zervikale Spondylose mit Myelopathie">Zervikale Spondylose mit Myelopathie</option><br>
-<option value="M47.22 VAG G55.2* Zervikale Spondylose mit Radikulopathie">Zervikale Spondylose mit Radikulopathie</option><br>
+<option value="M47.12 G99.2* VAG BRL Zervikale Spondylose mit Myelopathie">Zervikale Spondylose mit Myelopathie</option><br>
+<option value="M47.22 G55.2* VAG BRL Zervikale Spondylose mit Radikulopathie">Zervikale Spondylose mit Radikulopathie</option><br>
 <option value="M53.1 VAG BRL Zervikobrachial-Syndrom">Zervikobrachial-Syndrom</option><br>
                 </select></form>
                 <br>
@@ -973,8 +996,11 @@
                 <option value="Z.n.">Z.n.</option>
                 </select></form>
                 <br>
-<button class="bt1 bttext" onclick="ed1('M - Lokalisation\r\n0: Mehrere Lokalisationen\r\n1: Schulterregion [Klavikula, Skapula, Akromioklavikular-, Schulter-, Sternoklavikulargelenk]\r\n2: Oberarm [Humerus, Ellenbogengelenk]\r\n3: Unterarm [Radius, Ulna, Handgelenk]\r\n4: Hand [Finger, Handwurzel, Mittelhand, Gelenke zwischen diesen Knochen]\r\n5: Beckenregion und Oberschenkel [Becken, Femur, Gesäß, Hüfte, Hüftgelenk, Iliosakralgelenk]\r\n6: Unterschenkel [Fibula, Tibia, Kniegelenk]\r\n7: Knöchel und Fuß [Fußwurzel, Mittelfuß, Zehen, Sprunggelenk, sonstige Gelenke des Fußes]\r\n8: Sonstige [Hals, Kopf, Rippen, Rumpf, Schädel, Wirbelsäule]\r\n9: Nicht näher bezeichnete Lokalisation\r\n')">M-Lokalisation</button>
 
+
+<button class="bt1 bttext" onclick="ed1('M - Lokalisation-Gliedmaßen\r\n0: Mehrere Lokalisationen\r\n1: Schulterregion [Klavikula, Skapula, Akromioklavikular-, Schulter-, Sternoklavikulargelenk]\r\n2: Oberarm [Humerus, Ellenbogengelenk]\r\n3: Unterarm [Radius, Ulna, Handgelenk]\r\n4: Hand [Finger, Handwurzel, Mittelhand, Gelenke zwischen diesen Knochen]\r\n5: Beckenregion und Oberschenkel [Becken, Femur, Gesäß, Hüfte, Hüftgelenk, Iliosakralgelenk]\r\n6: Unterschenkel [Fibula, Tibia, Kniegelenk]\r\n7: Knöchel und Fuß [Fußwurzel, Mittelfuß, Zehen, Sprunggelenk, sonstige Gelenke des Fußes]\r\n8: Sonstige [Hals, Kopf, Rippen, Rumpf, Schädel, Wirbelsäule]\r\n9: Nicht näher bezeichnete Lokalisation\r\n\r\n')">M-Lok-Gliedm</button>
+
+<button class="bt1 bttext" onclick="ed1('M - Lokalisation-Rücken\r\n0 Mehrere Lokalisationen der Wirbelsäule\r\n1 Okzipito-Atlanto-Axialbereich\r\n2 Zervikalbereich\r\n3 Zervikothorakalbereich\r\n4 Thorakalbereich\r\n5 Thorakolumbalbereich\r\n6 Lumbalbereich\r\n7 Lumbosakralbereich\r\n8 Sakral- und Sakrokokzygealbereich\r\n9 Nicht näher bezeichnete Lokalisation\r\n\r\n')">M-Lok-Rücken</button>
 
 <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
 
@@ -1334,7 +1360,7 @@
             <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button><br>
             <!--the star logo-->
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<svg height="40" width="40"><polygon points="20.0,2.0 8.0,39.6 38.0,15.6 2.0,15.6 32.0,39.6" style="fill:hsla(40, 100%, 70%, 1);"/></svg></p>
-            <span>NBrief_MVZ 1.2 <br>25.04.2020</span>
+            <span>NBrief_MVZ 1.2 <br>28.04.2020</span>
         </div>
     </div>
     
@@ -1569,7 +1595,7 @@ function edein(inp) {
         tarea.value = tarea.value.substring(0, sst) + inp + tarea.value.substring(sse, tvl);
         tarea.selectionStart = sst + inp.length - 1;
         tarea.selectionEnd = sst + inp.length - 1;
-        tarea.focus();
+     // tarea.focus();
     } else {
         document.getElementById('mof').style.display = 'inline-block';
     }
