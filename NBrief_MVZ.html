@@ -397,7 +397,7 @@
 
 <body>
     <noscript><p>Der NBrief_MVZ hilft mit Textbausteinen einen Arztbrief zusammenzustellen.<br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. <br>Dieser Code wird von Ihrem Browser interpretiert. <br>Sie sehen diesen Text, weil Javascript in Ihrem Browser deaktiviert ist. Erwägen Sie bitte, Javascript zu aktivieren. <br>Der NBrief_MVZ braucht einen neuen Browser, am besten funktioniert er mit Firefox 45 oder neuer<br>
-<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 28.02.2021</p></noscript>
+<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 07.03.2021</p></noscript>
     <div id="topBar">
         <button class="bt1" onclick="ez1()">Arztbrief</button>
         <button class="bt1" onclick="ez4()">Hilfe</button>
@@ -684,7 +684,7 @@
     <div id="viert" class="wrap2">
         <div class="fleft50">
             <h3>Hilfe</h3>
-            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formatierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 28.02.2021<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
+            <p>Der NBrief_MVZ hilft mit Textbausteinen.<br>Klicken Sie auf die Knöpfe <b>Mann</b> oder <b>Frau</b>. So wird das richtige Geschlecht des Patienten in die Texte eingefügt. Voreingestellt ist <b>Frau</b>.<br>Der Typ-korrekt-Knopf verschönert typographisch:<br>1. Wenn Leerzeichen, nur ein Leerzeichen<br>2. Kein Leerzeichen vor . , ? : )<br>3. Kein Leerzeichen nach (<br>4. Ein Leerzeichen nach . , : wenn keine Zahl folgt<br>5. Ein Leerzeichen vor %<br>6. Ein Leerzeichen nach einer Zahl, wenn ein Buchstabe folgt<br>7. 10.30 Uhr wird 10:30 Uhr <br>Probieren Sie den Markdown-Editor, Sie schreiben einfachen Text nach bestimmten intuitiven Regeln der <a href="https://github.com/showdownjs/showdown/wiki/Showdown%27s-Markdown-syntax">Markdown syntax</a> und Sie bekommen formatierten Text, den Sie in andere Programme einfügen können. Der Markdown-Editor benutzt die Bibliothek <a href="https://github.com/showdownjs/showdown">showdown.js</a><br><br>Das Programm verändert nichts an Ihrem Rechner, es verbindet sich nicht mit dem Internet, es braucht keine Installation. Es besteht aus einer einzigen einfachen Text-Datei, die HTML-, CSS- und Javascript-Code enthält. Dieser Code wird von Ihrem Browser interpretiert. Wenn Sie HTML-, CSS- und Javascript kostenfrei und ohne Anmeldung lernen möchten, besuchen Sie: <a href="http://www.w3schools.com/">w3schools</a>. Der NBrief_MVZ funktioniert am besten mit Firefox.<br>Emanuil Giuris<br>giuris@gmail.com<br><br>NBrief_MVZ 1.2, Letzte Aktualisierung: 07.03.2021<br>GNU General Public License, Version 3 <br><a href="https://emanuilg.github.io/NBrief_MVZ/">NBrief_MVZ-Website</a><br></p>
         </div>
         <div class="fright50">
             <h3>Tastenkombinationen</h3> Die folgenden Tastenkombinationen gelten in den meisten Windows-Anwendungen.<br>Sie helfen bei der Textbearbeitung.<br>Sie gelten auch für das weiße Textfeld im 'NBrief'.
@@ -791,6 +791,7 @@
                     <select id="icd-diagnosen" class="select1 select2" size="1" onKeyUp="icddiagn()">
 
 
+
 <option value="F17.2 VAG Abhängigkeitssyndrom (Tabak)">Abhängigkeitssyndrom (Tabak)</option><br>
 <option value="E66.00 G Adipositas, BMI ">Adipositas, BMI 30-34,9</option><br>
 <option value="E66.01 G Adipositas, BMI ">Adipositas, BMI 35-39,9</option><br>
@@ -879,7 +880,6 @@
 <option value="H53.4 VAG BRL Gesichtsfelddefekte">Gesichtsfelddefekte</option><br>
 <option value="G50.1 VAG Persistierender idiopathischer Gesichtsschmerz">Gesichtsschmerz, persistierend idiopathisch</option><br>
 <option value="G61.0 VAG Guillain-Barré-Syndrom">Guillain-Barré-Syndrom</option><br>
-
 <option value="G57.8 VAG BRL Läsion des medialen Hallux-Astes des N. cutaneus dorsalis medialis - Ast des N. peronaeus superficialis">Hallux-Hautnerv-Dorsal</option><br>
 <option value="G57.6 VAG BRL Läsion des N. digitalis plantaris proprius der Großzehe - Ast des N. plantaris medialis">Hallux-Hautnerv-Plantar</option><br>
 <option value="R44.1 VG Akustische Halluzinationen (jeder Art)">Halluzinationen, akustische (jeder Art)</option><br>
@@ -921,10 +921,10 @@
 <option value="G44.4 VAG Kopfschmerz durch Übergebrauch von Medikamenten">Kopfschmerz durch Übergebrauch von Medikamenten</option><br>
 <option value="G44.8 VAG Idiopathisch stechender Kopfschmerz">Kopfschmerz: Idiopathisch stechender Kopfschmerz</option><br>
 <option value="G43.1 VAG Migräneaura ohne Kopfschmerz">Kopfschmerz: Migräneaura ohne Kopfschmerz</option><br>
+<option value="G43.8 VAG Chronische Migräne">Kopfschmerz: Migräne, chronisch</option><br>
 <option value="G43.1 VAG Migräne mit Aura">Kopfschmerz: Migräne mit Aura</option><br>
 <option value="G43.0 VAG Migräne ohne Aura">Kopfschmerz: Migräne ohne Aura</option><br>
 <option value="G43.8 VAG Migräne, sonstige">Kopfschmerz: Migräne sonstige</option><br>
-<option value="G43.8 VAG Chronische Migräne">Kopfschmerz: Migräne, chronisch</option><br>
 <option value="G44.3 VAG Chronischer posttraumatischer Kopfschmerz">Kopfschmerz: posttraumatischer Kopfschmerz (für mehr als 3 Monate) nach geringfügigem Schädel-Hirn-Trauma</option><br>
 <option value="G44.8 VAG Akuter posttraumatischer Kopfschmerz">Kopfschmerz: posttraumatischer Kopfschmerz (für weniger als 3 Monate) nach geringfügigem Schädel-Hirn-Trauma</option><br>
 <option value="G44.2 VAG Häufiger Seltener Episodischer Chronischer Kopfschmerz vom Spannungstyp">Kopfschmerz: Spannungs</option><br>
@@ -942,6 +942,7 @@
 <option value="M48.06 VAG Lumbale Spinalkanalstenose">Lumbale Spinalkanalstenose</option><br>
 <option value="M47.26 G55.2* VAG BRL Lumbale Spondylose mit Radikulopathie">Lumbale Spondylose mit Radikulopathie</option><br>
 <option value="M54.4 VAG Lumboischialgie">Lumboischialgie</option><br>
+<option value="I26.9 Z Lungenembolie">Lungenembolie</option><br>
 <option value="G56.1 VAGZ Läsion des N. medianus rechts links ">Medianus-Läsion</option><br>
 <option value="H81.0 VAG Ménière-Krankheit">Ménière-Krankheit</option><br>
 <option value="G57.1 VAG BRL Meralgia paraesthetica">Meralgia paraesthetica</option><br>
@@ -964,8 +965,8 @@
 <option value="R07.3 G Muskuloskeletale Brustschmerzen">Muskuloskeletale Brustschmerzen</option><br>
 <option value="G70.0 VAG Myasthenia gravis ">Myasthenia gravis </option><br>
 <option value="G95.9 VAG Myelopathie">Myelopathie</option><br>
-<option value="G25.3 VG Myoklonus">Myoklonus</option><br>
 <option value="M79.19 VG BRL Myofasziales Schmerzsyndrom rechts links ">Myofasziales Schmerzsyndrom </option><br>
+<option value="G25.3 VG Myoklonus">Myoklonus</option><br>
 <option value="G72.0 VAG Arzneimittelinduzierte Myopathie">Myopathie, arzneimittelinduziert</option><br>
 <option value="G71.1 VAG Myotone Dystrophie Typ 1 2">Myotone Dystrophie Typ 1 2</option><br>
 <option value="R29.5 VAG BRL Neglect">Neglect</option><br>
@@ -984,7 +985,6 @@
 <option value="F41.0 VAG Panikstörung oder Panikattacke">Panikstörung Panikattacke</option><br>
 <option value="G82.1 VAG Spastische Paraparese">Paraparese spastisch</option><br>
 <option value="R20.2 VAG BRL Parästhesien der Haut">Parästhesien der Haut</option><br>
-<option value="G25.9 G Parkinson-Syndrom, unklar ob primär oder sekundär  ">Parkinson-Syndrom, unklar ob primär oder sekundär  </option><br>
 <option value="G20.01 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 0 1 2 mit Wirkungsfluktuation">Parkinson HY 0 1 2 mit WF</option><br>
 <option value="G20.00 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 0 1 2 ohne Wirkungsfluktuation">Parkinson HY 0 1 2 ohne WF</option><br>
 <option value="G20.11 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 3 4 mit Wirkungsfluktuation">Parkinson HY 3 4 mit WF</option><br>
@@ -992,6 +992,7 @@
 <option value="G20.21 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 5 mit Wirkungsfluktuation">Parkinson HY 5 mit WF</option><br>
 <option value="G20.20 VAG Primäres Parkinson-Syndrom Hoehn und Yahr 5 ohne Wirkungsfluktuation">Parkinson HY 5 ohne WF</option><br>
 <option value="G21.1 VAG Arzneimittelinduziertes (xxx) Parkinson-Syndrom">Parkinson-Syndrom, arzneimittelinduziert</option><br>
+<option value="G25.9 G Parkinson-Syndrom, unklar ob primär oder sekundär  ">Parkinson-Syndrom, unklar ob primär oder sekundär  </option><br>
 <option value="G21.4 VAG Vaskuläres Parkinson-Syndrom">Parkinson-Syndrom, vaskuläres</option><br>
 <option value="G25.80 VG Periodische Beinbewegungen im Schlaf">Periodische Beinbewegungen im Schlaf</option><br>
 <option value="I70.29 VG Periphere arterielle Verschlusskrankheit">Periphere arterielle Verschlusskrankheit</option><br>
@@ -1018,6 +1019,7 @@
 <option value="F07.2 VG Organisches Psychosyndrom nach Schädelhirntrauma">Psychosyndrom nach Schädelhirntrauma</option><br>
 <option value="H02.4 VAG BRL Ptosis des Augenlides">Ptosis des Augenlides</option><br>
 <option value="G56.3 VAG BRL Läsion des N. radialis">Radialis-Läsion</option><br>
+<option value="K58.8 G Reizdarm">Reizdarm</option><br>
 <option value="G47.8 VAG REM-assoziierte Verhaltensstörung">REM-assoziierte Verhaltensstörung</option><br>
 <option value="G25.81 VAG Syndrom der unruhigen Beine [Restless-Legs-Syndrom, RLS]">Restless-Legs-Syndrom</option><br>
 <option value="M79.09 VG Rheumatische Erkrankung">Rheumatische Erkrankung</option><br>
@@ -1064,6 +1066,7 @@
 <option value="M65.83 V BRL V.a. Tenosynovitis im Unterarm rechts links">Tenosynovitis im Unterarm</option><br>
 <option value="G45.12 VAG Transitorisch-ischämische Attacke">TIA ACI-Gebiet 1-24 h</option><br>
 <option value="G45.13 VAG Transitorisch-ischämische Attacke">TIA ACI-Gebiet bis 1 h</option><br>
+<option value="I80.9 ZG Tiefe Beinvenenthrombose">Tiefe Beinvenenthrombose</option><br>
 <option value="H93.1 G BRL Tinnitus aurium">Tinnitus aurium</option><br>
 <option value="G25.1 VAG Arzneimittelinduzierter Tremor ">Tremor arzneimittelinduziert</option><br>
 <option value="G25.2 VG BRL Dystoner Tremor">Tremor dyston</option><br>
@@ -1090,6 +1093,11 @@
 <option value="M53.1 VAG BRL Zervikobrachial-Syndrom">Zervikobrachial-Syndrom</option><br>
 <option value="B02.2 VAG RL Post-Zoster-Neuralgie Zoster mit Neuralgie im Dermatom ">Zoster mit neuropathischen Schmerzen im Dermatom </option><br>
 <option value="B02.9 VAG RL Zoster ohne Komplikation im Dermatom ">Zoster ohne Komplikation im Dermatom </option><br>
+
+
+
+
+
                     </select></form>
             </div>
             <div class="wrap3" id="Diagnosen">
@@ -1493,7 +1501,8 @@
 
                 <button class="bt1 bttext" onclick="ed1('berichtet über Taubheitsgefühl und Schmerzen in den Händen, rechts mehr als links mehr als rechts, hauptsächlich in der Nacht, beim Aufwachen.\r\nDas Taubheitsgefühl ist eher in den Fingern xxx.\r\nEs handelt sich um ein leichtgradiges mittelgradiges schweres Karpaltunnelsyndrom rechts links bds.\r\nEs handelt sich um ein leichtgradiges Karpaltunnelsyndrom mit normaler Neurographie.\r\nDie Erkrankungen Diabetes mellitus und Hypothyreose können ein Karpaltunnelsyndrom auslösen oder verschlimmern, erwägen Sie entsprechende Untersuchungen.\r\nEine Operation ist nicht indiziert.\r\nIch habe eine Handgelenkschiene rechts links bds. zur Nacht empfohlen und verschrieben.\r\n' + Der_Patient + ' wird ' + seinen + ' Orthopäden Unfallchirurgen konsultieren.\r\nEine Kontrolle nach 3-4 Monaten ist sinnvoll.\r\n')">CTS</button>
 
-                <button class="bt1 bttext" onclick="ed1('Vergesslichkeit seit xxx Monaten Jahren.\r\nDie Ehefrau Der Ehemann berichtet über Vergesslichkeit gedrückte Stimmung Ängstlichkeit Reizbarkeit unsinnige Handlungen Schlafstörung. \r\n' + Der_Patient + ' kommt nicht mehr zurecht mit dem Anziehen dem Waschen dem Toilettengang. Es besteht keine Harninkontinenz. \r\n\r\nEs handelt sich um eine leichtgradige mittelgradige Demenz, wahrscheinlich vom Alzheimer-Typ.\r\nZum Ausschluss einer behandelbaren (Mit-)Ursache der Demenz erwägen Sie folgende Labordiagnostik, wenn nicht bereits durchgeführt: Blutbild, Vitamin B12 (besser Holotranscobalamin), Folsäure, Glukose, Kreatinin, GOT, GPT, GGT, Na, K, Ca, TSH, CRP.\r\nZum Ausschluss einer strukturellen Läsion habe ich zum Schädel-CT Schädel-MRT überwiesen.\r\nIch habe ein Informationsblatt mitgegeben und über vertrauenswürdige Internet-Quellen zur Demenz sowie über die Senioren-Beratung des Landkreises Hersfeld-Rotenburg informiert.\r\nZur Erhaltung und Übung der Alltagsaktivitäten habe ich Ergotherapie verschrieben.\r\nIch habe Ratschläge zum Umgang mit ' + dem_Patienten + ' gegeben, insbesondere habe ich über Milde, Akzeptanz und Erhaltung der Selbstständigkeit gesprochen.\r\n')">Demenz</button>
+
+                <button class="bt1 bttext" onclick="ed1('Vergesslichkeit seit xxx Monaten Jahren.\r\nDie Ehefrau Der Ehemann berichtet über Vergesslichkeit gedrückte Stimmung Ängstlichkeit Reizbarkeit unsinnige Handlungen Schlafstörung. \r\n' + Der_Patient + ' kommt nicht mehr zurecht mit dem Anziehen dem Waschen dem Toilettengang. Es besteht keine Harninkontinenz. \r\n\r\nEs handelt sich um eine leichtgradige mittelgradige Demenz, wahrscheinlich vom Alzheimer-Typ.\r\nZum Ausschluss einer behandelbaren (Mit-)Ursache der Demenz erwägen Sie folgende Labordiagnostik, wenn nicht bereits durchgeführt: Blutbild, Vitamin B12 (besser Holotranscobalamin), Folsäure, Glukose, Kreatinin, GOT, GPT, GGT, Na, K, Ca, TSH, CRP.\r\nZum Ausschluss einer strukturellen Läsion habe ich zum Schädel-CT Schädel-MRT überwiesen.\r\nIch habe ein Informationsblatt mitgegeben und über vertrauenswürdige Internet-Quellen zur Demenz sowie über die Senioren-Beratung des Landkreises Hersfeld-Rotenburg informiert.\r\nZur Erhaltung und Übung der Alltagsaktivitäten habe ich Ergotherapie verschrieben.\r\nKognitive Übungen und das Erlernen von Strategien bei verminderter Merkfähigkeit sinnvoll sind. Deshalb habe ich die Verordnung von Ergotherapie angeboten.\r\nIch habe Ratschläge zum Umgang mit ' + dem_Patienten + ' gegeben, insbesondere habe ich über Milde, Akzeptanz und Erhaltung der Selbstständigkeit gesprochen.\r\n')">Demenz</button>
 
                 <button class="bt1 bttext" onclick="ed1(Der_Patient + ' hatte in den letzten Wochen Monaten normale leicht sehr gedrückte Stimmung, keine leichte schwere Freudlosigkeit, keinen leichten schweren Antriebsmangel, keine leichte schwere Agitiertheit, keine leichte schwere Schlafstörungen, normalen leicht schwer verminderten Appetit, normale leicht schwer verminderte Konzentration, normales leicht schwer vermindertes Selbstwertgefühl, keine leichte schwere Schuldgefühle, keine leicht schwer negative Zukunftsgedanken, keine seltene häufige Suizidgedanken.\r\n\r\n' + Er + ' hatte in der Vergangenheit xxx depressive Episoden. \r\n' + Er + ' ist nicht in psychiatrischer psychotherapeutischer Behandlung, nimmt xxx xxx mg/d.\r\n\r\nEs handelt sich um eine leichtgradige mittelgradige schwere depressive Episode bei bekannter Depression.\r\nEine psychiatrische psychotherapeutische Vorstellung Behandlung ist notwendig empfohlen. ' + Der_Patient + ' bekam entsprechende Adressen/Telefonnummern. ' + Er + ' will sich um einen Termin kümmern. \r\n\r\nZwei-Fragen-Test\r\n1. Fühlten Sie sich im letzten Monat häufig niedergeschlagen, traurig bedrückt oder hoffnungslos?\r\n2. Hatten Sie im letzten Monat deutlich weniger Lust und Freude an Dingen, die Sie sonst gerne tun?\r\nDauer mehr als 2 Wochen\r\n\r\nKernsymptome (KS):\r\n1. Gedrückte Stimmung \r\n2. Freudlosigkeit\r\n3. Antriebsmangel/Agitiertheit\r\n\r\nZusatzsymptome (ZS): \r\n1. Konzentration vermindert\r\n2. Selbstwertgefühl vermindert\r\n3. Schuldgefühle\r\n4. Zukunftsgedanken negativ\r\n5. Suizidgedanken\r\n6. Schlafstörungen\r\n7. Appetit vermindert\r\n\r\nIch habe ' + den_Patienten  + ' ermutigt, sofort Hilfe in der Notaufnahme des Klinikums zu suchen, wenn lebensüberdrüssigen Gedanken kommen oder wenn ' + er + ' sich verzweifelt fühlt.\r\n\r\n')">Depression</button>
 
@@ -1520,6 +1529,8 @@
 
                 <button class="bt1 bttext" onclick="ed1('Neurostatus regelrecht.\r\nEs handelt sich am ehesten um gutartige Muskelkrämpfe. Ich habe Dehnungsübungen der Waden empfohlen und gezeigt.\r\nZur Aufdeckung einer behandelbaren Ursache erwägen Sie, wenn nicht bereits durchgeführt: Na, K, Ca, Mg, Kreatinin, Harnstoff, GPT, GOT, GGT, Glukose, TSH, Creatinkinase.\r\nMagnesium täglich kann versucht werden, z.B. Magnesium-DL-hydrogenaspartat 5 mmol 1x/d.\r\nDie Neurographie der Beine war nicht wegweisend.\r\nIch habe einen Termin (..2021) für Neurographie der Beine gegeben.\r\nGerne kollegiale Rücksprache.\r\n')">Muskelkrämpfe</button>
 
+                <button class="bt1 bttext" onclick="ed1('Ich darf an Medikamente erinnern, die eine Myasthenie stark verschlechtern können: Benzodiazepine und verwandte Substanzen, Antibiotika (Aminoglykoside, Gyrasehemmer, Makrolide, Tetrazykline), Muskelrelaxanzien vom Curare-Typ, D-Penicillamin, Chloroquin).\r\n')">Myasthenie</button>
+                <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
                 <button class="bt1 bttext" onclick="ed1('Text\r\n')">Text</button>
 
 
@@ -1650,7 +1661,7 @@
 
             <!--the star logo-->
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<svg height="40" width="40"><polygon points="20.0,2.0 8.0,39.6 38.0,15.6 2.0,15.6 32.0,39.6" style="fill:hsla(40, 100%, 70%, 1);"/></svg></p>
-            <span>NBrief_MVZ 1.2 <br>28.02.2021</span>
+            <span>NBrief_MVZ 1.2 <br>07.03.2021</span>
         </div>
     </div>
     
